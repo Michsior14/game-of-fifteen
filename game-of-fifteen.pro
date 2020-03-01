@@ -20,7 +20,11 @@ SOURCES += \
     src/mainwindow.cpp
 
 HEADERS += \
-    src/mainwindow.h
+    src/block.h \
+    src/blocks.h \
+    src/free_block.h \
+    src/mainwindow.h \
+    src/numbered_block.h
 
 FORMS += \
     src/mainwindow.ui
