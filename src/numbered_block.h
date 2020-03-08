@@ -3,11 +3,31 @@
 
 #include "block.h"
 
+/**
+ * @brief
+ *
+ */
 class NumberedBlock: public Block {
+    Q_OBJECT
 public:
-    NumberedBlock(const size_t _value): Block(_value) {}
-
-    bool IsFree() const override {
+    /**
+     * @brief
+     *
+     * @param value
+     * @param parent
+     */
+    NumberedBlock(const size_t value, QWidget* parent=nullptr): Block(value, parent) {};
+    /**
+     * @brief
+     *
+     */
+    virtual ~NumberedBlock() = default;
+    /**
+     * @brief
+     *
+     * @return bool
+     */
+    bool isFree() const override {
         return false;
     };
 };

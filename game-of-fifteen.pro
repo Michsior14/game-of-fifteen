@@ -2,7 +2,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
+CONFIG += c++14
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
@@ -16,18 +16,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    src/blocks.cpp \
+    src/game.cpp \
     src/main.cpp \
-    src/mainwindow.cpp
+    src/move_stack.cpp \
+    src/state_manger.cpp
 
 HEADERS += \
     src/block.h \
     src/blocks.h \
     src/free_block.h \
-    src/mainwindow.h \
-    src/numbered_block.h
+    src/game.h \
+    src/move_stack.h \
+    src/numbered_block.h \
+    src/state_manger.h
 
-FORMS += \
-    src/mainwindow.ui
+FORMS +=
 
 TRANSLATIONS += \
     game-of-fifteen_pl_PL.ts
@@ -41,3 +45,5 @@ DISTFILES += \
     LICENSE \
     README.md \
     src/game-of-fifteen_pl_PL.ts
+
+STATECHARTS +=

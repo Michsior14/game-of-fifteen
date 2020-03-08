@@ -3,18 +3,56 @@
 
 #include <stddef.h>
 #include <string>
+#include <QPushButton>
 
-class Block {
 
+/**
+ * @brief
+ *
+ */
+class Block: public QPushButton {
+    Q_OBJECT
 public:
-    Block(const size_t _value): title(std::to_string(_value)), value(_value) {};
-    Block(const size_t _value, const std::string _title): title(_title), value(_value) {};
-    size_t Value() const { return value; };
-    std::string Title() const { return title; };
-    virtual bool IsFree() const = 0;
+    /**
+     * @brief
+     *
+     * @param value
+     * @param parent
+     */
+    Block(const size_t value, QWidget* parent): QPushButton(QString::number(value), parent), _value(value) {};
+    /**
+     * @brief
+     *
+     * @param value
+     * @param title
+     * @param parent
+     */
+    Block(const size_t value, const std::string title, QWidget* parent): QPushButton(QString::fromUtf8(title.c_str()), parent), _value(value) {};
+    /**
+     * @brief
+     *
+     * @return size_t
+     */
+    size_t value() const { return _value; };
+    /**
+     * @brief
+     *
+     * @return std::string
+     */
+    std::string title() const { return QPushButton::text().toStdString(); };
+    /**
+     * @brief
+     *
+     * @return bool
+     */
+    virtual bool isFree() const = 0;
+    /**
+     * @brief
+     *
+     */
+    virtual ~Block() = default;
 private:
-    std::string title;
-    size_t value;
+    size_t _value; /**< TODO: describe */
 };
 
 #endif // BLOCK_H

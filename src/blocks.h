@@ -2,78 +2,87 @@
 #define BLOCKS_H
 
 #include <stddef.h>
-#include <string>
-#include <iomanip>
-#include <algorithm>
-#include <array>
-#include <random>
-#include <chrono>
-#include <iostream>
-#include <memory>
+#include <QGridLayout>
+
 #include "block.h"
-#include "numbered_block.h"
-#include "free_block.h"
 
-enum class Movement {
-    NONE,
-    UP,
-    DOWN,
-    LEFT,
-    RIGHT
-};
-
-template<size_t N>
-class Blocks {
-
+/**
+ * @brief
+ *
+ */
+class Blocks: public QGridLayout {
+    Q_OBJECT
 public:
-    Blocks() {
-        size = N * N;
-        blocks.reserve(size);
+    /**
+     * @brief
+     *
+     * @param edge
+     * @param parent
+     */
+    Blocks(const size_t edge, QWidget* parent = nullptr);
+    /**
+     * @brief
+     *
+     * @param edge
+     */
+    void newPuzzle(size_t edge);
+    /**
+     * @brief
+     *
+     */
+    virtual ~Blocks() = default;
 
-        size_t i = 1;
-        while(i < size){
-            blocks.push_back(std::make_shared<NumberedBlock>(i++));
-        }
-        blocks.push_back(std::make_shared<FreeBlock>(i));
+    /**
+     * @brief
+     *
+     * @param row
+     * @param column
+     */
+    void move(const size_t row, const size_t column);
+    /**
+     * @brief
+     *
+     * @return bool
+     */
+    bool isSolved();
+    /**
+     * @brief
+     *
+     */
+    void print();
+    /**
+     * @brief
+     *
+     * @param row
+     * @param column
+     * @return Block
+     */
+    Block* blockAtPosition(const size_t row, const size_t column);
 
-        shuffle();
-    }
-
-    Movement move(const size_t index) {
-        if(index >= N && blocks[index-N]->IsFree()) {
-            std::swap(blocks[index], blocks[index-N]);
-            return Movement::UP;
-        } else if ((index+1) % N > 1 && blocks[index-1]->IsFree()) {
-            std::swap(blocks[index], blocks[index-1]);
-            return Movement::LEFT;
-        } else if ((index+1) % N > 0 && blocks[index+1]->IsFree()) {
-            std::swap(blocks[index], blocks[index+1]);
-            return Movement::RIGHT;
-        } else if(index < N * (N-1) && blocks[index+N]->IsFree()) {
-            std::swap(blocks[index], blocks[index+N]);
-            return Movement::DOWN;
-        }
-        return Movement::NONE;
-    }
-
-    void print() {
-        for(size_t i = 0 ; i < size; i++){
-            std::cout << std::setw(2) << blocks[i]->Title() << " |";
-            if((i+1) % N == 0) {
-                std::cout << std::endl;
-            }
-        }
-        std::cout << std::endl;
-    }
+private slots:
+    /**
+     * @brief
+     *
+     */
+    void blockClicked();
 
 private:
-    void shuffle() {
-        size_t time = std::chrono::system_clock::now().time_since_epoch().count();
-        std::shuffle(blocks.begin(), blocks.end(), std::default_random_engine(time));
-    }
+    /**
+     * @brief
+     *
+     */
+    void clear();
+    /**
+     * @brief
+     *
+     * @param rowA
+     * @param columnA
+     * @param rowB
+     * @param columnB
+     */
+    void swapBlocks(const size_t rowA, const size_t columnA, const size_t rowB, const size_t columnB);
 
-    size_t size;
-    std::vector<std::shared_ptr<Block>> blocks;
+    size_t _edge; /**< TODO: describe */
 };
 
 #endif // BLOCKS_H
