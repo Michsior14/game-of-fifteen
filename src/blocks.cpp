@@ -12,15 +12,15 @@
 #include "free_block.h"
 
 
-Blocks::Blocks(const size_t edge, QWidget* parent): QGridLayout(parent) {
-    newPuzzle(edge);
+Blocks::Blocks(const GameLevel level, QWidget* parent): QGridLayout(parent) {
+    newPuzzle(level);
 }
 
-void Blocks::newPuzzle(size_t edge) {
+void Blocks::newPuzzle(const GameLevel level) {
     clear();
 
-    _edge = edge;
-    size_t blocksSize = _edge * _edge;
+    _level = static_cast<size_t>(level);
+    size_t blocksSize = _level * _level;
     std::vector<Block*> blocks;
     blocks.reserve(blocksSize);
 
@@ -33,13 +33,17 @@ void Blocks::newPuzzle(size_t edge) {
     size_t time = std::chrono::system_clock::now().time_since_epoch().count();
     std::shuffle(blocks.begin(), blocks.end(), std::default_random_engine(time));
 
-    for(i = 0; i < _edge; i++) {
-        for(size_t j = 0; j < _edge; j++) {
-            auto block = blocks[i*_edge+j];
+    for(i = 0; i < _level; i++) {
+        for(size_t j = 0; j < _level; j++) {
+            auto block = blocks[i*_level+j];
             connect(block, SIGNAL(clicked()), this, SLOT(blockClicked()));
             QGridLayout::addWidget(block, i, j);
         }
     }
+}
+
+void Blocks::restartPuzzle() {
+    newPuzzle(static_cast<GameLevel>(_level));
 }
 
 void Blocks::move(const size_t row, const size_t column) {
@@ -47,15 +51,15 @@ void Blocks::move(const size_t row, const size_t column) {
         swapBlocks(row, column, row-1, column);
     } else if (column != 0 && blockAtPosition(row, column-1)->isFree()) {
         swapBlocks(row, column, row, column-1);
-    } else if (column != _edge-1 && blockAtPosition(row, column+1)->isFree()) {
+    } else if (column != _level-1 && blockAtPosition(row, column+1)->isFree()) {
         swapBlocks(row, column, row, column+1);
-    } else if(row != _edge-1 && blockAtPosition(row+1, column)->isFree()) {
+    } else if(row != _level-1 && blockAtPosition(row+1, column)->isFree()) {
         swapBlocks(row, column, row+1, column);
     }
 
     if(isSolved()) {
-        QMessageBox::information(parentWidget(), tr("Game Over"), tr("You won! Congratulations!"));
-        newPuzzle(_edge);
+        QMessageBox::information(parentWidget(), tr("Game Over"), tr("You won! Congratulations!"), tr("New game"));
+        restartPuzzle();
     }
 }
 
@@ -64,9 +68,9 @@ Block* Blocks::blockAtPosition(const size_t row, const size_t column) {
 }
 
 bool Blocks::isSolved() {
-    for(size_t i = 0; i < _edge; i++) {
-        for(size_t j = 0; j < _edge; j++) {
-            if(blockAtPosition(i, j)->value() != (i*_edge+j)+1) {
+    for(size_t i = 0; i < _level; i++) {
+        for(size_t j = 0; j < _level; j++) {
+            if(blockAtPosition(i, j)->value() != (i*_level+j)+1) {
                 return false;
             }
         }
@@ -75,8 +79,8 @@ bool Blocks::isSolved() {
 }
 
 void Blocks::print() {
-    for(size_t i = 0; i < _edge; i++) {
-        for(size_t j = 0; j < _edge; j++) {
+    for(size_t i = 0; i < _level; i++) {
+        for(size_t j = 0; j < _level; j++) {
             std::cout << std::setw(2) << blockAtPosition(i, j)->value() << " |";
         }
         std::cout << std::endl;
@@ -102,5 +106,4 @@ void Blocks::clear() {
     for (int i = 0; i < QGridLayout::count(); i++) {
         QGridLayout::itemAt(i)->widget()->deleteLater();
     }
-    _edge = 0;
 }

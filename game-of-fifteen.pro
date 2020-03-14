@@ -17,16 +17,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     src/blocks.cpp \
+    src/blocks_model.cpp \
     src/game.cpp \
     src/main.cpp \
-    src/move_stack.cpp \
     src/state_manger.cpp
 
 HEADERS += \
     src/block.h \
     src/blocks.h \
+    src/blocks_model.h \
     src/free_block.h \
     src/game.h \
+    src/game_level.h \
     src/move_stack.h \
     src/numbered_block.h \
     src/state_manger.h

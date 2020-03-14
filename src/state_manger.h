@@ -1,6 +1,7 @@
 #ifndef STATEMANGER_H
 #define STATEMANGER_H
 #include "blocks.h"
+#include "move_stack.h"
 
 /**
  * @brief
@@ -26,7 +27,6 @@ public:
      *
      */
     void loadGame();
-
 private:
     Blocks* _blocks; /**< TODO: describe */
 };

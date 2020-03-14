@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <QGridLayout>
 
+#include "game_level.h"
 #include "block.h"
 
 /**
@@ -16,16 +17,17 @@ public:
     /**
      * @brief
      *
-     * @param edge
+     * @param level
      * @param parent
      */
-    Blocks(const size_t edge, QWidget* parent = nullptr);
+    Blocks(const GameLevel level, QWidget* parent = nullptr);
     /**
      * @brief
      *
-     * @param edge
+     * @param level
      */
-    void newPuzzle(size_t edge);
+    void newPuzzle(const GameLevel level);
+    void restartPuzzle();
     /**
      * @brief
      *
@@ -82,7 +84,7 @@ private:
      */
     void swapBlocks(const size_t rowA, const size_t columnA, const size_t rowB, const size_t columnB);
 
-    size_t _edge; /**< TODO: describe */
+    size_t _level; /**< TODO: describe */
 };
 
 #endif // BLOCKS_H
