@@ -6,6 +6,7 @@
 
 #include "game_level.h"
 #include "block.h"
+#include "move_stack.h"
 
 /**
  * @brief
@@ -20,7 +21,7 @@ public:
      * @param level
      * @param parent
      */
-    Blocks(const GameLevel level, QWidget* parent = nullptr);
+    Blocks(const GameLevel level, MoveStack* stack, QWidget* parent = nullptr);
     /**
      * @brief
      *
@@ -61,6 +62,9 @@ public:
      */
     Block* blockAtPosition(const size_t row, const size_t column);
 
+public slots:
+    void undoMove(const Move& move);
+
 private slots:
     /**
      * @brief
@@ -82,9 +86,10 @@ private:
      * @param rowB
      * @param columnB
      */
-    void swapBlocks(const size_t rowA, const size_t columnA, const size_t rowB, const size_t columnB);
+    void swapBlocks(const size_t rowA, const size_t columnA, const size_t rowB, const size_t columnB, const bool save = true);
 
     size_t _level; /**< TODO: describe */
+    MoveStack* _moveStack;
 };
 
 #endif // BLOCKS_H

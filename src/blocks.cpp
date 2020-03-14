@@ -12,7 +12,7 @@
 #include "free_block.h"
 
 
-Blocks::Blocks(const GameLevel level, QWidget* parent): QGridLayout(parent) {
+Blocks::Blocks(const GameLevel level, MoveStack* moveStack, QWidget* parent): QGridLayout(parent), _moveStack(moveStack) {
     newPuzzle(level);
 }
 
@@ -88,6 +88,10 @@ void Blocks::print() {
     std::cout << std::endl;
 }
 
+void Blocks::undoMove(const Move& move) {
+    swapBlocks(move.to.row, move.to.column, move.from.row, move.from.column, false);
+}
+
 void Blocks::blockClicked() {
     Block* clickedButton = qobject_cast<Block*>(sender());
     int row, column, rowSpan, columnSpan;
@@ -95,15 +99,19 @@ void Blocks::blockClicked() {
     move(row, column);
 }
 
-void Blocks::swapBlocks(const size_t rowA, const size_t columnA, const size_t rowB, const size_t columnB) {
+void Blocks::swapBlocks(const size_t rowA, const size_t columnA, const size_t rowB, const size_t columnB, const bool save) {
     auto a = blockAtPosition(rowA, columnA);
     auto b = blockAtPosition(rowB, columnB);
     QGridLayout::addWidget(a, rowB, columnB);
     QGridLayout::addWidget(b, rowA, columnA);
+    if(save){
+        _moveStack->add(Move(Position(rowA, columnA), Position(rowB, columnB)));
+    }
 }
 
 void Blocks::clear() {
     for (int i = 0; i < QGridLayout::count(); i++) {
         QGridLayout::itemAt(i)->widget()->deleteLater();
     }
+    _moveStack->clear();
 }

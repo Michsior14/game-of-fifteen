@@ -20,7 +20,9 @@ SOURCES += \
     src/blocks_model.cpp \
     src/game.cpp \
     src/main.cpp \
-    src/state_manger.cpp
+    src/move_stack_controller.cpp \
+    src/move_stack_view.cpp \
+    src/state_manager.cpp
 
 HEADERS += \
     src/block.h \
@@ -30,8 +32,10 @@ HEADERS += \
     src/game.h \
     src/game_level.h \
     src/move_stack.h \
+    src/move_stack_controller.h \
+    src/move_stack_view.h \
     src/numbered_block.h \
-    src/state_manger.h
+    src/state_manager.h
 
 FORMS +=
 

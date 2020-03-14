@@ -3,25 +3,26 @@
 #include "blocks.h"
 #include "move_stack.h"
 
+#include <QObject>
+
 /**
  * @brief
  *
  */
-class StateManger
-{
+class StateManager: public QObject {
+    Q_OBJECT
 public:
     /**
      * @brief
      *
      * @param _blocks
      */
-    StateManger(Blocks * _blocks);
-
+    StateManager(MoveStack* moveStack, Blocks * blocks);
     /**
      * @brief
      *
      */
-    void saveGame();
+    void saveGame(std::string path);
     /**
      * @brief
      *
@@ -29,6 +30,7 @@ public:
     void loadGame();
 private:
     Blocks* _blocks; /**< TODO: describe */
+    MoveStack* _moveStack;
 };
 
 #endif // STATEMANGER_H
