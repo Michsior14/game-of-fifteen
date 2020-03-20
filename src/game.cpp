@@ -1,38 +1,37 @@
 #include <QtWidgets>
 #include <QFileDialog>
+#include <iostream>
 
 #include "game_level.h"
 #include "game.h"
-#include "move_stack_view.h"
-#include "move_stack_controller.h"
 
-Game::Game() : QMainWindow()
+Game::Game() : QMainWindow(),
+    _blocksView(new BlocksView),
+    _blocksController(_blocksModel, *_blocksView),
+    _moveView(new MoveStackView),
+    _moveStackController(_moveStack, *_moveView, _blocksModel)
 {
-    moveStack = new MoveStack();
-    blocks = new Blocks(GameLevel::Easy, moveStack);
-    stateManager = new StateManager(moveStack, blocks);
+    layout()->setSizeConstraint(QLayout::SetFixedSize);
 
-    QWidget* widget = new QWidget;
+    //stateManager = new StateManager(moveStack, blocks);
+
+    auto widget = new QWidget;
     setCentralWidget(widget);
 
-    QWidget *topFiller = new QWidget;
-    topFiller->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    auto topFiller = new QWidget;
+    topFiller->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 
-    MoveStackView* moveView = new MoveStackView;
-    new MoveStackController(moveView, moveStack, blocks);
-
-    QWidget *centerWidget = new QWidget;
-    centerWidget->setLayout(blocks);
-
-    QVBoxLayout *layout = new QVBoxLayout;
+    auto layout = new QVBoxLayout;
     layout->setContentsMargins(5, 5, 5, 5);
     layout->addWidget(topFiller);
-    layout->addWidget(moveView);
-    layout->addWidget(centerWidget);
+    layout->addWidget(_moveView);
+    layout->addWidget(_blocksView);
     widget->setLayout(layout);
 
     createActions();
     createMenus();
+
+    _blocksController.init();
 }
 
 #ifndef QT_NO_CONTEXTMENU
@@ -47,21 +46,21 @@ void Game::createActions(){
     newGameAct = new QAction(tr("&New Game"), this);
     newGameAct->setShortcuts(QKeySequence::New);
     newGameAct->setStatusTip(tr("Create a new game"));
-    connect(newGameAct, &QAction::triggered, this, [this]{ blocks->restartPuzzle(); });
+    connect(newGameAct, &QAction::triggered, this, [this]{ _blocksModel.start(); });
 
     easyLevelAct = new QAction(tr("Easy"), this);
-    connect(easyLevelAct, &QAction::triggered, this, [this]{ blocks->newPuzzle(GameLevel::Easy); });
+    connect(easyLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Easy); });
 
     mediumLevelAct = new QAction(tr("Medium"), this);
-    connect(mediumLevelAct, &QAction::triggered, this, [this]{ blocks->newPuzzle(GameLevel::Medium); });
+    connect(mediumLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Medium); });
 
     hardLevelAct = new QAction(tr("Hard"), this);
-    connect(hardLevelAct, &QAction::triggered, this, [this]{ blocks->newPuzzle(GameLevel::Hard); });
+    connect(hardLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Hard); });
 
     undoMove = new QAction(tr("Undo"), this);
     undoMove->setShortcuts(QKeySequence::Undo);
     undoMove->setStatusTip(tr("Undo last move"));
-    connect(undoMove, &QAction::triggered, this, [this]{ moveStack->undo(); });
+    connect(undoMove, &QAction::triggered, this, [this]{ _moveStack.undo(); });
 
 
     saveGameAct = new QAction(tr("&Save Game"), this);
@@ -71,7 +70,7 @@ void Game::createActions(){
         QString fileName = QFileDialog::getSaveFileName(this,
                 tr("Save Game"), "",
                 tr("GameSave (*.save);;All Files (*)"));
-        stateManager->saveGame(fileName.toStdString());
+       // stateManager->saveGame(fileName.toStdString());
     });
 
 }

@@ -16,26 +16,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    src/blocks.cpp \
-    src/blocks_model.cpp \
+    src/block/block_layout_item.cpp \
+    src/blocks/blocks_controller.cpp \
+    src/blocks/blocks_model.cpp \
+    src/blocks/blocks_view.cpp \
     src/game.cpp \
     src/main.cpp \
-    src/move_stack_controller.cpp \
-    src/move_stack_view.cpp \
-    src/state_manager.cpp
+    src/move_stack/move_stack_controller.cpp \
+    src/move_stack/move_stack_view.cpp \
+    #src/state_manager.cpp
 
 HEADERS += \
-    src/block.h \
-    src/blocks.h \
-    src/blocks_model.h \
-    src/free_block.h \
+    src/block/block.h \
+    src/block/block_layout_item.h \
+    src/block/free_block.h \
+    src/block/numbered_block.h \
+    src/blocks/blocks_controller.h \
+    src/blocks/blocks_model.h \
+    src/blocks/blocks_view.h \
     src/game.h \
     src/game_level.h \
-    src/move_stack.h \
-    src/move_stack_controller.h \
-    src/move_stack_view.h \
-    src/numbered_block.h \
-    src/state_manager.h
+    src/move_stack/move.h \
+    src/move_stack/move_stack.h \
+    src/move_stack/move_stack_controller.h \
+    src/move_stack/move_stack_view.h \
+    #src/state_manager.h
 
 FORMS +=
 

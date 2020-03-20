@@ -3,14 +3,14 @@
 
 #include <stddef.h>
 #include <string>
-#include <QPushButton>
+#include <QGraphicsItem>
 
-
+#include "block_layout_item.h"
 /**
  * @brief
  *
  */
-class Block: public QPushButton {
+class Block: public QObject {
     Q_OBJECT
 public:
     /**
@@ -19,7 +19,7 @@ public:
      * @param value
      * @param parent
      */
-    Block(const size_t value, QWidget* parent): QPushButton(QString::number(value), parent), _value(value) {};
+    Block(const size_t value, QGraphicsItem* parent): _value(value), _layoutItem(std::make_shared<BlockLayoutItem>(std::to_string(value), parent)) {};
     /**
      * @brief
      *
@@ -27,7 +27,7 @@ public:
      * @param title
      * @param parent
      */
-    Block(const size_t value, const std::string title, QWidget* parent): QPushButton(QString::fromUtf8(title.c_str()), parent), _value(value) {};
+    Block(const size_t value, const std::string title, QGraphicsItem* parent): _value(value), _layoutItem(std::make_unique<BlockLayoutItem>(title, parent)) {};
     /**
      * @brief
      *
@@ -39,7 +39,8 @@ public:
      *
      * @return std::string
      */
-    std::string title() const { return QPushButton::text().toStdString(); };
+    std::string title() const { return _layoutItem->text(); };
+    BlockLayoutItem* layoutItem() { return _layoutItem.get(); };
     /**
      * @brief
      *
@@ -53,6 +54,7 @@ public:
     virtual ~Block() = default;
 private:
     size_t _value; /**< TODO: describe */
+    std::shared_ptr<BlockLayoutItem> _layoutItem;
 };
 
 #endif // BLOCK_H

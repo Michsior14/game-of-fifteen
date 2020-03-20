@@ -16,7 +16,7 @@ public:
      * @param value
      * @param parent
      */
-    FreeBlock(size_t value, QWidget* parent=nullptr): Block(value, "", parent) {};
+    FreeBlock(size_t value, QGraphicsItem* parent=nullptr): Block(value, "", parent) {};
     /**
      * @brief
      *

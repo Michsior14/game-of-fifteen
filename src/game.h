@@ -4,14 +4,19 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
+class QGraphicsScene;
 class QAction;
 class QLabel;
 class QMenu;
 QT_END_NAMESPACE
 
-#include "move_stack.h"
-#include "blocks.h"
-#include "state_manager.h"
+#include "move_stack/move_stack.h"
+#include "move_stack/move_stack_view.h"
+#include "move_stack/move_stack_controller.h"
+#include "blocks/blocks_model.h"
+#include "blocks/blocks_view.h"
+#include "blocks/blocks_controller.h"
+//#include "state_manager.h"
 
 /**
  * @brief
@@ -32,19 +37,25 @@ private:
     void createActions();
     void createMenus();
 
-    QMenu *gameMenu;
-    QMenu *levelMenu;
+    QMenu* gameMenu;
+    QMenu* levelMenu;
 
-    QAction *newGameAct;
-    QAction *saveGameAct;
-    QAction *easyLevelAct;
-    QAction *mediumLevelAct;
-    QAction *hardLevelAct;
-    QAction *undoMove;
+    QAction* newGameAct;
+    QAction* saveGameAct;
+    QAction* easyLevelAct;
+    QAction* mediumLevelAct;
+    QAction* hardLevelAct;
+    QAction* undoMove;
 
-    Blocks *blocks;
-    MoveStack *moveStack;
-    StateManager *stateManager;
+    //StateManager *stateManager;
+
+    BlocksModel _blocksModel;
+    BlocksView* _blocksView;
+    BlocksController _blocksController;
+
+    MoveStack _moveStack;
+    MoveStackView* _moveView;
+    MoveStackController _moveStackController;
 };
 
 #endif // GAME_H

@@ -16,7 +16,7 @@ public:
      * @param value
      * @param parent
      */
-    NumberedBlock(const size_t value, QWidget* parent=nullptr): Block(value, parent) {};
+    NumberedBlock(const size_t value, QGraphicsItem* parent=nullptr): Block(value, parent) {};
     /**
      * @brief
      *

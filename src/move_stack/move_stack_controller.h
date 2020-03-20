@@ -3,7 +3,7 @@
 
 #include "move_stack_view.h"
 #include "move_stack.h"
-#include "blocks.h"
+#include "../blocks/blocks_model.h"
 
 #include <QObject>
 
@@ -11,13 +11,13 @@ class MoveStackController : public QObject
 {
     Q_OBJECT
 public:
-    explicit MoveStackController(MoveStackView* view, MoveStack* model, Blocks* blocks, QObject *parent = nullptr);
+    explicit MoveStackController(MoveStack& model, MoveStackView& view, BlocksModel& blocks, QObject *parent = nullptr);
     virtual ~MoveStackController() = default;
 
 private:
-    MoveStackView* _view;
-    MoveStack* _model;
-    Blocks* _blocks;
+    MoveStackView& _view;
+    MoveStack& _model;
+    BlocksModel& _blocksModel;
 };
 
 #endif // MOVESTACKCONTROLLER_H
