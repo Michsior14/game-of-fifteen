@@ -6,14 +6,13 @@
 #include "game.h"
 
 Game::Game() : QMainWindow(),
-    _blocksView(new BlocksView),
-    _blocksController(_blocksModel, *_blocksView),
     _moveView(new MoveStackView),
-    _moveStackController(_moveStack, *_moveView, _blocksModel)
+    _moveStackController(_moveStackModel, *_moveView, _blocksModel, _stateManagerModel),
+    _blocksView(new BlocksView),
+    _blocksController(_blocksModel, *_blocksView, _stateManagerModel),
+    _stateManagerController(_stateManagerModel, _blocksModel, _moveStackModel)
 {
     layout()->setSizeConstraint(QLayout::SetFixedSize);
-
-    //stateManager = new StateManager(moveStack, blocks);
 
     auto widget = new QWidget;
     setCentralWidget(widget);
@@ -60,25 +59,33 @@ void Game::createActions(){
     undoMove = new QAction(tr("Undo"), this);
     undoMove->setShortcuts(QKeySequence::Undo);
     undoMove->setStatusTip(tr("Undo last move"));
-    connect(undoMove, &QAction::triggered, this, [this]{ _moveStack.undo(); });
+    connect(undoMove, &QAction::triggered, this, [this]{ _moveStackModel.undo(); });
 
 
     saveGameAct = new QAction(tr("&Save Game"), this);
     saveGameAct->setShortcuts(QKeySequence::Save);
     saveGameAct->setStatusTip(tr("Save the game"));
     connect(saveGameAct, &QAction::triggered, this, [this]{
-        QString fileName = QFileDialog::getSaveFileName(this,
-                tr("Save Game"), "",
-                tr("GameSave (*.save);;All Files (*)"));
-       // stateManager->saveGame(fileName.toStdString());
+       _stateManagerModel.saveGame(QFileDialog::getSaveFileName(this,
+                                                                tr("Save Game"), QDate::currentDate().toString("dd-MM-yyyy") + ".save",
+                                                                tr("GameSave (*.save);;All Files (*)")));
     });
 
+    loadGameAct = new QAction(tr("L&oad Game"), this);
+    loadGameAct->setShortcuts(QKeySequence::Open);
+    loadGameAct->setStatusTip(tr("Load the game"));
+    connect(loadGameAct, &QAction::triggered, this, [this]{
+       _stateManagerModel.loadGame(QFileDialog::getOpenFileName(this,
+                                                                tr("Load Game"), "",
+                                                                tr("GameSave (*.save);;All Files (*)")));
+    });
 }
 
 void Game::createMenus(){
     gameMenu = menuBar()->addMenu(tr("&Game"));
     gameMenu->addAction(newGameAct);
     gameMenu->addAction(saveGameAct);
+    gameMenu->addAction(loadGameAct);
 
     levelMenu = gameMenu->addMenu(tr("Choose level"));
     levelMenu->addAction(easyLevelAct);

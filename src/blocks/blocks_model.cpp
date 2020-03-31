@@ -36,29 +36,30 @@ void BlocksModel::start() {
 
 void BlocksModel::moveBlock(const Position& from) {
     if(from.row >= 1 && _blocks[(from.row - 1) * _level + from.column]->isFree()) {
-        swapBlock(Move(from, Position(from.row-1, from.column)));
+        swapBlock(std::make_shared<Move>(from, Position(from.row-1, from.column)));
     } else if (from.column != 0 && _blocks[from.row * _level + from.column - 1]->isFree()) {
-        swapBlock(Move(from, Position(from.row, from.column - 1)));
+        swapBlock(std::make_shared<Move>(from, Position(from.row, from.column - 1)));
     } else if (from.column != _level-1 && _blocks[from.row * _level + from.column + 1]->isFree()) {
-        swapBlock(Move(from, Position(from.row, from.column + 1)));
+        swapBlock(std::make_shared<Move>(from, Position(from.row, from.column + 1)));
     } else if(from.row != _level-1 && _blocks[(from.row + 1) * _level + from.column]->isFree()) {
-        swapBlock(Move(from, Position(from.row+1, from.column)));
+        swapBlock(std::make_shared<Move>(from, Position(from.row+1, from.column)));
     }
     isSolved();
 }
 
 
-void BlocksModel::undoMove(const Move& move){
-    swapBlock(Move(move.to, move.from), true);
+void BlocksModel::undoMove(const std::shared_ptr<Move>& move){
+    swapBlock(std::make_shared<Move>(move->to, move->from), true);
 }
 
-void BlocksModel::swapBlock(const Move& move, bool undo) {
-    auto aIdx = move.from.row * _level + move.from.column;
-    auto bIdx = move.to.row * _level + move.to.column;
+void BlocksModel::swapBlock(const std::shared_ptr<Move>& move, bool undo) {
+    auto aIdx = move->from.row * _level + move->from.column;
+    auto bIdx = move->to.row * _level + move->to.column;
     auto tmp = _blocks[aIdx];
     _blocks[aIdx] = _blocks[bIdx];
     _blocks[bIdx] = tmp;
     emit blockSwaped(*_blocks[bIdx].get(), *_blocks[aIdx].get(), move, undo);
+    emit blocksUpdated(_blocks);
 }
 
 void BlocksModel::isSolved() {
@@ -79,4 +80,20 @@ void BlocksModel::print() {
         std::cout << std::endl;
     }
     std::cout << std::endl;
+}
+
+void BlocksModel::stateLoadedHandler(const LoadState& state) {
+    _level = static_cast<size_t>(state.level);
+
+    _blocks.clear();
+    _blocks.reserve(state.blocks.size());
+    for(size_t block : state.blocks) {
+        if(block != state.blocks.size()) {
+            _blocks.push_back(std::make_shared<NumberedBlock>(block));
+        } else {
+            _blocks.push_back(std::make_shared<FreeBlock>(block));
+        }
+    }
+
+    emit gameRestored(_blocks, _level);
 }

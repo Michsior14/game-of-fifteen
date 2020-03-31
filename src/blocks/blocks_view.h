@@ -22,7 +22,7 @@ signals:
 
 public slots:
     void gameStartedHandler(const std::vector<std::shared_ptr<Block>>& blocks, const size_t& level);
-    void blockSwapedHandler(Block& a, Block& b, const Move& move);
+    void blockSwapedHandler(Block& a, Block& b, const std::shared_ptr<Move>& move);
     void puzzleSolvedHandler();
 
 protected:

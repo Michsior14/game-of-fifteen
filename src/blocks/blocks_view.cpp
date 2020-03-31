@@ -32,11 +32,11 @@ void BlocksView::gameStartedHandler(const std::vector<std::shared_ptr<Block>>& b
     setSceneRect(0, 0, width, height);
 };
 
-void BlocksView::blockSwapedHandler(Block& a, Block& b, const Move& move){
+void BlocksView::blockSwapedHandler(Block& a, Block& b, const std::shared_ptr<Move>& move){
     _layout->removeItem(a.layoutItem());
     _layout->removeItem(b.layoutItem());
-    _layout->addItem(a.layoutItem(), move.to.row, move.to.column);
-    _layout->addItem(b.layoutItem(), move.from.row, move.from.column);
+    _layout->addItem(a.layoutItem(), move->to.row, move->to.column);
+    _layout->addItem(b.layoutItem(), move->from.row, move->from.column);
 };
 
 void BlocksView::puzzleSolvedHandler(){
@@ -64,7 +64,10 @@ void BlocksView::mousePressEvent(QMouseEvent *event) {
 };
 
 void BlocksView::clear() {
-    for(int i = 0; i < _layout->count(); i++){
-        _layout->removeAt(i);
+    for(int i = 0; i < _layout->rowCount(); i++){
+        for(int j = 0; j < _layout->columnCount(); j++) {
+           auto item = _layout->itemAt(i, j);
+           _layout->removeItem(item);
+        }
     }
 }

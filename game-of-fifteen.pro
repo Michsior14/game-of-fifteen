@@ -23,8 +23,10 @@ SOURCES += \
     src/game.cpp \
     src/main.cpp \
     src/move_stack/move_stack_controller.cpp \
+    src/move_stack/move_stack_model.cpp \
     src/move_stack/move_stack_view.cpp \
-    #src/state_manager.cpp
+    src/state_manager/state_manager_controller.cpp \
+    src/state_manager/state_manager_model.cpp
 
 HEADERS += \
     src/block/block.h \
@@ -37,10 +39,11 @@ HEADERS += \
     src/game.h \
     src/game_level.h \
     src/move_stack/move.h \
-    src/move_stack/move_stack.h \
     src/move_stack/move_stack_controller.h \
+    src/move_stack/move_stack_model.h \
     src/move_stack/move_stack_view.h \
-    #src/state_manager.h
+    src/state_manager/state_manager_controller.h \
+    src/state_manager/state_manager_model.h
 
 FORMS +=
 

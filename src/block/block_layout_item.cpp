@@ -22,11 +22,12 @@ void BlockLayoutItem::paint(QPainter *painter,
     Q_UNUSED(option);
 
     QRectF frame(QPointF(0,0), geometry().size());
-    // paint a background rect (with gradient)
-//    painter->setBrush(QBrush(gradient));
+    painter->setPen(Qt::NoPen);
+    painter->setBrush(QBrush(QColor(128,128,128)));
     painter->drawRect(frame);
 
     painter->setFont(QFont("Arial", 14));
+    painter->setPen(QPen(QColor(0,0,0)));
     painter->drawText(frame, Qt::AlignHCenter | Qt::AlignVCenter, QString::fromStdString(_text));
 }
 
