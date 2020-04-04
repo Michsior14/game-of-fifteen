@@ -1,0 +1,172 @@
+\hypertarget{class_move_stack_model}{}\section{Move\+Stack\+Model Class Reference}
+\label{class_move_stack_model}\index{MoveStackModel@{MoveStackModel}}
+Inheritance diagram for Move\+Stack\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_move_stack_model}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}\label{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}} 
+using {\bfseries iterator} = std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ $>$\+::const\+\_\+iterator
+\end{DoxyCompactItemize}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa}{block\+Swaped\+Handler}} (\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&a, \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&b, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move, bool undo)
+\item 
+void \mbox{\hyperlink{class_move_stack_model_a8340fbe17638209c13250962fd4e2ff3}{game\+Started\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&level)
+\item 
+\mbox{\Hypertarget{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82}\label{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82}} 
+void {\bfseries puzzle\+Solved\+Handler} ()
+\item 
+void \mbox{\hyperlink{class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8}{state\+Loaded\+Handler}} (const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&state)
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_move_stack_model_aff05dc88104b96911f9cf8a1033d4356}{moves\+Changed}} (const size\+\_\+t \&moves)
+\item 
+void \mbox{\hyperlink{class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55}{total\+Moves\+Changed}} (const size\+\_\+t \&counter, const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&moves)
+\item 
+void \mbox{\hyperlink{class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb}{time\+Passed\+Changed}} (const size\+\_\+t \&time\+Passed)
+\item 
+void \mbox{\hyperlink{class_move_stack_model_a16436cf5acda5455355c24f28586f1e8}{undo\+Move}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}\label{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}} 
+void {\bfseries undo} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{class_move_stack_model_a59f08def53913e4f33df7fe30a16dc75}{total\+Moves}} () const
+\item 
+iterator \mbox{\hyperlink{class_move_stack_model_a5617b792b9e541940f6bfdbcc3c08bfa}{begin}} () const
+\item 
+iterator \mbox{\hyperlink{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492b9}{end}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_move_stack_model_a5617b792b9e541940f6bfdbcc3c08bfa}\label{class_move_stack_model_a5617b792b9e541940f6bfdbcc3c08bfa}} 
+\index{MoveStackModel@{MoveStackModel}!begin@{begin}}
+\index{begin@{begin}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily iterator Move\+Stack\+Model\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa}\label{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa}} 
+\index{MoveStackModel@{MoveStackModel}!blockSwapedHandler@{blockSwapedHandler}}
+\index{blockSwapedHandler@{blockSwapedHandler}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{blockSwapedHandler}{blockSwapedHandler}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::block\+Swaped\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{b,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move,  }\item[{bool}]{undo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+{\em move} & \\
+\hline
+{\em undo} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492b9}\label{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492b9}} 
+\index{MoveStackModel@{MoveStackModel}!end@{end}}
+\index{end@{end}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily iterator Move\+Stack\+Model\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+iterator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_move_stack_model_a8340fbe17638209c13250962fd4e2ff3}\label{class_move_stack_model_a8340fbe17638209c13250962fd4e2ff3}} 
+\index{MoveStackModel@{MoveStackModel}!gameStartedHandler@{gameStartedHandler}}
+\index{gameStartedHandler@{gameStartedHandler}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{gameStartedHandler}{gameStartedHandler}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::game\+Started\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & \\
+\hline
+{\em level} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_move_stack_model_aff05dc88104b96911f9cf8a1033d4356}\label{class_move_stack_model_aff05dc88104b96911f9cf8a1033d4356}} 
+\index{MoveStackModel@{MoveStackModel}!movesChanged@{movesChanged}}
+\index{movesChanged@{movesChanged}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{movesChanged}{movesChanged}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::moves\+Changed (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em moves} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8}\label{class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8}} 
+\index{MoveStackModel@{MoveStackModel}!stateLoadedHandler@{stateLoadedHandler}}
+\index{stateLoadedHandler@{stateLoadedHandler}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{stateLoadedHandler}{stateLoadedHandler}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::state\+Loaded\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb}\label{class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb}} 
+\index{MoveStackModel@{MoveStackModel}!timePassedChanged@{timePassedChanged}}
+\index{timePassedChanged@{timePassedChanged}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{timePassedChanged}{timePassedChanged}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::time\+Passed\+Changed (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{time\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Passed} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_move_stack_model_a59f08def53913e4f33df7fe30a16dc75}\label{class_move_stack_model_a59f08def53913e4f33df7fe30a16dc75}} 
+\index{MoveStackModel@{MoveStackModel}!totalMoves@{totalMoves}}
+\index{totalMoves@{totalMoves}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{totalMoves()}{totalMoves()}}
+{\footnotesize\ttfamily size\+\_\+t Move\+Stack\+Model\+::total\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55}\label{class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55}} 
+\index{MoveStackModel@{MoveStackModel}!totalMovesChanged@{totalMovesChanged}}
+\index{totalMovesChanged@{totalMovesChanged}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{totalMovesChanged}{totalMovesChanged}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::total\+Moves\+Changed (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{counter,  }\item[{const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & \\
+\hline
+{\em moves} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_move_stack_model_a16436cf5acda5455355c24f28586f1e8}\label{class_move_stack_model_a16436cf5acda5455355c24f28586f1e8}} 
+\index{MoveStackModel@{MoveStackModel}!undoMove@{undoMove}}
+\index{undoMove@{undoMove}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{undoMove}{undoMove}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::undo\+Move (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/move\+\_\+stack/move\+\_\+stack\+\_\+model.\+h\item 
+src/move\+\_\+stack/move\+\_\+stack\+\_\+model.\+cpp\end{DoxyCompactItemize}

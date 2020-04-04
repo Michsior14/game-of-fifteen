@@ -1,0 +1,106 @@
+\hypertarget{class_blocks_view}{}\section{Blocks\+View Class Reference}
+\label{class_blocks_view}\index{BlocksView@{BlocksView}}
+Inheritance diagram for Blocks\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blocks_view}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_blocks_view_a23c0b8242274f9627a91dba5fa8af036}{game\+Started\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&level)
+\item 
+void \mbox{\hyperlink{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4}{block\+Swaped\+Handler}} (\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&a, \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&b, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move)
+\item 
+\mbox{\Hypertarget{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1}\label{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1}} 
+void {\bfseries puzzle\+Solved\+Handler} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9}{block\+Clicked}} (const \mbox{\hyperlink{struct_position}{Position}} \&position)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_blocks_view_a921e08c8ceb03226654cdedca68590ad}{Blocks\+View}} (Q\+Widget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}{mouse\+Press\+Event}} (Q\+Mouse\+Event $\ast$event)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_blocks_view_a921e08c8ceb03226654cdedca68590ad}\label{class_blocks_view_a921e08c8ceb03226654cdedca68590ad}} 
+\index{BlocksView@{BlocksView}!BlocksView@{BlocksView}}
+\index{BlocksView@{BlocksView}!BlocksView@{BlocksView}}
+\subsubsection{\texorpdfstring{BlocksView()}{BlocksView()}}
+{\footnotesize\ttfamily Blocks\+View\+::\+Blocks\+View (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9}\label{class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9}} 
+\index{BlocksView@{BlocksView}!blockClicked@{blockClicked}}
+\index{blockClicked@{blockClicked}!BlocksView@{BlocksView}}
+\subsubsection{\texorpdfstring{blockClicked}{blockClicked}}
+{\footnotesize\ttfamily void Blocks\+View\+::block\+Clicked (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_position}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4}\label{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4}} 
+\index{BlocksView@{BlocksView}!blockSwapedHandler@{blockSwapedHandler}}
+\index{blockSwapedHandler@{blockSwapedHandler}!BlocksView@{BlocksView}}
+\subsubsection{\texorpdfstring{blockSwapedHandler}{blockSwapedHandler}}
+{\footnotesize\ttfamily void Blocks\+View\+::block\+Swaped\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{b,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+{\em move} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_view_a23c0b8242274f9627a91dba5fa8af036}\label{class_blocks_view_a23c0b8242274f9627a91dba5fa8af036}} 
+\index{BlocksView@{BlocksView}!gameStartedHandler@{gameStartedHandler}}
+\index{gameStartedHandler@{gameStartedHandler}!BlocksView@{BlocksView}}
+\subsubsection{\texorpdfstring{gameStartedHandler}{gameStartedHandler}}
+{\footnotesize\ttfamily void Blocks\+View\+::game\+Started\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & \\
+\hline
+{\em level} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}\label{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}} 
+\index{BlocksView@{BlocksView}!mousePressEvent@{mousePressEvent}}
+\index{mousePressEvent@{mousePressEvent}!BlocksView@{BlocksView}}
+\subsubsection{\texorpdfstring{mousePressEvent()}{mousePressEvent()}}
+{\footnotesize\ttfamily void Blocks\+View\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blocks/blocks\+\_\+view.\+h\item 
+src/blocks/blocks\+\_\+view.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,178 @@
+\hypertarget{class_blocks_model}{}\section{Blocks\+Model Class Reference}
+\label{class_blocks_model}\index{BlocksModel@{BlocksModel}}
+Inheritance diagram for Blocks\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_blocks_model}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266}{set\+Level}} (const Game\+Level \&level)
+\item 
+void \mbox{\hyperlink{class_blocks_model_abf01998c6ba41012b2ef6a457415b06c}{move\+Block}} (const \mbox{\hyperlink{struct_position}{Position}} \&move)
+\item 
+void \mbox{\hyperlink{class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef}{undo\+Move}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move)
+\item 
+\mbox{\Hypertarget{class_blocks_model_a9bc356cf8f30e3cdaa94b8d7cf5d92f2}\label{class_blocks_model_a9bc356cf8f30e3cdaa94b8d7cf5d92f2}} 
+void {\bfseries start} ()
+\item 
+void \mbox{\hyperlink{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377}{state\+Loaded\+Handler}} (const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&state)
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_blocks_model_ad4beaf1054214a1688033489a0817a8b}{game\+Started}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&size)
+\item 
+void \mbox{\hyperlink{class_blocks_model_a1b26e86f148e270ac598aa24accc718b}{game\+Restored}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&size)
+\item 
+void \mbox{\hyperlink{class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb}{blocks\+Updated}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks)
+\item 
+void \mbox{\hyperlink{class_blocks_model_aadc67f8541695e398bd80f66690308c4}{level\+Changed}} (const Game\+Level level)
+\item 
+void \mbox{\hyperlink{class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e}{block\+Swaped}} (\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&a, \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&b, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move, bool undo)
+\item 
+\mbox{\Hypertarget{class_blocks_model_a0511c008064fa694adfc249c096609bb}\label{class_blocks_model_a0511c008064fa694adfc249c096609bb}} 
+void {\bfseries puzzle\+Solved} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_blocks_model_a0c3da3595fe9984f7ac2c02cef09c03d}{Blocks\+Model}} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\Hypertarget{class_blocks_model_a115cbe7c4e49a128ebcbae3b5c6c24ee}\label{class_blocks_model_a115cbe7c4e49a128ebcbae3b5c6c24ee}} 
+void {\bfseries print} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_blocks_model_a0c3da3595fe9984f7ac2c02cef09c03d}\label{class_blocks_model_a0c3da3595fe9984f7ac2c02cef09c03d}} 
+\index{BlocksModel@{BlocksModel}!BlocksModel@{BlocksModel}}
+\index{BlocksModel@{BlocksModel}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{BlocksModel()}{BlocksModel()}}
+{\footnotesize\ttfamily Blocks\+Model\+::\+Blocks\+Model (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb}\label{class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb}} 
+\index{BlocksModel@{BlocksModel}!blocksUpdated@{blocksUpdated}}
+\index{blocksUpdated@{blocksUpdated}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{blocksUpdated}{blocksUpdated}}
+{\footnotesize\ttfamily void Blocks\+Model\+::blocks\+Updated (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e}\label{class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e}} 
+\index{BlocksModel@{BlocksModel}!blockSwaped@{blockSwaped}}
+\index{blockSwaped@{blockSwaped}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{blockSwaped}{blockSwaped}}
+{\footnotesize\ttfamily void Blocks\+Model\+::block\+Swaped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{b,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move,  }\item[{bool}]{undo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+{\em move} & \\
+\hline
+{\em undo} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_a1b26e86f148e270ac598aa24accc718b}\label{class_blocks_model_a1b26e86f148e270ac598aa24accc718b}} 
+\index{BlocksModel@{BlocksModel}!gameRestored@{gameRestored}}
+\index{gameRestored@{gameRestored}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{gameRestored}{gameRestored}}
+{\footnotesize\ttfamily void Blocks\+Model\+::game\+Restored (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_ad4beaf1054214a1688033489a0817a8b}\label{class_blocks_model_ad4beaf1054214a1688033489a0817a8b}} 
+\index{BlocksModel@{BlocksModel}!gameStarted@{gameStarted}}
+\index{gameStarted@{gameStarted}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{gameStarted}{gameStarted}}
+{\footnotesize\ttfamily void Blocks\+Model\+::game\+Started (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_aadc67f8541695e398bd80f66690308c4}\label{class_blocks_model_aadc67f8541695e398bd80f66690308c4}} 
+\index{BlocksModel@{BlocksModel}!levelChanged@{levelChanged}}
+\index{levelChanged@{levelChanged}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{levelChanged}{levelChanged}}
+{\footnotesize\ttfamily void Blocks\+Model\+::level\+Changed (\begin{DoxyParamCaption}\item[{const Game\+Level}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_abf01998c6ba41012b2ef6a457415b06c}\label{class_blocks_model_abf01998c6ba41012b2ef6a457415b06c}} 
+\index{BlocksModel@{BlocksModel}!moveBlock@{moveBlock}}
+\index{moveBlock@{moveBlock}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{moveBlock}{moveBlock}}
+{\footnotesize\ttfamily void Blocks\+Model\+::move\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_position}{Position}} \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266}\label{class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266}} 
+\index{BlocksModel@{BlocksModel}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{setLevel}{setLevel}}
+{\footnotesize\ttfamily void Blocks\+Model\+::set\+Level (\begin{DoxyParamCaption}\item[{const Game\+Level \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377}\label{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377}} 
+\index{BlocksModel@{BlocksModel}!stateLoadedHandler@{stateLoadedHandler}}
+\index{stateLoadedHandler@{stateLoadedHandler}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{stateLoadedHandler}{stateLoadedHandler}}
+{\footnotesize\ttfamily void Blocks\+Model\+::state\+Loaded\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef}\label{class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef}} 
+\index{BlocksModel@{BlocksModel}!undoMove@{undoMove}}
+\index{undoMove@{undoMove}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{undoMove}{undoMove}}
+{\footnotesize\ttfamily void Blocks\+Model\+::undo\+Move (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blocks/blocks\+\_\+model.\+h\item 
+src/blocks/blocks\+\_\+model.\+cpp\end{DoxyCompactItemize}

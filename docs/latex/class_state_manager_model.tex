@@ -1,0 +1,117 @@
+\hypertarget{class_state_manager_model}{}\section{State\+Manager\+Model Class Reference}
+\label{class_state_manager_model}\index{StateManagerModel@{StateManagerModel}}
+Inheritance diagram for State\+Manager\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_state_manager_model}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_state_manager_model_a414fe4dfa55aa139c26b3ccd002328ff}{game\+Started\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&size)
+\item 
+void \mbox{\hyperlink{class_state_manager_model_a51df218169f899e063572ca5df5a388b}{blocks\+Updated\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks)
+\item 
+void \mbox{\hyperlink{class_state_manager_model_a3cd67127d4b7edcb431db1d700f0048e}{total\+Moves\+Handler}} (const size\+\_\+t \&moves\+Counter, const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&moves)
+\item 
+void \mbox{\hyperlink{class_state_manager_model_ab3f4c9b1d44a75c63c034e79f88ee9f0}{time\+Passed\+Handler}} (const size\+\_\+t \&time\+Passed)
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_state_manager_model_ade47748f618f84b0a2a32be1da177ad5}{state\+Loaded}} (const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&state)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_manager_model_a79fdf627c06b835bbe4c457366f66524}{State\+Manager\+Model}} ()
+\item 
+\mbox{\Hypertarget{class_state_manager_model_a57883b92890873f23537e78c1bf6f2de}\label{class_state_manager_model_a57883b92890873f23537e78c1bf6f2de}} 
+void {\bfseries save\+Game} (const Q\+String \&path)
+\item 
+\mbox{\Hypertarget{class_state_manager_model_abf3febd681c98f8522bd52944e720618}\label{class_state_manager_model_abf3febd681c98f8522bd52944e720618}} 
+void {\bfseries load\+Game} (const Q\+String \&path)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_state_manager_model_a79fdf627c06b835bbe4c457366f66524}\label{class_state_manager_model_a79fdf627c06b835bbe4c457366f66524}} 
+\index{StateManagerModel@{StateManagerModel}!StateManagerModel@{StateManagerModel}}
+\index{StateManagerModel@{StateManagerModel}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{StateManagerModel()}{StateManagerModel()}}
+{\footnotesize\ttfamily State\+Manager\+Model\+::\+State\+Manager\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+blocks} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_state_manager_model_a51df218169f899e063572ca5df5a388b}\label{class_state_manager_model_a51df218169f899e063572ca5df5a388b}} 
+\index{StateManagerModel@{StateManagerModel}!blocksUpdatedHandler@{blocksUpdatedHandler}}
+\index{blocksUpdatedHandler@{blocksUpdatedHandler}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{blocksUpdatedHandler}{blocksUpdatedHandler}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::blocks\+Updated\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_model_a414fe4dfa55aa139c26b3ccd002328ff}\label{class_state_manager_model_a414fe4dfa55aa139c26b3ccd002328ff}} 
+\index{StateManagerModel@{StateManagerModel}!gameStartedHandler@{gameStartedHandler}}
+\index{gameStartedHandler@{gameStartedHandler}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{gameStartedHandler}{gameStartedHandler}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::game\+Started\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em blocks} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_model_ade47748f618f84b0a2a32be1da177ad5}\label{class_state_manager_model_ade47748f618f84b0a2a32be1da177ad5}} 
+\index{StateManagerModel@{StateManagerModel}!stateLoaded@{stateLoaded}}
+\index{stateLoaded@{stateLoaded}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{stateLoaded}{stateLoaded}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::state\+Loaded (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_model_ab3f4c9b1d44a75c63c034e79f88ee9f0}\label{class_state_manager_model_ab3f4c9b1d44a75c63c034e79f88ee9f0}} 
+\index{StateManagerModel@{StateManagerModel}!timePassedHandler@{timePassedHandler}}
+\index{timePassedHandler@{timePassedHandler}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{timePassedHandler}{timePassedHandler}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::time\+Passed\+Handler (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{time\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Passed} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_model_a3cd67127d4b7edcb431db1d700f0048e}\label{class_state_manager_model_a3cd67127d4b7edcb431db1d700f0048e}} 
+\index{StateManagerModel@{StateManagerModel}!totalMovesHandler@{totalMovesHandler}}
+\index{totalMovesHandler@{totalMovesHandler}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{totalMovesHandler}{totalMovesHandler}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::total\+Moves\+Handler (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{moves\+Counter,  }\item[{const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em moves\+Counter} & \\
+\hline
+{\em moves} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/state\+\_\+manager/state\+\_\+manager\+\_\+model.\+h\item 
+src/state\+\_\+manager/state\+\_\+manager\+\_\+model.\+cpp\end{DoxyCompactItemize}
