@@ -5,6 +5,7 @@
 #include <QString>
 
 #include "../block/block.h"
+#include "../block/block_layout_item.h"
 #include "../move_stack/move.h"
 
 struct LoadState {
@@ -43,11 +44,11 @@ signals:
     void stateLoaded(const LoadState& state);
 
 public slots:
-    void gameStartedHandler(const std::vector<std::shared_ptr<Block>>& blocks, const size_t& size) {
+    void gameStartedHandler(const std::vector<std::shared_ptr<Block<BlockLayoutItem>>>& blocks, const size_t& size) {
         _level = size;
         _blocks = blocks;
     }
-    void blocksUpdatedHandler(const std::vector<std::shared_ptr<Block>>& blocks) {
+    void blocksUpdatedHandler(const std::vector<std::shared_ptr<Block<BlockLayoutItem>>>& blocks) {
         _blocks = blocks;
     }
     void totalMovesHandler(const size_t& movesCounter, const std::list<std::shared_ptr<Move>>& moves){
@@ -63,7 +64,7 @@ private:
     size_t _level;
     size_t _movesCounter;
     size_t _timePassed;
-    std::vector<std::shared_ptr<Block>> _blocks;
+    std::vector<std::shared_ptr<Block<BlockLayoutItem>>> _blocks;
     std::list<std::shared_ptr<Move>> _moves;
 };
 

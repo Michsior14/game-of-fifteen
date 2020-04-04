@@ -13,14 +13,14 @@ void StateManagerModel::saveGame(const QString& path){
     QFile file(path);
     if (file.open(QIODevice::WriteOnly | QIODevice::Unbuffered)){
         QDataStream  stream(&file);
-        stream << (qint32)_level;
+        stream << static_cast<qint32>(_level);
         for(auto block : _blocks){
-            stream << (qint32)block->value();
+            stream << static_cast<qint32>(block->value());
         }
 
-        stream << (qint32)_timePassed << (qint32)_movesCounter << (qint32)_moves.size();
+        stream << static_cast<qint32>(_timePassed) << static_cast<qint32>(_movesCounter) << static_cast<qint32>(_moves.size());
         for(auto move : _moves) {
-            stream << (qint32)move->from.row << (qint32)move->from.column << (qint32)move->to.row << (qint32)move->to.column;
+            stream << static_cast<qint32>(move->from.row) << static_cast<qint32>(move->from.column) << static_cast<qint32>(move->to.row) << static_cast<qint32>(move->to.column);
         }
         file.close();
     }

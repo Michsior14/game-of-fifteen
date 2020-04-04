@@ -28,6 +28,7 @@ class Game : public QMainWindow
     Q_OBJECT
 public:
     explicit Game();
+    virtual ~Game();
 
 protected:
 #ifndef QT_NO_CONTEXTMENU
@@ -38,16 +39,16 @@ private:
     void createActions();
     void createMenus();
 
-    QMenu* gameMenu;
-    QMenu* levelMenu;
+    QMenu* _gameMenu;
+    QMenu* _levelMenu;
 
-    QAction* newGameAct;
-    QAction* saveGameAct;
-    QAction* loadGameAct;
-    QAction* easyLevelAct;
-    QAction* mediumLevelAct;
-    QAction* hardLevelAct;
-    QAction* undoMove;
+    QAction* _newGameAct;
+    QAction* _saveGameAct;
+    QAction* _loadGameAct;
+    QAction* _easyLevelAct;
+    QAction* _mediumLevelAct;
+    QAction* _hardLevelAct;
+    QAction* _undoMove;
 
     StateManagerModel _stateManagerModel;
     MoveStackModel _moveStackModel;

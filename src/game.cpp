@@ -33,6 +33,22 @@ Game::Game() : QMainWindow(),
     _blocksController.init();
 }
 
+Game::~Game() {
+    delete _gameMenu;
+    delete _levelMenu;
+
+    delete _newGameAct;
+    delete _saveGameAct;
+    delete _loadGameAct;
+    delete _easyLevelAct;
+    delete _mediumLevelAct;
+    delete _hardLevelAct;
+    delete _undoMove;
+
+    delete _moveView;
+    delete _blocksView;
+}
+
 #ifndef QT_NO_CONTEXTMENU
 void Game::contextMenuEvent(QContextMenuEvent *event)
 {
@@ -42,39 +58,38 @@ void Game::contextMenuEvent(QContextMenuEvent *event)
 #endif // QT_NO_CONTEXTMENU
 
 void Game::createActions(){
-    newGameAct = new QAction(tr("&New Game"), this);
-    newGameAct->setShortcuts(QKeySequence::New);
-    newGameAct->setStatusTip(tr("Create a new game"));
-    connect(newGameAct, &QAction::triggered, this, [this]{ _blocksModel.start(); });
+    _newGameAct = new QAction(tr("&New Game"), this);
+    _newGameAct->setShortcuts(QKeySequence::New);
+    _newGameAct->setStatusTip(tr("Create a new game"));
+    connect(_newGameAct, &QAction::triggered, this, [this]{ _blocksModel.start(); });
 
-    easyLevelAct = new QAction(tr("Easy"), this);
-    connect(easyLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Easy); });
+    _easyLevelAct = new QAction(tr("Easy"), this);
+    connect(_easyLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Easy); });
 
-    mediumLevelAct = new QAction(tr("Medium"), this);
-    connect(mediumLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Medium); });
+    _mediumLevelAct = new QAction(tr("Medium"), this);
+    connect(_mediumLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Medium); });
 
-    hardLevelAct = new QAction(tr("Hard"), this);
-    connect(hardLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Hard); });
+    _hardLevelAct = new QAction(tr("Hard"), this);
+    connect(_hardLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Hard); });
 
-    undoMove = new QAction(tr("Undo"), this);
-    undoMove->setShortcuts(QKeySequence::Undo);
-    undoMove->setStatusTip(tr("Undo last move"));
-    connect(undoMove, &QAction::triggered, this, [this]{ _moveStackModel.undo(); });
+    _undoMove = new QAction(tr("Undo"), this);
+    _undoMove->setShortcuts(QKeySequence::Undo);
+    _undoMove->setStatusTip(tr("Undo last move"));
+    connect(_undoMove, &QAction::triggered, this, [this]{ _moveStackModel.undo(); });
 
-
-    saveGameAct = new QAction(tr("&Save Game"), this);
-    saveGameAct->setShortcuts(QKeySequence::Save);
-    saveGameAct->setStatusTip(tr("Save the game"));
-    connect(saveGameAct, &QAction::triggered, this, [this]{
+    _saveGameAct = new QAction(tr("&Save Game"), this);
+    _saveGameAct->setShortcuts(QKeySequence::Save);
+    _saveGameAct->setStatusTip(tr("Save the game"));
+    connect(_saveGameAct, &QAction::triggered, this, [this]{
        _stateManagerModel.saveGame(QFileDialog::getSaveFileName(this,
                                                                 tr("Save Game"), QDate::currentDate().toString("dd-MM-yyyy") + ".save",
                                                                 tr("GameSave (*.save);;All Files (*)")));
     });
 
-    loadGameAct = new QAction(tr("L&oad Game"), this);
-    loadGameAct->setShortcuts(QKeySequence::Open);
-    loadGameAct->setStatusTip(tr("Load the game"));
-    connect(loadGameAct, &QAction::triggered, this, [this]{
+    _loadGameAct = new QAction(tr("L&oad Game"), this);
+    _loadGameAct->setShortcuts(QKeySequence::Open);
+    _loadGameAct->setStatusTip(tr("Load the game"));
+    connect(_loadGameAct, &QAction::triggered, this, [this]{
        _stateManagerModel.loadGame(QFileDialog::getOpenFileName(this,
                                                                 tr("Load Game"), "",
                                                                 tr("GameSave (*.save);;All Files (*)")));
@@ -82,15 +97,15 @@ void Game::createActions(){
 }
 
 void Game::createMenus(){
-    gameMenu = menuBar()->addMenu(tr("&Game"));
-    gameMenu->addAction(newGameAct);
-    gameMenu->addAction(saveGameAct);
-    gameMenu->addAction(loadGameAct);
+    _gameMenu = menuBar()->addMenu(tr("&Game"));
+    _gameMenu->addAction(_newGameAct);
+    _gameMenu->addAction(_saveGameAct);
+    _gameMenu->addAction(_loadGameAct);
 
-    levelMenu = gameMenu->addMenu(tr("Choose level"));
-    levelMenu->addAction(easyLevelAct);
-    levelMenu->addAction(mediumLevelAct);
-    levelMenu->addAction(hardLevelAct);
+    _levelMenu = _gameMenu->addMenu(tr("Choose level"));
+    _levelMenu->addAction(_easyLevelAct);
+    _levelMenu->addAction(_mediumLevelAct);
+    _levelMenu->addAction(_hardLevelAct);
 
-    gameMenu->addAction(undoMove);
+    _gameMenu->addAction(_undoMove);
 }

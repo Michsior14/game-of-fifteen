@@ -2,12 +2,13 @@
 #define NUMBERED_BLOCK_H
 
 #include "block.h"
+#include "block_layout_item.h"
 
 /**
  * @brief
  *
  */
-class NumberedBlock: public Block {
+class NumberedBlock: public Block<BlockLayoutItem> {
     Q_OBJECT
 public:
     /**

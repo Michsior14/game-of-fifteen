@@ -8,6 +8,7 @@
 
 #include "move.h"
 #include "../block/block.h"
+#include "../block/block_layout_item.h"
 #include "../state_manager/state_manager_model.h"
 
 /**
@@ -45,8 +46,8 @@ signals:
     void undoMove(const std::shared_ptr<Move>& move);
 
 public slots:
-    void blockSwapedHandler(Block& a, Block& b, const std::shared_ptr<Move>& move, bool undo);
-    void gameStartedHandler(const std::vector<std::shared_ptr<Block>>& blocks, const size_t& level);
+    void blockSwapedHandler(Block<BlockLayoutItem>& a, Block<BlockLayoutItem>& b, const std::shared_ptr<Move>& move, bool undo);
+    void gameStartedHandler(const std::vector<std::shared_ptr<Block<BlockLayoutItem>>>& blocks, const size_t& level);
     void puzzleSolvedHandler();
     void stateLoadedHandler(const LoadState& state);
 

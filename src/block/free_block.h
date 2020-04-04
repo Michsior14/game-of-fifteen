@@ -2,12 +2,13 @@
 #define FREE_BLOCK_H
 
 #include "block.h"
+#include "block_layout_item.h"
 
 /**
  * @brief
  *
  */
-class FreeBlock: public Block {
+class FreeBlock: public Block<BlockLayoutItem> {
     Q_OBJECT
 public:
     /**

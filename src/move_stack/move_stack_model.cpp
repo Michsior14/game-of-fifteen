@@ -18,7 +18,7 @@ void MoveStackModel::undo(){
     setTotalMoves(_totalMoves+1);
 };
 
-void MoveStackModel::blockSwapedHandler(Block& a, Block& b, const std::shared_ptr<Move>& move, bool undo) {
+void MoveStackModel::blockSwapedHandler(Block<BlockLayoutItem>& a, Block<BlockLayoutItem>& b, const std::shared_ptr<Move>& move, bool undo) {
     Q_UNUSED(a);
     Q_UNUSED(b);
     if(undo){
@@ -27,7 +27,7 @@ void MoveStackModel::blockSwapedHandler(Block& a, Block& b, const std::shared_pt
     add(move);
 }
 
-void MoveStackModel::gameStartedHandler(const std::vector<std::shared_ptr<Block>>& blocks, const size_t& level){
+void MoveStackModel::gameStartedHandler(const std::vector<std::shared_ptr<Block<BlockLayoutItem>>>& blocks, const size_t& level){
     Q_UNUSED(blocks);
     Q_UNUSED(level);
     clear();
