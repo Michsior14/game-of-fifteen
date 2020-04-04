@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <string>
 #include <QGraphicsItem>
+#include <QDebug>
 
 /**
  * @brief
@@ -30,6 +31,11 @@ public:
     /**
      * @brief
      *
+     */
+    virtual ~Block() = default;
+    /**
+     * @brief
+     *
      * @return size_t
      */
     size_t value() const { return _value; };
@@ -46,11 +52,6 @@ public:
      * @return bool
      */
     virtual bool isFree() const = 0;
-    /**
-     * @brief
-     *
-     */
-    virtual ~Block() = default;
 private:
     size_t _value; /**< TODO: describe */
     std::shared_ptr<T> _layoutItem;

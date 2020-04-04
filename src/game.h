@@ -6,6 +6,7 @@
 QT_BEGIN_NAMESPACE
 class QGraphicsScene;
 class QAction;
+class QActionGroup;
 class QLabel;
 class QMenu;
 QT_END_NAMESPACE
@@ -37,6 +38,12 @@ public:
      *
      */
     virtual ~Game();
+
+    /**
+     * @brief
+     *
+     */
+    void show();
 
 protected:
 #ifndef QT_NO_CONTEXTMENU
@@ -70,6 +77,7 @@ private:
     QAction* _mediumLevelAct; /**< TODO: describe */
     QAction* _hardLevelAct; /**< TODO: describe */
     QAction* _undoMove; /**< TODO: describe */
+    QActionGroup* _levelGroup; /**< TODO: describe */
 
     StateManagerModel _stateManagerModel; /**< TODO: describe */
     MoveStackModel _moveStackModel; /**< TODO: describe */

@@ -14,10 +14,15 @@ BlocksModel::BlocksModel(QObject *parent) : QObject(parent)
 void BlocksModel::setLevel(const GameLevel& level){
     _level = static_cast<size_t>(level);
     emit levelChanged(level);
-    start();
 }
 
-void BlocksModel::start() {
+void BlocksModel::restart() {
+    start(static_cast<GameLevel>(_level));
+}
+
+void BlocksModel::start(const GameLevel& level) {
+    setLevel(level);
+
     size_t blocksSize = _level * _level;
 
     _blocks.clear();
@@ -69,7 +74,7 @@ void BlocksModel::isSolved() {
         }
     }
     emit puzzleSolved();
-    start();
+    restart();
 }
 
 void BlocksModel::print() {
@@ -83,10 +88,11 @@ void BlocksModel::print() {
 }
 
 void BlocksModel::stateLoadedHandler(const LoadState& state) {
-    _level = static_cast<size_t>(state.level);
+    setLevel(static_cast<GameLevel>(state.level));
 
     _blocks.clear();
     _blocks.reserve(state.blocks.size());
+
     for(size_t block : state.blocks) {
         if(block != state.blocks.size()) {
             _blocks.push_back(std::make_shared<NumberedBlock>(block));

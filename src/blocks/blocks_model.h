@@ -100,7 +100,13 @@ public slots:
      * @brief
      *
      */
-    void start();
+    void restart();
+    /**
+     * @brief
+     *
+     * @param level
+     */
+    void start(const GameLevel& level);
     /**
      * @brief
      *

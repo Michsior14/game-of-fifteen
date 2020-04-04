@@ -10,5 +10,5 @@ BlocksController::BlocksController(BlocksModel& model, BlocksView& view, StateMa
 }
 
 void BlocksController::init() {
-    _model.setLevel(GameLevel::Easy);
+    _model.start(GameLevel::Easy);
 }

@@ -64,10 +64,8 @@ void BlocksView::mousePressEvent(QMouseEvent *event) {
 };
 
 void BlocksView::clear() {
-    for(int i = 0; i < _layout->rowCount(); i++){
-        for(int j = 0; j < _layout->columnCount(); j++) {
-           auto item = _layout->itemAt(i, j);
-           _layout->removeItem(item);
-        }
+    while(_layout->count()){
+        _layout->itemAt(0)->graphicsItem()->hide();
+        _layout->removeAt(0);
     }
 }

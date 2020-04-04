@@ -38,13 +38,13 @@ void StateManagerModel::loadGame(const QString& path){
         QDataStream  stream(&file);
 
         stream >> state.level;
-        for(size_t i = 0; i < (size_t)state.level * state.level; i++){
+        for(size_t i = 0; i < static_cast<size_t>(state.level * state.level); i++){
             stream >> temp;
             state.blocks.push_back(temp);
         }
 
         stream >> state.timePassed >> state.movesCounter >> temp;
-        for(size_t i = 0; i < (size_t)temp; i++){
+        for(size_t i = 0; i < static_cast<size_t>(temp); i++){
             stream >> fromRow >> fromColumn >> toRow >> toColumn;
             state.moves.push_back(Move(Position(fromRow, fromColumn), Position(toRow, toColumn)));
         }

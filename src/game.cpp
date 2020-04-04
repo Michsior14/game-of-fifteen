@@ -12,6 +12,7 @@ Game::Game() : QMainWindow(),
     _blocksController(_blocksModel, *_blocksView, _stateManagerModel),
     _stateManagerController(_stateManagerModel, _blocksModel, _moveStackModel)
 {
+    setWindowTitle("Game of Fifteen - Extended");
     layout()->setSizeConstraint(QLayout::SetFixedSize);
 
     auto widget = new QWidget;
@@ -34,9 +35,6 @@ Game::Game() : QMainWindow(),
 }
 
 Game::~Game() {
-    delete _gameMenu;
-    delete _levelMenu;
-
     delete _newGameAct;
     delete _saveGameAct;
     delete _loadGameAct;
@@ -47,6 +45,18 @@ Game::~Game() {
 
     delete _moveView;
     delete _blocksView;
+}
+
+void Game::show(){
+    QMainWindow::show();
+    setGeometry(
+        QStyle::alignedRect(
+            Qt::LeftToRight,
+            Qt::AlignCenter,
+            size(),
+            qApp->screens().first()->geometry()
+        )
+    );
 }
 
 #ifndef QT_NO_CONTEXTMENU
@@ -61,16 +71,33 @@ void Game::createActions(){
     _newGameAct = new QAction(tr("&New Game"), this);
     _newGameAct->setShortcuts(QKeySequence::New);
     _newGameAct->setStatusTip(tr("Create a new game"));
-    connect(_newGameAct, &QAction::triggered, this, [this]{ _blocksModel.start(); });
+    connect(_newGameAct, &QAction::triggered, this, [this]{ _blocksModel.restart(); });
 
     _easyLevelAct = new QAction(tr("Easy"), this);
-    connect(_easyLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Easy); });
+    _easyLevelAct->setCheckable(true);
+    connect(_easyLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(GameLevel::Easy); });
 
     _mediumLevelAct = new QAction(tr("Medium"), this);
-    connect(_mediumLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Medium); });
+    _mediumLevelAct->setCheckable(true);
+    connect(_mediumLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(GameLevel::Medium); });
 
     _hardLevelAct = new QAction(tr("Hard"), this);
-    connect(_hardLevelAct, &QAction::triggered, this, [this]{ _blocksModel.setLevel(GameLevel::Hard); });
+    _hardLevelAct->setCheckable(true);
+    connect(_hardLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(GameLevel::Hard); });
+
+    connect(&_blocksModel, &BlocksModel::levelChanged, this, [this](const GameLevel level) {
+        switch (level) {
+        case GameLevel::Easy:
+            _easyLevelAct->setChecked(true);
+            break;
+        case GameLevel::Medium:
+            _mediumLevelAct->setChecked(true);
+            break;
+        case GameLevel::Hard:
+            _hardLevelAct->setChecked(true);
+            break;
+        }
+    });
 
     _undoMove = new QAction(tr("Undo"), this);
     _undoMove->setShortcuts(QKeySequence::Undo);
@@ -106,6 +133,13 @@ void Game::createMenus(){
     _levelMenu->addAction(_easyLevelAct);
     _levelMenu->addAction(_mediumLevelAct);
     _levelMenu->addAction(_hardLevelAct);
+
+
+    _levelGroup = new QActionGroup(this);
+    _levelGroup->addAction(_easyLevelAct);
+    _levelGroup->addAction(_mediumLevelAct);
+    _levelGroup->addAction(_hardLevelAct);
+    _levelGroup->setExclusive(true);
 
     _gameMenu->addAction(_undoMove);
 }
