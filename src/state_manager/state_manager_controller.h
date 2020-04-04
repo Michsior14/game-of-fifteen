@@ -7,17 +7,33 @@
 
 #include <QObject>
 
+/**
+ * @brief
+ *
+ */
 class StateManagerController : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief
+     *
+     * @param model
+     * @param blocksModel
+     * @param movesStackModel
+     * @param parent
+     */
     explicit StateManagerController(StateManagerModel& model, BlocksModel& blocksModel, MoveStackModel& movesStackModel, QObject *parent = nullptr);
+    /**
+     * @brief
+     *
+     */
     virtual ~StateManagerController() = default;
 
 private:
-    StateManagerModel& _model;
-    BlocksModel& _blocksModel;
-    MoveStackModel& _moveStackModel;
+    StateManagerModel& _model; /**< TODO: describe */
+    BlocksModel& _blocksModel; /**< TODO: describe */
+    MoveStackModel& _moveStackModel; /**< TODO: describe */
 };
 
 #endif // STATEMANAGERCONTROLLER_H

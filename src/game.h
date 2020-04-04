@@ -27,40 +27,61 @@ class Game : public QMainWindow
 {
     Q_OBJECT
 public:
+    /**
+     * @brief
+     *
+     */
     explicit Game();
+    /**
+     * @brief
+     *
+     */
     virtual ~Game();
 
 protected:
 #ifndef QT_NO_CONTEXTMENU
+    /**
+     * @brief
+     *
+     * @param event
+     */
     void contextMenuEvent(QContextMenuEvent *event) override;
 #endif // QT_NO_CONTEXTMENU
 
 private:
+    /**
+     * @brief
+     *
+     */
     void createActions();
+    /**
+     * @brief
+     *
+     */
     void createMenus();
 
-    QMenu* _gameMenu;
-    QMenu* _levelMenu;
+    QMenu* _gameMenu; /**< TODO: describe */
+    QMenu* _levelMenu; /**< TODO: describe */
 
-    QAction* _newGameAct;
-    QAction* _saveGameAct;
-    QAction* _loadGameAct;
-    QAction* _easyLevelAct;
-    QAction* _mediumLevelAct;
-    QAction* _hardLevelAct;
-    QAction* _undoMove;
+    QAction* _newGameAct; /**< TODO: describe */
+    QAction* _saveGameAct; /**< TODO: describe */
+    QAction* _loadGameAct; /**< TODO: describe */
+    QAction* _easyLevelAct; /**< TODO: describe */
+    QAction* _mediumLevelAct; /**< TODO: describe */
+    QAction* _hardLevelAct; /**< TODO: describe */
+    QAction* _undoMove; /**< TODO: describe */
 
-    StateManagerModel _stateManagerModel;
-    MoveStackModel _moveStackModel;
-    BlocksModel _blocksModel;
+    StateManagerModel _stateManagerModel; /**< TODO: describe */
+    MoveStackModel _moveStackModel; /**< TODO: describe */
+    BlocksModel _blocksModel; /**< TODO: describe */
 
-    MoveStackView* _moveView;
-    MoveStackController _moveStackController;
+    MoveStackView* _moveView; /**< TODO: describe */
+    MoveStackController _moveStackController; /**< TODO: describe */
 
-    BlocksView* _blocksView;
-    BlocksController _blocksController;
+    BlocksView* _blocksView; /**< TODO: describe */
+    BlocksController _blocksController; /**< TODO: describe */
 
-    StateManagerController _stateManagerController;
+    StateManagerController _stateManagerController; /**< TODO: describe */
 };
 
 #endif // GAME_H

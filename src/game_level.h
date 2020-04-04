@@ -2,6 +2,10 @@
 #define GAME_LEVEL_H
 #include <stddef.h>
 
+/**
+ * @brief
+ *
+ */
 enum class GameLevel : size_t {
     Easy = 4,
     Medium = 6,
