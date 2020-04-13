@@ -1,0 +1,4 @@
+<map id="StateManagerModel::gameStartedHandler" name="StateManagerModel::gameStartedHandler">
+<area shape="rect" id="node1" title="Handles the new game signal." alt="" coords="239,5,400,47"/>
+<area shape="rect" id="node2" href="$class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="5,5,191,47"/>
+</map>

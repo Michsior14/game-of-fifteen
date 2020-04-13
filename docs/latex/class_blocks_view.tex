@@ -1,36 +1,65 @@
 \hypertarget{class_blocks_view}{}\section{Blocks\+View Class Reference}
 \label{class_blocks_view}\index{BlocksView@{BlocksView}}
-Inheritance diagram for Blocks\+View\+:\begin{figure}[H]
+
+
+View responsible for showing all Blocks that takes part in the game.  
+
+
+
+
+{\ttfamily \#include $<$blocks\+\_\+view.\+h$>$}
+
+
+
+Inheritance diagram for Blocks\+View\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_blocks_view}
+\includegraphics[width=171pt]{class_blocks_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Blocks\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_blocks_view__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_blocks_view_a23c0b8242274f9627a91dba5fa8af036}{game\+Started\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&level)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles the new game signal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4}{block\+Swaped\+Handler}} (\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&a, \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&b, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move)
-\item 
-\mbox{\Hypertarget{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1}\label{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1}} 
-void {\bfseries puzzle\+Solved\+Handler} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles the swapped blocks signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1}{puzzle\+Solved\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the puzzle solved signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9}{block\+Clicked}} (const \mbox{\hyperlink{struct_position}{Position}} \&position)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Emitted whenever displayed \mbox{\hyperlink{class_block}{Block}} has been clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_blocks_view_a921e08c8ceb03226654cdedca68590ad}{Blocks\+View}} (Q\+Widget $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates the view. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_blocks_view_a40c2c572d4a1cb2809ce55fa0746c4ff}{$\sim$\+Blocks\+View}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}{mouse\+Press\+Event}} (Q\+Mouse\+Event $\ast$event)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles mouse pressed events that origin from the blocks view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+View responsible for showing all Blocks that takes part in the game. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -41,10 +70,24 @@ void \mbox{\hyperlink{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}{mouse
 {\footnotesize\ttfamily Blocks\+View\+::\+Blocks\+View (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
+
+Creates the view. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent object. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_view_a40c2c572d4a1cb2809ce55fa0746c4ff}\label{class_blocks_view_a40c2c572d4a1cb2809ce55fa0746c4ff}} 
+\index{BlocksView@{BlocksView}!````~BlocksView@{$\sim$BlocksView}}
+\index{````~BlocksView@{$\sim$BlocksView}!BlocksView@{BlocksView}}
+\subsubsection{\texorpdfstring{$\sim$BlocksView()}{~BlocksView()}}
+{\footnotesize\ttfamily virtual Blocks\+View\+::$\sim$\+Blocks\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -55,10 +98,22 @@ void \mbox{\hyperlink{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}{mouse
 {\footnotesize\ttfamily void Blocks\+View\+::block\+Clicked (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_position}{Position}} \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted whenever displayed \mbox{\hyperlink{class_block}{Block}} has been clicked. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em position} & \\
+{\em position} & The possition of the \mbox{\hyperlink{class_block}{Block}} that has been clicked. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4}\label{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4}} 
 \index{BlocksView@{BlocksView}!blockSwapedHandler@{blockSwapedHandler}}
 \index{blockSwapedHandler@{blockSwapedHandler}!BlocksView@{BlocksView}}
@@ -66,14 +121,34 @@ void \mbox{\hyperlink{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}{mouse
 {\footnotesize\ttfamily void Blocks\+View\+::block\+Swaped\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{b,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
+
+Handles the swapped blocks signal. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em a} & \\
+{\em a} & The first \mbox{\hyperlink{class_block}{Block}} that changed the placement. \\
 \hline
-{\em b} & \\
+{\em b} & The second \mbox{\hyperlink{class_block}{Block}} that changed the placement. \\
 \hline
-{\em move} & \\
+{\em move} & Describes the move that happend on the board (how positions changed). \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_view_a23c0b8242274f9627a91dba5fa8af036}\label{class_blocks_view_a23c0b8242274f9627a91dba5fa8af036}} 
 \index{BlocksView@{BlocksView}!gameStartedHandler@{gameStartedHandler}}
 \index{gameStartedHandler@{gameStartedHandler}!BlocksView@{BlocksView}}
@@ -81,12 +156,24 @@ void \mbox{\hyperlink{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}{mouse
 {\footnotesize\ttfamily void Blocks\+View\+::game\+Started\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
+
+Handles the new game signal. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em blocks} & \\
+{\em blocks} & The array of pointers to all Blocks that creates the board. \\
 \hline
-{\em level} & \\
+{\em size} & The edge size of a board (i.\+e. 4 in case of board created for 16 blocks) \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_view_a23c0b8242274f9627a91dba5fa8af036_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}\label{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}} 
 \index{BlocksView@{BlocksView}!mousePressEvent@{mousePressEvent}}
 \index{mousePressEvent@{mousePressEvent}!BlocksView@{BlocksView}}
@@ -94,10 +181,32 @@ void \mbox{\hyperlink{class_blocks_view_a9131c975ebe8b9c6933890bb9d9b0848}{mouse
 {\footnotesize\ttfamily void Blocks\+View\+::mouse\+Press\+Event (\begin{DoxyParamCaption}\item[{Q\+Mouse\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
+
+Handles mouse pressed events that origin from the blocks view. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em event} & \\
+{\em event} & The mouse event. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1}\label{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1}} 
+\index{BlocksView@{BlocksView}!puzzleSolvedHandler@{puzzleSolvedHandler}}
+\index{puzzleSolvedHandler@{puzzleSolvedHandler}!BlocksView@{BlocksView}}
+\subsubsection{\texorpdfstring{puzzleSolvedHandler}{puzzleSolvedHandler}}
+{\footnotesize\ttfamily void Blocks\+View\+::puzzle\+Solved\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles the puzzle solved signal. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="MoveStackModel::blockSwapedHandler" name="MoveStackModel::blockSwapedHandler">
+<area shape="rect" id="node1" title="Handles the swapped blocks signal." alt="" coords="5,5,233,47"/>
+<area shape="rect" id="node2" href="$class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf" title="Undo the last move if there is any." alt="" coords="281,13,456,39"/>
+</map>

@@ -1,19 +1,19 @@
 \section{Class List}
 Here are the classes, structs, unions and interfaces with brief descriptions\+:\begin{DoxyCompactList}
-\item\contentsline{section}{\mbox{\hyperlink{class_block}{Block$<$ T $>$}} }{\pageref{class_block}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} }{\pageref{class_block_layout_item}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_blocks_controller}{Blocks\+Controller}} }{\pageref{class_blocks_controller}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} }{\pageref{class_blocks_model}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_blocks_view}{Blocks\+View}} }{\pageref{class_blocks_view}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_free_block}{Free\+Block}} }{\pageref{class_free_block}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_game}{Game}} }{\pageref{class_game}}{}
-\item\contentsline{section}{\mbox{\hyperlink{struct_load_state}{Load\+State}} }{\pageref{struct_load_state}}{}
-\item\contentsline{section}{\mbox{\hyperlink{struct_move}{Move}} }{\pageref{struct_move}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_move_stack_controller}{Move\+Stack\+Controller}} }{\pageref{class_move_stack_controller}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_move_stack_model}{Move\+Stack\+Model}} }{\pageref{class_move_stack_model}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_move_stack_view}{Move\+Stack\+View}} }{\pageref{class_move_stack_view}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_numbered_block}{Numbered\+Block}} }{\pageref{class_numbered_block}}{}
-\item\contentsline{section}{\mbox{\hyperlink{struct_position}{Position}} }{\pageref{struct_position}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_state_manager_controller}{State\+Manager\+Controller}} }{\pageref{class_state_manager_controller}}{}
-\item\contentsline{section}{\mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} }{\pageref{class_state_manager_model}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_block}{Block$<$ T $>$}} \\*Abstract class used to connect layout with model. Holds the information if created block is the empty one or not }{\pageref{class_block}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} \\*The layout item used for presentation of the \mbox{\hyperlink{class_block}{Block}}. Holds information about size, position etc }{\pageref{class_block_layout_item}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_blocks_controller}{Blocks\+Controller}} \\*Connects \mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} with Block\+View }{\pageref{class_blocks_controller}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} \\*The model responsible for Blocks logic. Handles all movements on the board }{\pageref{class_blocks_model}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_blocks_view}{Blocks\+View}} \\*View responsible for showing all Blocks that takes part in the game }{\pageref{class_blocks_view}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_free_block}{Free\+Block}} \\*Represents empty \mbox{\hyperlink{class_block}{Block}} (without the title displayed to the user) }{\pageref{class_free_block}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_game}{Game}} \\*The main window used to display the game }{\pageref{class_game}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_load_state}{Load\+State}} \\*The structure used to pass loaded state of a game to models }{\pageref{struct_load_state}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_move}{Move}} \\*Represents the move of \mbox{\hyperlink{class_block}{Block}} between two positions on the grid layout }{\pageref{struct_move}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_move_stack_controller}{Move\+Stack\+Controller}} \\*Connects \mbox{\hyperlink{class_move_stack_model}{Move\+Stack\+Model}} with \mbox{\hyperlink{class_move_stack_view}{Move\+Stack\+View}} }{\pageref{class_move_stack_controller}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_move_stack_model}{Move\+Stack\+Model}} \\*The model responsible for storing all moves that have been made by the user and passed time }{\pageref{class_move_stack_model}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_move_stack_view}{Move\+Stack\+View}} \\*The view responsible for display information about done moves }{\pageref{class_move_stack_view}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_numbered_block}{Numbered\+Block}} \\*Represents a \mbox{\hyperlink{class_block}{Block}} with number displayed on it }{\pageref{class_numbered_block}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_position}{Position}} \\*The structure that indicates the position of \mbox{\hyperlink{class_block}{Block}} in the grid layout }{\pageref{struct_position}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_state_manager_controller}{State\+Manager\+Controller}} \\*Connects State\+Managger\+Model with Blocks nad Move\+Stack models }{\pageref{class_state_manager_controller}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} \\*The model responsible for the loading/saving current game from/to file }{\pageref{class_state_manager_model}}{}
 \end{DoxyCompactList}

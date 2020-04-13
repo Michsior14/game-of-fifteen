@@ -1,0 +1,4 @@
+<map id="BlocksModel::stateLoadedHandler" name="BlocksModel::stateLoadedHandler">
+<area shape="rect" id="node1" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node2" href="$class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="247,13,415,39"/>
+</map>

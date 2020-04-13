@@ -1,0 +1,5 @@
+<map id="MoveStackModel::undo" name="MoveStackModel::undo">
+<area shape="rect" id="node1" title="Undo the last move if there is any." alt="" coords="496,13,671,39"/>
+<area shape="rect" id="node2" href="$class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa" title="Handles the swapped blocks signal." alt="" coords="220,5,448,47"/>
+<area shape="rect" id="node3" href="$class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>

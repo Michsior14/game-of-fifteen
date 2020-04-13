@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +55,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_move_stack_model.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +86,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
@@ -72,54 +97,124 @@ $(function() {
 <div class="title">MoveStackModel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The model responsible for storing all moves that have been made by the user and passed time.  
+ <a href="class_move_stack_model.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="move__stack__model_8h_source.html">move_stack_model.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MoveStackModel:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_move_stack_model.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_move_stack_model__inherit__graph.png" border="0" usemap="#_move_stack_model_inherit__map" alt="Inheritance graph"/></div>
+<map name="_move_stack_model_inherit__map" id="_move_stack_model_inherit__map">
+<area shape="rect"  title="The model responsible for storing all moves that have been made by the user and passed time." alt="" coords="5,80,140,107"/>
+<area shape="rect"  title=" " alt="" coords="35,5,110,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for MoveStackModel:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model__coll__graph.png" border="0" usemap="#_move_stack_model_coll__map" alt="Collaboration graph"/></div>
+<map name="_move_stack_model_coll__map" id="_move_stack_model_coll__map">
+<area shape="rect"  title="The model responsible for storing all moves that have been made by the user and passed time." alt="" coords="5,80,140,107"/>
+<area shape="rect"  title=" " alt="" coords="35,5,110,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a64b3cd5b744e18ce4cebd87957b2f3fa"><td class="memItemLeft" align="right" valign="top"><a id="a64b3cd5b744e18ce4cebd87957b2f3fa"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>iterator</b> = std::list&lt; std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &gt;::const_iterator</td></tr>
+<tr class="memitem:a64b3cd5b744e18ce4cebd87957b2f3fa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">iterator</a> = std::list&lt; std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &gt;::const_iterator</td></tr>
+<tr class="memdesc:a64b3cd5b744e18ce4cebd87957b2f3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The stack iterator.  <a href="#a64b3cd5b744e18ce4cebd87957b2f3fa">More...</a><br /></td></tr>
 <tr class="separator:a64b3cd5b744e18ce4cebd87957b2f3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a8ff4e26b9eaded33ae9a2588d470feaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa">blockSwapedHandler</a> (<a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;a, <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;b, const std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &amp;move, bool undo)</td></tr>
+<tr class="memitem:a8ff4e26b9eaded33ae9a2588d470feaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa">blockSwapedHandler</a> (<a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;a, <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;b, const std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &amp;move, bool <a class="el" href="class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf">undo</a>)</td></tr>
+<tr class="memdesc:a8ff4e26b9eaded33ae9a2588d470feaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the swapped blocks signal.  <a href="#a8ff4e26b9eaded33ae9a2588d470feaa">More...</a><br /></td></tr>
 <tr class="separator:a8ff4e26b9eaded33ae9a2588d470feaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8340fbe17638209c13250962fd4e2ff3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a8340fbe17638209c13250962fd4e2ff3">gameStartedHandler</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt;&gt;&gt; &amp;blocks, const size_t &amp;level)</td></tr>
-<tr class="separator:a8340fbe17638209c13250962fd4e2ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fba5a7c9c8cca32112274c87b45fa82"><td class="memItemLeft" align="right" valign="top"><a id="a7fba5a7c9c8cca32112274c87b45fa82"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>puzzleSolvedHandler</b> ()</td></tr>
+<tr class="memitem:a5a5d359de832234daceef5e216120b65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a5a5d359de832234daceef5e216120b65">gameStartedHandler</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt;&gt;&gt; &amp;blocks, const size_t &amp;size)</td></tr>
+<tr class="memdesc:a5a5d359de832234daceef5e216120b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the new game signal.  <a href="#a5a5d359de832234daceef5e216120b65">More...</a><br /></td></tr>
+<tr class="separator:a5a5d359de832234daceef5e216120b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fba5a7c9c8cca32112274c87b45fa82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a7fba5a7c9c8cca32112274c87b45fa82">puzzleSolvedHandler</a> ()</td></tr>
+<tr class="memdesc:a7fba5a7c9c8cca32112274c87b45fa82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the puzzle solved signal.  <a href="#a7fba5a7c9c8cca32112274c87b45fa82">More...</a><br /></td></tr>
 <tr class="separator:a7fba5a7c9c8cca32112274c87b45fa82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c8028466c62b5f8b269b71939c56ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a2c8028466c62b5f8b269b71939c56ef8">stateLoadedHandler</a> (const <a class="el" href="struct_load_state.html">LoadState</a> &amp;state)</td></tr>
+<tr class="memdesc:a2c8028466c62b5f8b269b71939c56ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler for signals when new state has been loaded (game has been loaded from file).  <a href="#a2c8028466c62b5f8b269b71939c56ef8">More...</a><br /></td></tr>
 <tr class="separator:a2c8028466c62b5f8b269b71939c56ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:aff05dc88104b96911f9cf8a1033d4356"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#aff05dc88104b96911f9cf8a1033d4356">movesChanged</a> (const size_t &amp;moves)</td></tr>
-<tr class="separator:aff05dc88104b96911f9cf8a1033d4356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b596d9619735fc7d066a3d0e1b8cc55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a8b596d9619735fc7d066a3d0e1b8cc55">totalMovesChanged</a> (const size_t &amp;counter, const std::list&lt; std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt;&gt; &amp;moves)</td></tr>
+<tr class="memdesc:a8b596d9619735fc7d066a3d0e1b8cc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when number of moves has changed.  <a href="#a8b596d9619735fc7d066a3d0e1b8cc55">More...</a><br /></td></tr>
 <tr class="separator:a8b596d9619735fc7d066a3d0e1b8cc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7d3186093032e523b2a7bbefa74f8fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#aa7d3186093032e523b2a7bbefa74f8fb">timePassedChanged</a> (const size_t &amp;timePassed)</td></tr>
+<tr class="memdesc:aa7d3186093032e523b2a7bbefa74f8fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when passed time changes.  <a href="#aa7d3186093032e523b2a7bbefa74f8fb">More...</a><br /></td></tr>
 <tr class="separator:aa7d3186093032e523b2a7bbefa74f8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16436cf5acda5455355c24f28586f1e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a16436cf5acda5455355c24f28586f1e8">undoMove</a> (const std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &amp;move)</td></tr>
+<tr class="memdesc:a16436cf5acda5455355c24f28586f1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when move has been undone.  <a href="#a16436cf5acda5455355c24f28586f1e8">More...</a><br /></td></tr>
 <tr class="separator:a16436cf5acda5455355c24f28586f1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a10ab990b00c1eb0d543d75b8b07eb4bf"><td class="memItemLeft" align="right" valign="top"><a id="a10ab990b00c1eb0d543d75b8b07eb4bf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
+<tr class="memitem:aaed956e471dc01eb1c996001e2d3751b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#aaed956e471dc01eb1c996001e2d3751b">MoveStackModel</a> ()</td></tr>
+<tr class="memdesc:aaed956e471dc01eb1c996001e2d3751b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the new model.  <a href="#aaed956e471dc01eb1c996001e2d3751b">More...</a><br /></td></tr>
+<tr class="separator:aaed956e471dc01eb1c996001e2d3751b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1aec2985059d170399ae0ce971cbcd"><td class="memItemLeft" align="right" valign="top"><a id="a3b1aec2985059d170399ae0ce971cbcd"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a3b1aec2985059d170399ae0ce971cbcd">~MoveStackModel</a> ()</td></tr>
+<tr class="memdesc:a3b1aec2985059d170399ae0ce971cbcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor. <br /></td></tr>
+<tr class="separator:a3b1aec2985059d170399ae0ce971cbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ab990b00c1eb0d543d75b8b07eb4bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf">undo</a> ()</td></tr>
+<tr class="memdesc:a10ab990b00c1eb0d543d75b8b07eb4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo the last move if there is any.  <a href="#a10ab990b00c1eb0d543d75b8b07eb4bf">More...</a><br /></td></tr>
 <tr class="separator:a10ab990b00c1eb0d543d75b8b07eb4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59f08def53913e4f33df7fe30a16dc75"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a59f08def53913e4f33df7fe30a16dc75">totalMoves</a> () const</td></tr>
+<tr class="memdesc:a59f08def53913e4f33df7fe30a16dc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of total moves done by the user, including <code>undo</code> ones.  <a href="#a59f08def53913e4f33df7fe30a16dc75">More...</a><br /></td></tr>
 <tr class="separator:a59f08def53913e4f33df7fe30a16dc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5617b792b9e541940f6bfdbcc3c08bfa"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a5617b792b9e541940f6bfdbcc3c08bfa">begin</a> () const</td></tr>
+<tr class="memitem:a5617b792b9e541940f6bfdbcc3c08bfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#a5617b792b9e541940f6bfdbcc3c08bfa">begin</a> () const</td></tr>
+<tr class="memdesc:a5617b792b9e541940f6bfdbcc3c08bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the iterator to the first move in the stack.  <a href="#a5617b792b9e541940f6bfdbcc3c08bfa">More...</a><br /></td></tr>
 <tr class="separator:a5617b792b9e541940f6bfdbcc3c08bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4d30bfd992058342c0faff6ab5492b9"><td class="memItemLeft" align="right" valign="top">iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#aa4d30bfd992058342c0faff6ab5492b9">end</a> () const</td></tr>
+<tr class="memitem:aa4d30bfd992058342c0faff6ab5492b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_model.html#aa4d30bfd992058342c0faff6ab5492b9">end</a> () const</td></tr>
+<tr class="memdesc:aa4d30bfd992058342c0faff6ab5492b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the iterator to the last move in the stack.  <a href="#aa4d30bfd992058342c0faff6ab5492b9">More...</a><br /></td></tr>
 <tr class="separator:aa4d30bfd992058342c0faff6ab5492b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The model responsible for storing all moves that have been made by the user and passed time. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a64b3cd5b744e18ce4cebd87957b2f3fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b3cd5b744e18ce4cebd87957b2f3fa">&#9670;&nbsp;</a></span>iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">MoveStackModel::iterator</a> =  std::list&lt;std::shared_ptr&lt;<a class="el" href="struct_move.html">Move</a>&gt; &gt;::const_iterator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The stack iterator. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aaed956e471dc01eb1c996001e2d3751b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed956e471dc01eb1c996001e2d3751b">&#9670;&nbsp;</a></span>MoveStackModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MoveStackModel::MoveStackModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates the new model. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5617b792b9e541940f6bfdbcc3c08bfa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5617b792b9e541940f6bfdbcc3c08bfa">&#9670;&nbsp;</a></span>begin()</h2>
@@ -131,7 +226,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">iterator MoveStackModel::begin </td>
+          <td class="memname"><a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">iterator</a> MoveStackModel::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -143,7 +238,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>iterator </dd></dl>
+
+<p>Returns the iterator to the first move in the stack. </p>
+<dl class="section return"><dt>Returns</dt><dd>iterator The iterator. </dd></dl>
 
 </div>
 </div>
@@ -192,15 +289,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handles the swapped blocks signal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td></td></tr>
-    <tr><td class="paramname">b</td><td></td></tr>
-    <tr><td class="paramname">move</td><td></td></tr>
-    <tr><td class="paramname">undo</td><td></td></tr>
+    <tr><td class="paramname">a</td><td>The first <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> that changed the placement. </td></tr>
+    <tr><td class="paramname">b</td><td>The second <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> that changed the placement. </td></tr>
+    <tr><td class="paramname">move</td><td>Describes the move that happend on the board (how positions changed). </td></tr>
+    <tr><td class="paramname">undo</td><td>Indicates if it is an undo action. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_cgraph.png" border="0" usemap="#class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_cgraph" alt=""/></div>
+<map name="class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_cgraph" id="class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_cgraph">
+<area shape="rect"  title="Handles the swapped blocks signal." alt="" coords="5,5,233,47"/>
+<area shape="rect"  href="class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf" title="Undo the last move if there is any." alt="" coords="281,13,456,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_icgraph.png" border="0" usemap="#class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_icgraph" alt=""/></div>
+<map name="class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_icgraph" id="class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_icgraph">
+<area shape="rect"  title="Handles the swapped blocks signal." alt="" coords="220,5,448,47"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -214,7 +331,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">iterator MoveStackModel::end </td>
+          <td class="memname"><a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">iterator</a> MoveStackModel::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -226,12 +343,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>iterator </dd></dl>
+
+<p>Returns the iterator to the last move in the stack. </p>
+<dl class="section return"><dt>Returns</dt><dd>iterator The iterator. </dd></dl>
 
 </div>
 </div>
-<a id="a8340fbe17638209c13250962fd4e2ff3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8340fbe17638209c13250962fd4e2ff3">&#9670;&nbsp;</a></span>gameStartedHandler</h2>
+<a id="a5a5d359de832234daceef5e216120b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5d359de832234daceef5e216120b65">&#9670;&nbsp;</a></span>gameStartedHandler</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +368,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const size_t &amp;&#160;</td>
-          <td class="paramname"><em>level</em>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -263,18 +382,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handles the new game signal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blocks</td><td></td></tr>
-    <tr><td class="paramname">level</td><td></td></tr>
+    <tr><td class="paramname">blocks</td><td>The array of pointers to all Blocks that creates the board. </td></tr>
+    <tr><td class="paramname">size</td><td>The edge size of a board (i.e. 4 in case of board created for 16 blocks) </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a5a5d359de832234daceef5e216120b65_icgraph.png" border="0" usemap="#class_move_stack_model_a5a5d359de832234daceef5e216120b65_icgraph" alt=""/></div>
+<map name="class_move_stack_model_a5a5d359de832234daceef5e216120b65_icgraph" id="class_move_stack_model_a5a5d359de832234daceef5e216120b65_icgraph">
+<area shape="rect"  title="Handles the new game signal." alt="" coords="220,5,447,47"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="aff05dc88104b96911f9cf8a1033d4356"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff05dc88104b96911f9cf8a1033d4356">&#9670;&nbsp;</a></span>movesChanged</h2>
+<a id="a7fba5a7c9c8cca32112274c87b45fa82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fba5a7c9c8cca32112274c87b45fa82">&#9670;&nbsp;</a></span>puzzleSolvedHandler</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -283,25 +413,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MoveStackModel::movesChanged </td>
+          <td class="memname">void MoveStackModel::puzzleSolvedHandler </td>
           <td>(</td>
-          <td class="paramtype">const size_t &amp;&#160;</td>
-          <td class="paramname"><em>moves</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">moves</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+
+<p>Handles the puzzle solved signal. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82_icgraph.png" border="0" usemap="#class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82_icgraph" alt=""/></div>
+<map name="class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82_icgraph" id="class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82_icgraph">
+<area shape="rect"  title="Handles the puzzle solved signal." alt="" coords="220,5,448,47"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -328,12 +462,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handler for signals when new state has been loaded (game has been loaded from file). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">state</td><td></td></tr>
+    <tr><td class="paramname">state</td><td>The state object, holding level, numbers and size of the board. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8_icgraph.png" border="0" usemap="#class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8_icgraph" alt=""/></div>
+<map name="class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8_icgraph" id="class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8_icgraph">
+<area shape="rect"  title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="220,5,443,47"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -360,12 +505,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted when passed time changes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">timePassed</td><td></td></tr>
+    <tr><td class="paramname">timePassed</td><td>The number of seconds since the first move. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb_icgraph.png" border="0" usemap="#class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb_icgraph" alt=""/></div>
+<map name="class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb_icgraph" id="class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb_icgraph">
+<area shape="rect"  title="Emitted when passed time changes." alt="" coords="239,39,456,80"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="15,5,181,47"/>
+<area shape="rect"  href="class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="5,71,191,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -391,7 +548,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
+
+<p>Returns the number of total moves done by the user, including <code>undo</code> ones. </p>
+<dl class="section return"><dt>Returns</dt><dd>size_t The number of total moves. </dd></dl>
 
 </div>
 </div>
@@ -428,13 +587,54 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted when number of moves has changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">counter</td><td></td></tr>
-    <tr><td class="paramname">moves</td><td></td></tr>
+    <tr><td class="paramname">counter</td><td>The number of moves. </td></tr>
+    <tr><td class="paramname">moves</td><td>The list of pointers to changed moves. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55_icgraph.png" border="0" usemap="#class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55_icgraph" alt=""/></div>
+<map name="class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55_icgraph" id="class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55_icgraph">
+<area shape="rect"  title="Emitted when number of moves has changed." alt="" coords="239,39,453,80"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="15,5,181,47"/>
+<area shape="rect"  href="class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="5,71,191,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10ab990b00c1eb0d543d75b8b07eb4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ab990b00c1eb0d543d75b8b07eb4bf">&#9670;&nbsp;</a></span>undo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MoveStackModel::undo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Undo the last move if there is any. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf_icgraph.png" border="0" usemap="#class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf_icgraph" alt=""/></div>
+<map name="class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf_icgraph" id="class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf_icgraph">
+<area shape="rect"  title="Undo the last move if there is any." alt="" coords="496,13,671,39"/>
+<area shape="rect"  href="class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa" title="Handles the swapped blocks signal." alt="" coords="220,5,448,47"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -461,12 +661,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted when move has been undone. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">move</td><td></td></tr>
+    <tr><td class="paramname">move</td><td>The move that has been undone. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_model_a16436cf5acda5455355c24f28586f1e8_icgraph.png" border="0" usemap="#class_move_stack_model_a16436cf5acda5455355c24f28586f1e8_icgraph" alt=""/></div>
+<map name="class_move_stack_model_a16436cf5acda5455355c24f28586f1e8_icgraph" id="class_move_stack_model_a16436cf5acda5455355c24f28586f1e8_icgraph">
+<area shape="rect"  title="Emitted when move has been undone." alt="" coords="719,13,929,39"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+<area shape="rect"  href="class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf" title="Undo the last move if there is any." alt="" coords="496,38,671,65"/>
+<area shape="rect"  href="class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa" title="Handles the swapped blocks signal." alt="" coords="220,35,448,76"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -475,11 +688,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>undo</b> ()</td></tr>
 <li>src/move_stack/move_stack_model.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

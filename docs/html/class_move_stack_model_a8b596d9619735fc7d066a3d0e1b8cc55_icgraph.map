@@ -1,0 +1,5 @@
+<map id="MoveStackModel::totalMovesChanged" name="MoveStackModel::totalMovesChanged">
+<area shape="rect" id="node1" title="Emitted when number of moves has changed." alt="" coords="239,39,453,80"/>
+<area shape="rect" id="node2" href="$class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="15,5,181,47"/>
+<area shape="rect" id="node3" href="$class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="5,71,191,112"/>
+</map>

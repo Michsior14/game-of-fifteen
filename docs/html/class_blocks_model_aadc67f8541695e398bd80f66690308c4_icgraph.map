@@ -1,0 +1,10 @@
+<map id="BlocksModel::levelChanged" name="BlocksModel::levelChanged">
+<area shape="rect" id="node1" title="Emitted whenever the current game level has changed." alt="" coords="847,85,1049,112"/>
+<area shape="rect" id="node2" href="$class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="631,85,799,112"/>
+<area shape="rect" id="node3" href="$class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2" title="Starts the game." alt="" coords="415,56,557,83"/>
+<area shape="rect" id="node7" href="$class_blocks_model.html#a9fc884d31e972c84e2e3dcbce73b8377" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="389,107,583,149"/>
+<area shape="rect" id="node4" href="$class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c" title="Initialize the default values for the model." alt="" coords="172,5,331,32"/>
+<area shape="rect" id="node6" href="$class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6" title="Restarts the game." alt="" coords="173,56,329,83"/>
+<area shape="rect" id="node5" href="$class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node8" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="161,107,341,149"/>
+</map>

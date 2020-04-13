@@ -1,27 +1,59 @@
 \hypertarget{class_block}{}\section{Block$<$ T $>$ Class Template Reference}
 \label{class_block}\index{Block$<$ T $>$@{Block$<$ T $>$}}
-Inheritance diagram for Block$<$ T $>$\+:\begin{figure}[H]
+
+
+Abstract class used to connect layout with model. Holds the information if created block is the empty one or not.  
+
+
+
+
+{\ttfamily \#include $<$block.\+h$>$}
+
+
+
+Inheritance diagram for Block$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_block}
+\includegraphics[width=152pt]{class_block__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Block$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_block__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_block_aa19ca9a93a3cb69f9583c1f5edfd5d26}{Block}} (const size\+\_\+t \mbox{\hyperlink{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}{value}}, Q\+Graphics\+Item $\ast$parent)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{class_block}{Block}} using number only (same title and internal value). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_block_a91743e5381dcc23971f99db3f1b7607c}{Block}} (const size\+\_\+t \mbox{\hyperlink{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}{value}}, const std\+::string \mbox{\hyperlink{class_block_a48197972162fbfe6b2f4d721d80034cf}{title}}, Q\+Graphics\+Item $\ast$parent)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates \mbox{\hyperlink{class_block}{Block}} with number and title as separate values. Useful for \char`\"{}empty\char`\"{} blocks. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_block_a7da3fe07e22a8d7f161cc23225b9964f}{$\sim$\+Block}} ()=default
+\begin{DoxyCompactList}\small\item\em Default virtual destructor. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}{value}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Gets current number assigned to the \mbox{\hyperlink{class_block}{Block}}. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_block_a48197972162fbfe6b2f4d721d80034cf}{title}} () const
-\item 
-\mbox{\Hypertarget{class_block_adebc177a35bfd2ecaebd8fc23a6ceafb}\label{class_block_adebc177a35bfd2ecaebd8fc23a6ceafb}} 
-T $\ast$ {\bfseries layout\+Item} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Gets current title assigned to the \mbox{\hyperlink{class_block}{Block}}. \end{DoxyCompactList}\item 
+T $\ast$ \mbox{\hyperlink{class_block_adebc177a35bfd2ecaebd8fc23a6ceafb}{layout\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Gets a layout item assigned to the \mbox{\hyperlink{class_block}{Block}}. \end{DoxyCompactList}\item 
 virtual bool \mbox{\hyperlink{class_block_a795e0536746b840286cb1e74487311a9}{is\+Free}} () const =0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets information if the \mbox{\hyperlink{class_block}{Block}} is \char`\"{}empty\char`\"{} or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Block$<$ T $>$}
+
+Abstract class used to connect layout with model. Holds the information if created block is the empty one or not. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -33,10 +65,14 @@ virtual bool \mbox{\hyperlink{class_block_a795e0536746b840286cb1e74487311a9}{is\
 \mbox{\hyperlink{class_block}{Block}}$<$ T $>$\+::\mbox{\hyperlink{class_block}{Block}} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{value,  }\item[{Q\+Graphics\+Item $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Creates \mbox{\hyperlink{class_block}{Block}} using number only (same title and internal value). 
+
+
 \begin{DoxyParams}{Parameters}
-{\em value} & \\
+{\em value} & The number a block should hold. \\
 \hline
-{\em parent} & \\
+{\em parent} & The parent Qt object. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_block_a91743e5381dcc23971f99db3f1b7607c}\label{class_block_a91743e5381dcc23971f99db3f1b7607c}} 
@@ -47,14 +83,29 @@ virtual bool \mbox{\hyperlink{class_block_a795e0536746b840286cb1e74487311a9}{is\
 \mbox{\hyperlink{class_block}{Block}}$<$ T $>$\+::\mbox{\hyperlink{class_block}{Block}} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{value,  }\item[{const std\+::string}]{title,  }\item[{Q\+Graphics\+Item $\ast$}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Creates \mbox{\hyperlink{class_block}{Block}} with number and title as separate values. Useful for \char`\"{}empty\char`\"{} blocks. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em value} & \\
+{\em value} & The number a block should hold. \\
 \hline
-{\em title} & \\
+{\em title} & The title of the block (displayed value to the user). \\
 \hline
-{\em parent} & \\
+{\em parent} & The parent Qt object. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_block_a7da3fe07e22a8d7f161cc23225b9964f}\label{class_block_a7da3fe07e22a8d7f161cc23225b9964f}} 
+\index{Block$<$ T $>$@{Block$<$ T $>$}!````~Block@{$\sim$Block}}
+\index{````~Block@{$\sim$Block}!Block$<$ T $>$@{Block$<$ T $>$}}
+\subsubsection{\texorpdfstring{$\sim$Block()}{~Block()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \mbox{\hyperlink{class_block}{Block}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_block}{Block}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Default virtual destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -65,13 +116,39 @@ virtual bool \mbox{\hyperlink{class_block_a795e0536746b840286cb1e74487311a9}{is\
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 virtual bool \mbox{\hyperlink{class_block}{Block}}$<$ T $>$\+::is\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+
+
+Gets information if the \mbox{\hyperlink{class_block}{Block}} is \char`\"{}empty\char`\"{} or not. 
+
 \begin{DoxyReturn}{Returns}
-bool 
+bool \char`\"{}\+True\char`\"{} if the \mbox{\hyperlink{class_block}{Block}} is free, \char`\"{}\+False\char`\"{} otherwise. 
 \end{DoxyReturn}
 
 
 Implemented in \mbox{\hyperlink{class_free_block_a76d3f40934d42c566095ee2f1386eac5}{Free\+Block}}, and \mbox{\hyperlink{class_numbered_block_a04899b0e9d90f4ce4faa8aae9e4140e9}{Numbered\+Block}}.
 
+\mbox{\Hypertarget{class_block_adebc177a35bfd2ecaebd8fc23a6ceafb}\label{class_block_adebc177a35bfd2ecaebd8fc23a6ceafb}} 
+\index{Block$<$ T $>$@{Block$<$ T $>$}!layoutItem@{layoutItem}}
+\index{layoutItem@{layoutItem}!Block$<$ T $>$@{Block$<$ T $>$}}
+\subsubsection{\texorpdfstring{layoutItem()}{layoutItem()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+T$\ast$ \mbox{\hyperlink{class_block}{Block}}$<$ T $>$\+::layout\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets a layout item assigned to the \mbox{\hyperlink{class_block}{Block}}. 
+
+\begin{DoxyReturn}{Returns}
+T$\ast$ The layout item pointer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_block_adebc177a35bfd2ecaebd8fc23a6ceafb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_block_a48197972162fbfe6b2f4d721d80034cf}\label{class_block_a48197972162fbfe6b2f4d721d80034cf}} 
 \index{Block$<$ T $>$@{Block$<$ T $>$}!title@{title}}
 \index{title@{title}!Block$<$ T $>$@{Block$<$ T $>$}}
@@ -79,8 +156,12 @@ Implemented in \mbox{\hyperlink{class_free_block_a76d3f40934d42c566095ee2f1386ea
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 std\+::string \mbox{\hyperlink{class_block}{Block}}$<$ T $>$\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Gets current title assigned to the \mbox{\hyperlink{class_block}{Block}}. 
+
 \begin{DoxyReturn}{Returns}
-std\+::string 
+std\+::string The title assigned to the \mbox{\hyperlink{class_block}{Block}}. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}\label{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}} 
 \index{Block$<$ T $>$@{Block$<$ T $>$}!value@{value}}
@@ -89,8 +170,12 @@ std\+::string
 {\footnotesize\ttfamily template$<$typename T$>$ \\
 size\+\_\+t \mbox{\hyperlink{class_block}{Block}}$<$ T $>$\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Gets current number assigned to the \mbox{\hyperlink{class_block}{Block}}. 
+
 \begin{DoxyReturn}{Returns}
-size\+\_\+t 
+size\+\_\+t Number assigned to the \mbox{\hyperlink{class_block}{Block}}. 
 \end{DoxyReturn}
 
 

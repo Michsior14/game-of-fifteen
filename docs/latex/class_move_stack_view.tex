@@ -1,23 +1,53 @@
 \hypertarget{class_move_stack_view}{}\section{Move\+Stack\+View Class Reference}
 \label{class_move_stack_view}\index{MoveStackView@{MoveStackView}}
-Inheritance diagram for Move\+Stack\+View\+:\begin{figure}[H]
+
+
+The view responsible for display information about done moves.  
+
+
+
+
+{\ttfamily \#include $<$move\+\_\+stack\+\_\+view.\+h$>$}
+
+
+
+Inheritance diagram for Move\+Stack\+View\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_move_stack_view}
+\includegraphics[width=175pt]{class_move_stack_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Move\+Stack\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_move_stack_view__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_move_stack_view_ad3439eab1b100699aa82ece0b21de8a8}{set\+Count\+Label}} (const size\+\_\+t \&couter, const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&moves)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles the total moves changes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_move_stack_view_a6a70962da0c881426a408bb78cf9f974}{set\+Time\+Passed}} (const size\+\_\+t \&time\+Passed)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles the time passed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_move_stack_view_aee51704e36aeb3f7d5a5a0c6be03b414}{Move\+Stack\+View}} (Q\+Widget $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates the view. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_move_stack_view_a39b59ddaeb4178aa284864661047127c}{$\sim$\+Move\+Stack\+View}} ()
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The view responsible for display information about done moves. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -28,10 +58,24 @@ void \mbox{\hyperlink{class_move_stack_view_a6a70962da0c881426a408bb78cf9f974}{s
 {\footnotesize\ttfamily Move\+Stack\+View\+::\+Move\+Stack\+View (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
+
+Creates the view. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent object. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_move_stack_view_a39b59ddaeb4178aa284864661047127c}\label{class_move_stack_view_a39b59ddaeb4178aa284864661047127c}} 
+\index{MoveStackView@{MoveStackView}!````~MoveStackView@{$\sim$MoveStackView}}
+\index{````~MoveStackView@{$\sim$MoveStackView}!MoveStackView@{MoveStackView}}
+\subsubsection{\texorpdfstring{$\sim$MoveStackView()}{~MoveStackView()}}
+{\footnotesize\ttfamily Move\+Stack\+View\+::$\sim$\+Move\+Stack\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -42,12 +86,24 @@ void \mbox{\hyperlink{class_move_stack_view_a6a70962da0c881426a408bb78cf9f974}{s
 {\footnotesize\ttfamily void Move\+Stack\+View\+::set\+Count\+Label (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{couter,  }\item[{const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
 
 
+
+Handles the total moves changes. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em couter} & \\
+{\em counter} & The number of moves. \\
 \hline
-{\em moves} & \\
+{\em moves} & The list of pointers to changed moves. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_view_ad3439eab1b100699aa82ece0b21de8a8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_move_stack_view_a6a70962da0c881426a408bb78cf9f974}\label{class_move_stack_view_a6a70962da0c881426a408bb78cf9f974}} 
 \index{MoveStackView@{MoveStackView}!setTimePassed@{setTimePassed}}
 \index{setTimePassed@{setTimePassed}!MoveStackView@{MoveStackView}}
@@ -55,10 +111,22 @@ void \mbox{\hyperlink{class_move_stack_view_a6a70962da0c881426a408bb78cf9f974}{s
 {\footnotesize\ttfamily void Move\+Stack\+View\+::set\+Time\+Passed (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{time\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
 
 
+
+Handles the time passed. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em time\+Passed} & \\
+{\em time\+Passed} & The number of seconds since the first move. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_view_a6a70962da0c881426a408bb78cf9f974_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

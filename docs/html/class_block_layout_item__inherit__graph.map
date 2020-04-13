@@ -1,0 +1,6 @@
+<map id="BlockLayoutItem" name="BlockLayoutItem">
+<area shape="rect" id="node1" title="The layout item used for presentation of the Block. Holds information about size, position etc." alt="" coords="186,80,318,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="193,5,311,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="336,5,411,32"/>
+</map>

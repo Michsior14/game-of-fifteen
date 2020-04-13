@@ -12,7 +12,7 @@
 #include "../block/block_layout_item.h"
 
 /**
- * @brief
+ * @brief View responsible for showing all Blocks that takes part in the game.
  *
  */
 class BlocksView : public QGraphicsView
@@ -20,62 +20,62 @@ class BlocksView : public QGraphicsView
     Q_OBJECT
 public:
     /**
-     * @brief
+     * @brief Creates the view.
      *
-     * @param parent
+     * @param parent The Qt's parent object.
      */
     explicit BlocksView(QWidget *parent = nullptr);
     /**
-     * @brief
+     * @brief The default destructor.
      *
      */
     virtual ~BlocksView() = default;
 
 signals:
     /**
-     * @brief
+     * @brief Emitted whenever displayed Block has been clicked.
      *
-     * @param position
+     * @param position The possition of the Block that has been clicked.
      */
     void blockClicked(const Position& position);
 
 public slots:
     /**
-     * @brief
+     * @brief Handles the new game signal.
      *
-     * @param blocks
-     * @param level
+     * @param blocks The array of pointers to all Blocks that creates the board.
+     * @param size The edge size of a board (i.e. 4 in case of board created for 16 blocks)
      */
     void gameStartedHandler(const std::vector<std::shared_ptr<Block<BlockLayoutItem>>>& blocks, const size_t& level);
     /**
-     * @brief
+     * @brief Handles the swapped blocks signal.
      *
-     * @param a
-     * @param b
-     * @param move
+     * @param a The first Block that changed the placement.
+     * @param b The second Block that changed the placement.
+     * @param move Describes the move that happend on the board (how positions changed).
      */
     void blockSwapedHandler(Block<BlockLayoutItem>& a, Block<BlockLayoutItem>& b, const std::shared_ptr<Move>& move);
     /**
-     * @brief
+     * @brief Handles the puzzle solved signal.
      *
      */
     void puzzleSolvedHandler();
 
 protected:
     /**
-     * @brief
+     * @brief Handles mouse pressed events that origin from the blocks view.
      *
-     * @param event
+     * @param event The mouse event.
      */
     void mousePressEvent(QMouseEvent *event);
 
 private:
     /**
-     * @brief
+     * @brief Removes all items from the layout.
      *
      */
     void clear();
-    QGraphicsGridLayout* _layout; /**< TODO: describe */
+    QGraphicsGridLayout* _layout; /**< The layout that holds all blocks inside */
 };
 
 #endif // BLOCKSVIEW_H

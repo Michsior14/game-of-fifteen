@@ -7,8 +7,7 @@
 #include "../block/numbered_block.h"
 #include "../block/free_block.h"
 
-BlocksModel::BlocksModel(QObject *parent) : QObject(parent)
-{
+BlocksModel::BlocksModel(QObject *parent) : QObject(parent) {
 }
 
 void BlocksModel::setLevel(const GameLevel& level){

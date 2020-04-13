@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +55,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_move_stack_model.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +86,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">MoveStackModel Member List</div>  </div>
@@ -72,24 +97,26 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#a5617b792b9e541940f6bfdbcc3c08bfa">begin</a>() const</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa">blockSwapedHandler</a>(Block&lt; BlockLayoutItem &gt; &amp;a, Block&lt; BlockLayoutItem &gt; &amp;b, const std::shared_ptr&lt; Move &gt; &amp;move, bool undo)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#aa4d30bfd992058342c0faff6ab5492b9">end</a>() const</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a8340fbe17638209c13250962fd4e2ff3">gameStartedHandler</a>(const std::vector&lt; std::shared_ptr&lt; Block&lt; BlockLayoutItem &gt;&gt;&gt; &amp;blocks, const size_t &amp;level)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>iterator</b> typedef (defined in <a class="el" href="class_move_stack_model.html">MoveStackModel</a>)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#aff05dc88104b96911f9cf8a1033d4356">movesChanged</a>(const size_t &amp;moves)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>MoveStackModel</b>() (defined in <a class="el" href="class_move_stack_model.html">MoveStackModel</a>)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>puzzleSolvedHandler</b>() (defined in <a class="el" href="class_move_stack_model.html">MoveStackModel</a>)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#a2c8028466c62b5f8b269b71939c56ef8">stateLoadedHandler</a>(const LoadState &amp;state)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#aa7d3186093032e523b2a7bbefa74f8fb">timePassedChanged</a>(const size_t &amp;timePassed)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#a59f08def53913e4f33df7fe30a16dc75">totalMoves</a>() const</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a8b596d9619735fc7d066a3d0e1b8cc55">totalMovesChanged</a>(const size_t &amp;counter, const std::list&lt; std::shared_ptr&lt; Move &gt;&gt; &amp;moves)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>undo</b>() (defined in <a class="el" href="class_move_stack_model.html">MoveStackModel</a>)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a16436cf5acda5455355c24f28586f1e8">undoMove</a>(const std::shared_ptr&lt; Move &gt; &amp;move)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~MoveStackModel</b>() (defined in <a class="el" href="class_move_stack_model.html">MoveStackModel</a>)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a5a5d359de832234daceef5e216120b65">gameStartedHandler</a>(const std::vector&lt; std::shared_ptr&lt; Block&lt; BlockLayoutItem &gt;&gt;&gt; &amp;blocks, const size_t &amp;size)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">iterator</a> typedef</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#aaed956e471dc01eb1c996001e2d3751b">MoveStackModel</a>()</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#a7fba5a7c9c8cca32112274c87b45fa82">puzzleSolvedHandler</a>()</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a2c8028466c62b5f8b269b71939c56ef8">stateLoadedHandler</a>(const LoadState &amp;state)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#aa7d3186093032e523b2a7bbefa74f8fb">timePassedChanged</a>(const size_t &amp;timePassed)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a59f08def53913e4f33df7fe30a16dc75">totalMoves</a>() const</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#a8b596d9619735fc7d066a3d0e1b8cc55">totalMovesChanged</a>(const size_t &amp;counter, const std::list&lt; std::shared_ptr&lt; Move &gt;&gt; &amp;moves)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf">undo</a>()</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_move_stack_model.html#a16436cf5acda5455355c24f28586f1e8">undoMove</a>(const std::shared_ptr&lt; Move &gt; &amp;move)</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_move_stack_model.html#a3b1aec2985059d170399ae0ce971cbcd">~MoveStackModel</a>()</td><td class="entry"><a class="el" href="class_move_stack_model.html">MoveStackModel</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

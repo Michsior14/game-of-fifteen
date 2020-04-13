@@ -1,10 +1,21 @@
 \hypertarget{struct_position}{}\section{Position Struct Reference}
 \label{struct_position}\index{Position@{Position}}
+
+
+The structure that indicates the position of \mbox{\hyperlink{class_block}{Block}} in the grid layout.  
+
+
+
+
+{\ttfamily \#include $<$move.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_position_ac30ff0c554df4e53f02b79b067ac368c}{Position}} (size\+\_\+t pos\+Row, size\+\_\+t pos\+Col)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{struct_position_a5b1c9b0f98d4ba290679fcd06284a0c8}{Position}} (const size\+\_\+t pos\+Row, const size\+\_\+t pos\+Col)
+\begin{DoxyCompactList}\small\item\em Creates the position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_position_aa8917a1643d950d09a44957956aed67a}{$\sim$\+Position}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,20 +25,39 @@ size\+\_\+t \mbox{\hyperlink{struct_position_abac43d1772ad2cf9447b134240e88d27}{
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The structure that indicates the position of \mbox{\hyperlink{class_block}{Block}} in the grid layout. 
+
+
+
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{struct_position_ac30ff0c554df4e53f02b79b067ac368c}\label{struct_position_ac30ff0c554df4e53f02b79b067ac368c}} 
+\mbox{\Hypertarget{struct_position_a5b1c9b0f98d4ba290679fcd06284a0c8}\label{struct_position_a5b1c9b0f98d4ba290679fcd06284a0c8}} 
 \index{Position@{Position}!Position@{Position}}
 \index{Position@{Position}!Position@{Position}}
 \subsubsection{\texorpdfstring{Position()}{Position()}}
-{\footnotesize\ttfamily Position\+::\+Position (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos\+Row,  }\item[{size\+\_\+t}]{pos\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Position\+::\+Position (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{pos\+Row,  }\item[{const size\+\_\+t}]{pos\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the position. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em pos\+Row} & \\
+{\em pos\+Row} & The row in the grid. \\
 \hline
-{\em pos\+Col} & \\
+{\em pos\+Col} & T\+He column in the grid. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{struct_position_aa8917a1643d950d09a44957956aed67a}\label{struct_position_aa8917a1643d950d09a44957956aed67a}} 
+\index{Position@{Position}!````~Position@{$\sim$Position}}
+\index{````~Position@{$\sim$Position}!Position@{Position}}
+\subsubsection{\texorpdfstring{$\sim$Position()}{~Position()}}
+{\footnotesize\ttfamily virtual Position\+::$\sim$\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Data Documentation}
@@ -37,13 +67,13 @@ size\+\_\+t \mbox{\hyperlink{struct_position_abac43d1772ad2cf9447b134240e88d27}{
 \subsubsection{\texorpdfstring{column}{column}}
 {\footnotesize\ttfamily size\+\_\+t Position\+::column}
 
-T\+O\+DO\+: describe \mbox{\Hypertarget{struct_position_a55d3db7ca0f004461b890a5340a0cd24}\label{struct_position_a55d3db7ca0f004461b890a5340a0cd24}} 
+The column in the grid \mbox{\Hypertarget{struct_position_a55d3db7ca0f004461b890a5340a0cd24}\label{struct_position_a55d3db7ca0f004461b890a5340a0cd24}} 
 \index{Position@{Position}!row@{row}}
 \index{row@{row}!Position@{Position}}
 \subsubsection{\texorpdfstring{row}{row}}
 {\footnotesize\ttfamily size\+\_\+t Position\+::row}
 
-T\+O\+DO\+: describe 
+The row in the grid 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

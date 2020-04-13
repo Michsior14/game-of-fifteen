@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +56,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -127,7 +152,7 @@ $(function() {
 
 <h3><a id="index_f"></a>- f -</h3><ul>
 <li>FreeBlock()
-: <a class="el" href="class_free_block.html#aa23ff8e21dde64908f9c6c01bf8e6923">FreeBlock</a>
+: <a class="el" href="class_free_block.html#a6c7d3b6a2c8b1edac0f59ea2b33b9e73">FreeBlock</a>
 </li>
 <li>from
 : <a class="el" href="struct_move.html#add76f7fa185380a7a02b6904bf48dc87">Move</a>
@@ -136,6 +161,9 @@ $(function() {
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>Game()
+: <a class="el" href="class_game.html#ad59df6562a58a614fda24622d3715b65">Game</a>
+</li>
 <li>gameRestored()
 : <a class="el" href="class_blocks_model.html#a1b26e86f148e270ac598aa24accc718b">BlocksModel</a>
 </li>
@@ -144,27 +172,39 @@ $(function() {
 </li>
 <li>gameStartedHandler()
 : <a class="el" href="class_blocks_view.html#a23c0b8242274f9627a91dba5fa8af036">BlocksView</a>
-, <a class="el" href="class_move_stack_model.html#a8340fbe17638209c13250962fd4e2ff3">MoveStackModel</a>
+, <a class="el" href="class_move_stack_model.html#a5a5d359de832234daceef5e216120b65">MoveStackModel</a>
 , <a class="el" href="class_state_manager_model.html#a414fe4dfa55aa139c26b3ccd002328ff">StateManagerModel</a>
 </li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>init()
+: <a class="el" href="class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c">BlocksController</a>
+</li>
 <li>isFree()
 : <a class="el" href="class_block.html#a795e0536746b840286cb1e74487311a9">Block&lt; T &gt;</a>
 , <a class="el" href="class_free_block.html#a76d3f40934d42c566095ee2f1386eac5">FreeBlock</a>
 , <a class="el" href="class_numbered_block.html#a04899b0e9d90f4ce4faa8aae9e4140e9">NumberedBlock</a>
 </li>
+<li>iterator
+: <a class="el" href="class_move_stack_model.html#a64b3cd5b744e18ce4cebd87957b2f3fa">MoveStackModel</a>
+</li>
 </ul>
 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
+<li>layoutItem()
+: <a class="el" href="class_block.html#adebc177a35bfd2ecaebd8fc23a6ceafb">Block&lt; T &gt;</a>
+</li>
 <li>level
 : <a class="el" href="struct_load_state.html#ab48ca57dd161df569b22a88f457df244">LoadState</a>
 </li>
 <li>levelChanged()
 : <a class="el" href="class_blocks_model.html#aadc67f8541695e398bd80f66690308c4">BlocksModel</a>
+</li>
+<li>loadGame()
+: <a class="el" href="class_state_manager_model.html#abf3febd681c98f8522bd52944e720618">StateManagerModel</a>
 </li>
 </ul>
 
@@ -174,22 +214,22 @@ $(function() {
 : <a class="el" href="class_blocks_view.html#a9131c975ebe8b9c6933890bb9d9b0848">BlocksView</a>
 </li>
 <li>Move()
-: <a class="el" href="struct_move.html#a30751f94ab306167b39b648076407532">Move</a>
+: <a class="el" href="struct_move.html#aa27facde66c32c5f168c7779108c16a2">Move</a>
 </li>
 <li>moveBlock()
-: <a class="el" href="class_blocks_model.html#abf01998c6ba41012b2ef6a457415b06c">BlocksModel</a>
+: <a class="el" href="class_blocks_model.html#a8ce391f7ec760f11d166aead833aa002">BlocksModel</a>
 </li>
 <li>moves
 : <a class="el" href="struct_load_state.html#a00e978ec8c48f99e7007814da01f328b">LoadState</a>
-</li>
-<li>movesChanged()
-: <a class="el" href="class_move_stack_model.html#aff05dc88104b96911f9cf8a1033d4356">MoveStackModel</a>
 </li>
 <li>movesCounter
 : <a class="el" href="struct_load_state.html#a72929d48135962cbff700c440a57553f">LoadState</a>
 </li>
 <li>MoveStackController()
 : <a class="el" href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f">MoveStackController</a>
+</li>
+<li>MoveStackModel()
+: <a class="el" href="class_move_stack_model.html#aaed956e471dc01eb1c996001e2d3751b">MoveStackModel</a>
 </li>
 <li>MoveStackView()
 : <a class="el" href="class_move_stack_view.html#aee51704e36aeb3f7d5a5a0c6be03b414">MoveStackView</a>
@@ -209,12 +249,25 @@ $(function() {
 : <a class="el" href="class_block_layout_item.html#a418628ab57eed9f9e9857f1a33149c54">BlockLayoutItem</a>
 </li>
 <li>Position()
-: <a class="el" href="struct_position.html#ac30ff0c554df4e53f02b79b067ac368c">Position</a>
+: <a class="el" href="struct_position.html#a5b1c9b0f98d4ba290679fcd06284a0c8">Position</a>
+</li>
+<li>print()
+: <a class="el" href="class_blocks_model.html#a115cbe7c4e49a128ebcbae3b5c6c24ee">BlocksModel</a>
+</li>
+<li>puzzleSolved()
+: <a class="el" href="class_blocks_model.html#a0511c008064fa694adfc249c096609bb">BlocksModel</a>
+</li>
+<li>puzzleSolvedHandler()
+: <a class="el" href="class_blocks_view.html#aac769b83129ef5e37c4ab6c680cc13a1">BlocksView</a>
+, <a class="el" href="class_move_stack_model.html#a7fba5a7c9c8cca32112274c87b45fa82">MoveStackModel</a>
 </li>
 </ul>
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>restart()
+: <a class="el" href="class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6">BlocksModel</a>
+</li>
 <li>row
 : <a class="el" href="struct_position.html#a55d3db7ca0f004461b890a5340a0cd24">Position</a>
 </li>
@@ -222,6 +275,9 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>saveGame()
+: <a class="el" href="class_state_manager_model.html#a57883b92890873f23537e78c1bf6f2de">StateManagerModel</a>
+</li>
 <li>setCountLabel()
 : <a class="el" href="class_move_stack_view.html#ad3439eab1b100699aa82ece0b21de8a8">MoveStackView</a>
 </li>
@@ -234,8 +290,14 @@ $(function() {
 <li>setTimePassed()
 : <a class="el" href="class_move_stack_view.html#a6a70962da0c881426a408bb78cf9f974">MoveStackView</a>
 </li>
+<li>show()
+: <a class="el" href="class_game.html#ada0891dcd00cd18026915f7dfcdde2b6">Game</a>
+</li>
 <li>sizeHint()
 : <a class="el" href="class_block_layout_item.html#aed00c617a4ca20cc196fe2809382488b">BlockLayoutItem</a>
+</li>
+<li>start()
+: <a class="el" href="class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2">BlocksModel</a>
 </li>
 <li>stateLoaded()
 : <a class="el" href="class_state_manager_model.html#ade47748f618f84b0a2a32be1da177ad5">StateManagerModel</a>
@@ -279,12 +341,15 @@ $(function() {
 : <a class="el" href="class_move_stack_model.html#a8b596d9619735fc7d066a3d0e1b8cc55">MoveStackModel</a>
 </li>
 <li>totalMovesHandler()
-: <a class="el" href="class_state_manager_model.html#a3cd67127d4b7edcb431db1d700f0048e">StateManagerModel</a>
+: <a class="el" href="class_state_manager_model.html#a692ae20069405c9ace78f1d403046d8c">StateManagerModel</a>
 </li>
 </ul>
 
 
 <h3><a id="index_u"></a>- u -</h3><ul>
+<li>undo()
+: <a class="el" href="class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf">MoveStackModel</a>
+</li>
 <li>undoMove()
 : <a class="el" href="class_blocks_model.html#a6707a7dac44d269c2d52e7904a7473ef">BlocksModel</a>
 , <a class="el" href="class_move_stack_model.html#a16436cf5acda5455355c24f28586f1e8">MoveStackModel</a>
@@ -297,12 +362,58 @@ $(function() {
 : <a class="el" href="class_block.html#ab0b547f273f8d5e4e783ccedaf13ef26">Block&lt; T &gt;</a>
 </li>
 </ul>
+
+
+<h3><a id="index__7E"></a>- ~ -</h3><ul>
+<li>~Block()
+: <a class="el" href="class_block.html#a7da3fe07e22a8d7f161cc23225b9964f">Block&lt; T &gt;</a>
+</li>
+<li>~BlockLayoutItem()
+: <a class="el" href="class_block_layout_item.html#aa39e2ec9aa8fd0168bbc5eca07eb5814">BlockLayoutItem</a>
+</li>
+<li>~BlocksModel()
+: <a class="el" href="class_blocks_model.html#af39495843287a69e0957451f3751ebbe">BlocksModel</a>
+</li>
+<li>~BlocksView()
+: <a class="el" href="class_blocks_view.html#a40c2c572d4a1cb2809ce55fa0746c4ff">BlocksView</a>
+</li>
+<li>~FreeBlock()
+: <a class="el" href="class_free_block.html#a7bd1edc9b556e577949cb2ec97b4f817">FreeBlock</a>
+</li>
+<li>~Game()
+: <a class="el" href="class_game.html#ae3d112ca6e0e55150d2fdbc704474530">Game</a>
+</li>
+<li>~Move()
+: <a class="el" href="struct_move.html#a6632e48fd18a643a58bf21c6eafc06d7">Move</a>
+</li>
+<li>~MoveStackController()
+: <a class="el" href="class_move_stack_controller.html#a1e1f7f27f4c98dadd32f436ff8245d66">MoveStackController</a>
+</li>
+<li>~MoveStackModel()
+: <a class="el" href="class_move_stack_model.html#a3b1aec2985059d170399ae0ce971cbcd">MoveStackModel</a>
+</li>
+<li>~MoveStackView()
+: <a class="el" href="class_move_stack_view.html#a39b59ddaeb4178aa284864661047127c">MoveStackView</a>
+</li>
+<li>~NumberedBlock()
+: <a class="el" href="class_numbered_block.html#aa7724b741079dbba2a507988bf669aaa">NumberedBlock</a>
+</li>
+<li>~Position()
+: <a class="el" href="struct_position.html#aa8917a1643d950d09a44957956aed67a">Position</a>
+</li>
+<li>~StateManagerController()
+: <a class="el" href="class_state_manager_controller.html#a9fc558b48688774b9690edd208ee5797">StateManagerController</a>
+</li>
+</ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

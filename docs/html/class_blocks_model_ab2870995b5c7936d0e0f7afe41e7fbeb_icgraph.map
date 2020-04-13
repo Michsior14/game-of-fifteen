@@ -1,0 +1,4 @@
+<map id="BlocksModel::blocksUpdated" name="BlocksModel::blocksUpdated">
+<area shape="rect" id="node1" title="Emitted whenever the position of one of the blocks has changed." alt="" coords="239,13,449,39"/>
+<area shape="rect" id="node2" href="$class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="5,5,191,47"/>
+</map>

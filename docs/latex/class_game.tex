@@ -1,16 +1,84 @@
 \hypertarget{class_game}{}\section{Game Class Reference}
 \label{class_game}\index{Game@{Game}}
-Inheritance diagram for Game\+:\begin{figure}[H]
+
+
+The main window used to display the game.  
+
+
+
+
+{\ttfamily \#include $<$game.\+h$>$}
+
+
+
+Inheritance diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_game}
+\includegraphics[width=167pt]{class_game__inherit__graph}
 \end{center}
 \end{figure}
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_game__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em The creates the main window. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ada0891dcd00cd18026915f7dfcdde2b6}{show}} ()
+\begin{DoxyCompactList}\small\item\em Shows the window in the center of a screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_game_a4122fd61c61ca57ecbe4458f938e2f98}{context\+Menu\+Event}} (Q\+Context\+Menu\+Event $\ast$event) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reimplement to recive context menu events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The main window used to display the game. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+The creates the main window. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_game_ad59df6562a58a614fda24622d3715b65_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\subsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -21,10 +89,24 @@ void \mbox{\hyperlink{class_game_a4122fd61c61ca57ecbe4458f938e2f98}{context\+Men
 {\footnotesize\ttfamily void Game\+::context\+Menu\+Event (\begin{DoxyParamCaption}\item[{Q\+Context\+Menu\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
 
 
+
+Reimplement to recive context menu events. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em event} & \\
+{\em event} & The context of menu events. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_game_ada0891dcd00cd18026915f7dfcdde2b6}\label{class_game_ada0891dcd00cd18026915f7dfcdde2b6}} 
+\index{Game@{Game}!show@{show}}
+\index{show@{show}!Game@{Game}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Game\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shows the window in the center of a screen. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

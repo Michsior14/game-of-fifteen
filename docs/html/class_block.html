@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +55,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_block.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +86,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -69,30 +94,60 @@ $(function() {
 <div class="title">Block&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract class used to connect layout with model. Holds the information if created block is the empty one or not.  
+ <a href="class_block.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="block_8h_source.html">block.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Block&lt; T &gt;:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_block.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_block__inherit__graph.png" border="0" usemap="#_block_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="_block_3_01_t_01_4_inherit__map" id="_block_3_01_t_01_4_inherit__map">
+<area shape="rect"  title="Abstract class used to connect layout with model. Holds the information if created block is the empty..." alt="" coords="5,80,101,107"/>
+<area shape="rect"  title=" " alt="" coords="16,5,91,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Block&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block__coll__graph.png" border="0" usemap="#_block_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="_block_3_01_t_01_4_coll__map" id="_block_3_01_t_01_4_coll__map">
+<area shape="rect"  title="Abstract class used to connect layout with model. Holds the information if created block is the empty..." alt="" coords="5,80,101,107"/>
+<area shape="rect"  title=" " alt="" coords="16,5,91,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa19ca9a93a3cb69f9583c1f5edfd5d26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#aa19ca9a93a3cb69f9583c1f5edfd5d26">Block</a> (const size_t <a class="el" href="class_block.html#ab0b547f273f8d5e4e783ccedaf13ef26">value</a>, QGraphicsItem *parent)</td></tr>
+<tr class="memdesc:aa19ca9a93a3cb69f9583c1f5edfd5d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> using number only (same title and internal value).  <a href="#aa19ca9a93a3cb69f9583c1f5edfd5d26">More...</a><br /></td></tr>
 <tr class="separator:aa19ca9a93a3cb69f9583c1f5edfd5d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91743e5381dcc23971f99db3f1b7607c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#a91743e5381dcc23971f99db3f1b7607c">Block</a> (const size_t <a class="el" href="class_block.html#ab0b547f273f8d5e4e783ccedaf13ef26">value</a>, const std::string <a class="el" href="class_block.html#a48197972162fbfe6b2f4d721d80034cf">title</a>, QGraphicsItem *parent)</td></tr>
+<tr class="memdesc:a91743e5381dcc23971f99db3f1b7607c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> with number and title as separate values. Useful for "empty" blocks.  <a href="#a91743e5381dcc23971f99db3f1b7607c">More...</a><br /></td></tr>
 <tr class="separator:a91743e5381dcc23971f99db3f1b7607c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da3fe07e22a8d7f161cc23225b9964f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#a7da3fe07e22a8d7f161cc23225b9964f">~Block</a> ()=default</td></tr>
+<tr class="memdesc:a7da3fe07e22a8d7f161cc23225b9964f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default virtual destructor.  <a href="#a7da3fe07e22a8d7f161cc23225b9964f">More...</a><br /></td></tr>
+<tr class="separator:a7da3fe07e22a8d7f161cc23225b9964f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0b547f273f8d5e4e783ccedaf13ef26"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#ab0b547f273f8d5e4e783ccedaf13ef26">value</a> () const</td></tr>
+<tr class="memdesc:ab0b547f273f8d5e4e783ccedaf13ef26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets current number assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>.  <a href="#ab0b547f273f8d5e4e783ccedaf13ef26">More...</a><br /></td></tr>
 <tr class="separator:ab0b547f273f8d5e4e783ccedaf13ef26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48197972162fbfe6b2f4d721d80034cf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#a48197972162fbfe6b2f4d721d80034cf">title</a> () const</td></tr>
+<tr class="memdesc:a48197972162fbfe6b2f4d721d80034cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets current title assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>.  <a href="#a48197972162fbfe6b2f4d721d80034cf">More...</a><br /></td></tr>
 <tr class="separator:a48197972162fbfe6b2f4d721d80034cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adebc177a35bfd2ecaebd8fc23a6ceafb"><td class="memItemLeft" align="right" valign="top"><a id="adebc177a35bfd2ecaebd8fc23a6ceafb"></a>
-T *&#160;</td><td class="memItemRight" valign="bottom"><b>layoutItem</b> ()</td></tr>
+<tr class="memitem:adebc177a35bfd2ecaebd8fc23a6ceafb"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#adebc177a35bfd2ecaebd8fc23a6ceafb">layoutItem</a> ()</td></tr>
+<tr class="memdesc:adebc177a35bfd2ecaebd8fc23a6ceafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a layout item assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>.  <a href="#adebc177a35bfd2ecaebd8fc23a6ceafb">More...</a><br /></td></tr>
 <tr class="separator:adebc177a35bfd2ecaebd8fc23a6ceafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a795e0536746b840286cb1e74487311a9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#a795e0536746b840286cb1e74487311a9">isFree</a> () const =0</td></tr>
+<tr class="memdesc:a795e0536746b840286cb1e74487311a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets information if the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> is "empty" or not.  <a href="#a795e0536746b840286cb1e74487311a9">More...</a><br /></td></tr>
 <tr class="separator:a795e0536746b840286cb1e74487311a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Block&lt; T &gt;</h3>
+
+<p>Abstract class used to connect layout with model. Holds the information if created block is the empty one or not. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa19ca9a93a3cb69f9583c1f5edfd5d26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa19ca9a93a3cb69f9583c1f5edfd5d26">&#9670;&nbsp;</a></span>Block() <span class="overload">[1/2]</span></h2>
 
@@ -128,10 +183,12 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> using number only (same title and internal value). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td></td></tr>
-    <tr><td class="paramname">parent</td><td></td></tr>
+    <tr><td class="paramname">value</td><td>The number a block should hold. </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent Qt object. </td></tr>
   </table>
   </dd>
 </dl>
@@ -179,14 +236,45 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> with number and title as separate values. Useful for "empty" blocks. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td></td></tr>
-    <tr><td class="paramname">title</td><td></td></tr>
-    <tr><td class="paramname">parent</td><td></td></tr>
+    <tr><td class="paramname">value</td><td>The number a block should hold. </td></tr>
+    <tr><td class="paramname">title</td><td>The title of the block (displayed value to the user). </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent Qt object. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a7da3fe07e22a8d7f161cc23225b9964f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da3fe07e22a8d7f161cc23225b9964f">&#9670;&nbsp;</a></span>~Block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_block.html">Block</a>&lt; T &gt;::~<a class="el" href="class_block.html">Block</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default virtual destructor. </p>
 
 </div>
 </div>
@@ -215,9 +303,51 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+<p>Gets information if the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> is "empty" or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>bool "True" if the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> is free, "False" otherwise. </dd></dl>
 
 <p>Implemented in <a class="el" href="class_free_block.html#a76d3f40934d42c566095ee2f1386eac5">FreeBlock</a>, and <a class="el" href="class_numbered_block.html#a04899b0e9d90f4ce4faa8aae9e4140e9">NumberedBlock</a>.</p>
+
+</div>
+</div>
+<a id="adebc177a35bfd2ecaebd8fc23a6ceafb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adebc177a35bfd2ecaebd8fc23a6ceafb">&#9670;&nbsp;</a></span>layoutItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* <a class="el" href="class_block.html">Block</a>&lt; T &gt;::layoutItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a layout item assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>T* The layout item pointer </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_block_adebc177a35bfd2ecaebd8fc23a6ceafb_icgraph.png" border="0" usemap="#class_block_adebc177a35bfd2ecaebd8fc23a6ceafb_icgraph" alt=""/></div>
+<map name="class_block_adebc177a35bfd2ecaebd8fc23a6ceafb_icgraph" id="class_block_adebc177a35bfd2ecaebd8fc23a6ceafb_icgraph">
+<area shape="rect"  title="Gets a layout item assigned to the Block." alt="" coords="523,13,660,39"/>
+<area shape="rect"  href="class_blocks_view.html#ad7f8487f26dd09d0058e8774f5f443b4" title="Handles the swapped blocks signal." alt="" coords="233,13,475,39"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -245,7 +375,9 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
+
+<p>Gets current title assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::string The title assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>. </dd></dl>
 
 </div>
 </div>
@@ -273,7 +405,9 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
+
+<p>Gets current number assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>size_t Number assigned to the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a>. </dd></dl>
 
 </div>
 </div>
@@ -281,11 +415,15 @@ template&lt;typename T&gt; </div>
 <li>src/block/<a class="el" href="block_8h_source.html">block.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_block.html">Block</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

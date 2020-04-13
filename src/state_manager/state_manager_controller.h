@@ -8,7 +8,7 @@
 #include <QObject>
 
 /**
- * @brief
+ * @brief Connects StateManaggerModel with Blocks nad MoveStack models.
  *
  */
 class StateManagerController : public QObject
@@ -16,24 +16,19 @@ class StateManagerController : public QObject
     Q_OBJECT
 public:
     /**
-     * @brief
+     * @brief Creates the controller.
      *
-     * @param model
-     * @param blocksModel
-     * @param movesStackModel
-     * @param parent
+     * @param model The StateManagerModel instance.
+     * @param blocksModel The BlocksModel instance.
+     * @param movesStackModel The MoveStackModel instance.
+     * @param parent The Qt's parent object.
      */
     explicit StateManagerController(StateManagerModel& model, BlocksModel& blocksModel, MoveStackModel& movesStackModel, QObject *parent = nullptr);
     /**
-     * @brief
+     * @brief The default destructor.
      *
      */
     virtual ~StateManagerController() = default;
-
-private:
-    StateManagerModel& _model; /**< TODO: describe */
-    BlocksModel& _blocksModel; /**< TODO: describe */
-    MoveStackModel& _moveStackModel; /**< TODO: describe */
 };
 
 #endif // STATEMANAGERCONTROLLER_H

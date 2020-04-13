@@ -1,19 +1,46 @@
 \hypertarget{class_blocks_controller}{}\section{Blocks\+Controller Class Reference}
 \label{class_blocks_controller}\index{BlocksController@{BlocksController}}
-Inheritance diagram for Blocks\+Controller\+:\begin{figure}[H]
+
+
+Connects \mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} with Block\+View.  
+
+
+
+
+{\ttfamily \#include $<$blocks\+\_\+controller.\+h$>$}
+
+
+
+Inheritance diagram for Blocks\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_blocks_controller}
+\includegraphics[width=177pt]{class_blocks_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Blocks\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_blocks_controller__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_blocks_controller_a477c727edcc0d3fd121beae431d7539b}{Blocks\+Controller}} (\mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} \&model, \mbox{\hyperlink{class_blocks_view}{Blocks\+View}} \&view, \mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} \&state\+Manager\+Model, Q\+Object $\ast$parent=nullptr)
-\item 
-\mbox{\Hypertarget{class_blocks_controller_a469ef02a49634593039a88e96dcff22c}\label{class_blocks_controller_a469ef02a49634593039a88e96dcff22c}} 
-void {\bfseries init} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates the controller. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blocks_controller_a469ef02a49634593039a88e96dcff22c}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the default values for the model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Connects \mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} with Block\+View. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -24,16 +51,57 @@ void {\bfseries init} ()
 {\footnotesize\ttfamily Blocks\+Controller\+::\+Blocks\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} \&}]{model,  }\item[{\mbox{\hyperlink{class_blocks_view}{Blocks\+View}} \&}]{view,  }\item[{\mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} \&}]{state\+Manager\+Model,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
+
+Creates the controller. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em model} & \\
+{\em model} & The \mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} instance. \\
 \hline
-{\em view} & \\
+{\em view} & The \mbox{\hyperlink{class_blocks_view}{Blocks\+View}} instance. \\
 \hline
-{\em state\+Manager\+Model} & \\
+{\em state\+Manager\+Model} & The \mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} instance. \\
 \hline
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent object. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_controller_a477c727edcc0d3fd121beae431d7539b_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_blocks_controller_a469ef02a49634593039a88e96dcff22c}\label{class_blocks_controller_a469ef02a49634593039a88e96dcff22c}} 
+\index{BlocksController@{BlocksController}!init@{init}}
+\index{init@{init}!BlocksController@{BlocksController}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Blocks\+Controller\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the default values for the model. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_controller_a469ef02a49634593039a88e96dcff22c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_blocks_controller_a469ef02a49634593039a88e96dcff22c_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -21,7 +21,7 @@ QT_END_NAMESPACE
 #include "state_manager/state_manager_controller.h"
 
 /**
- * @brief
+ * @brief The main window used to display the game.
  *
  */
 class Game : public QMainWindow
@@ -29,18 +29,18 @@ class Game : public QMainWindow
     Q_OBJECT
 public:
     /**
-     * @brief
+     * @brief The creates the main window.
      *
      */
     explicit Game();
     /**
-     * @brief
+     * @brief The default destructor.
      *
      */
     virtual ~Game();
 
     /**
-     * @brief
+     * @brief Shows the window in the center of a screen.
      *
      */
     void show();
@@ -48,48 +48,48 @@ public:
 protected:
 #ifndef QT_NO_CONTEXTMENU
     /**
-     * @brief
+     * @brief Reimplement to recive context menu events.
      *
-     * @param event
+     * @param event The context of menu events.
      */
     void contextMenuEvent(QContextMenuEvent *event) override;
 #endif // QT_NO_CONTEXTMENU
 
 private:
     /**
-     * @brief
+     * @brief Creates actions used in the menu.
      *
      */
     void createActions();
     /**
-     * @brief
+     * @brief Creates menus on the Game window.
      *
      */
     void createMenus();
 
-    QMenu* _gameMenu; /**< TODO: describe */
-    QMenu* _levelMenu; /**< TODO: describe */
+    QMenu* _gameMenu; /**< The main menu instance. */
+    QMenu* _levelMenu; /**< The level submenu instance. */
 
-    QAction* _newGameAct; /**< TODO: describe */
-    QAction* _saveGameAct; /**< TODO: describe */
-    QAction* _loadGameAct; /**< TODO: describe */
-    QAction* _easyLevelAct; /**< TODO: describe */
-    QAction* _mediumLevelAct; /**< TODO: describe */
-    QAction* _hardLevelAct; /**< TODO: describe */
-    QAction* _undoMove; /**< TODO: describe */
-    QActionGroup* _levelGroup; /**< TODO: describe */
+    QAction* _newGameAct; /**< The new game action instance. */
+    QAction* _saveGameAct; /**< The save game action instance. */
+    QAction* _loadGameAct; /**< The load game action instance. */
+    QAction* _easyLevelAct; /**< The easy level action instance. */
+    QAction* _mediumLevelAct; /**< The medium level action instance. */
+    QAction* _hardLevelAct; /**< The hard level action instance. */
+    QAction* _undoMove; /**< The undo move action instance. */
+    QActionGroup* _levelGroup; /**< The level group instance. */
 
-    StateManagerModel _stateManagerModel; /**< TODO: describe */
-    MoveStackModel _moveStackModel; /**< TODO: describe */
-    BlocksModel _blocksModel; /**< TODO: describe */
+    StateManagerModel _stateManagerModel; /**< The StateManagerModel instance. */
+    MoveStackModel _moveStackModel; /**< The MoveStackModel instance. */
+    BlocksModel _blocksModel; /**< The BlocksModel instance. */
 
-    MoveStackView* _moveView; /**< TODO: describe */
-    MoveStackController _moveStackController; /**< TODO: describe */
+    MoveStackView* _moveView; /**< The MoveStackView instance. */
+    MoveStackController _moveStackController; /**< The MoveStackController instance. */
 
-    BlocksView* _blocksView; /**< TODO: describe */
-    BlocksController _blocksController; /**< TODO: describe */
+    BlocksView* _blocksView; /**< The BlocksView instance. */
+    BlocksController _blocksController; /**< The BlocksController instance. */
 
-    StateManagerController _stateManagerController; /**< TODO: describe */
+    StateManagerController _stateManagerController; /**< The StateManagerController instance. */
 };
 
 #endif // GAME_H

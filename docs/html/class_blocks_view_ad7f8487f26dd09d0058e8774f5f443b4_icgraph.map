@@ -1,0 +1,4 @@
+<map id="BlocksView::blockSwapedHandler" name="BlocksView::blockSwapedHandler">
+<area shape="rect" id="node1" title="Handles the swapped blocks signal." alt="" coords="233,13,475,39"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>

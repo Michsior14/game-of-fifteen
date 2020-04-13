@@ -1,52 +1,106 @@
 \hypertarget{class_move_stack_model}{}\section{Move\+Stack\+Model Class Reference}
 \label{class_move_stack_model}\index{MoveStackModel@{MoveStackModel}}
-Inheritance diagram for Move\+Stack\+Model\+:\begin{figure}[H]
+
+
+The model responsible for storing all moves that have been made by the user and passed time.  
+
+
+
+
+{\ttfamily \#include $<$move\+\_\+stack\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for Move\+Stack\+Model\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_move_stack_model}
+\includegraphics[width=181pt]{class_move_stack_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Move\+Stack\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_move_stack_model__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}\label{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}} 
-using {\bfseries iterator} = std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ $>$\+::const\+\_\+iterator
-\end{DoxyCompactItemize}
+using \mbox{\hyperlink{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}{iterator}} = std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ $>$\+::const\+\_\+iterator
+\begin{DoxyCompactList}\small\item\em The stack iterator. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa}{block\+Swaped\+Handler}} (\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&a, \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&b, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move, bool undo)
-\item 
-void \mbox{\hyperlink{class_move_stack_model_a8340fbe17638209c13250962fd4e2ff3}{game\+Started\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&level)
-\item 
-\mbox{\Hypertarget{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82}\label{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82}} 
-void {\bfseries puzzle\+Solved\+Handler} ()
-\item 
+void \mbox{\hyperlink{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa}{block\+Swaped\+Handler}} (\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&a, \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&b, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move, bool \mbox{\hyperlink{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}{undo}})
+\begin{DoxyCompactList}\small\item\em Handles the swapped blocks signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_stack_model_a5a5d359de832234daceef5e216120b65}{game\+Started\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&size)
+\begin{DoxyCompactList}\small\item\em Handles the new game signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82}{puzzle\+Solved\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles the puzzle solved signal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8}{state\+Loaded\+Handler}} (const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&state)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handler for signals when new state has been loaded (game has been loaded from file). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_move_stack_model_aff05dc88104b96911f9cf8a1033d4356}{moves\+Changed}} (const size\+\_\+t \&moves)
-\item 
 void \mbox{\hyperlink{class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55}{total\+Moves\+Changed}} (const size\+\_\+t \&counter, const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&moves)
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted when number of moves has changed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb}{time\+Passed\+Changed}} (const size\+\_\+t \&time\+Passed)
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted when passed time changes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_move_stack_model_a16436cf5acda5455355c24f28586f1e8}{undo\+Move}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Emitted when move has been undone. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}\label{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}} 
-void {\bfseries undo} ()
-\item 
+\mbox{\hyperlink{class_move_stack_model_aaed956e471dc01eb1c996001e2d3751b}{Move\+Stack\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Creates the new model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_stack_model_a3b1aec2985059d170399ae0ce971cbcd}\label{class_move_stack_model_a3b1aec2985059d170399ae0ce971cbcd}} 
+virtual \mbox{\hyperlink{class_move_stack_model_a3b1aec2985059d170399ae0ce971cbcd}{$\sim$\+Move\+Stack\+Model}} ()
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}{undo}} ()
+\begin{DoxyCompactList}\small\item\em Undo the last move if there is any. \end{DoxyCompactList}\item 
 size\+\_\+t \mbox{\hyperlink{class_move_stack_model_a59f08def53913e4f33df7fe30a16dc75}{total\+Moves}} () const
-\item 
-iterator \mbox{\hyperlink{class_move_stack_model_a5617b792b9e541940f6bfdbcc3c08bfa}{begin}} () const
-\item 
-iterator \mbox{\hyperlink{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492b9}{end}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the number of total moves done by the user, including {\ttfamily undo} ones. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}{iterator}} \mbox{\hyperlink{class_move_stack_model_a5617b792b9e541940f6bfdbcc3c08bfa}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns the iterator to the first move in the stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}{iterator}} \mbox{\hyperlink{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492b9}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns the iterator to the last move in the stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The model responsible for storing all moves that have been made by the user and passed time. 
+
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}\label{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}} 
+\index{MoveStackModel@{MoveStackModel}!iterator@{iterator}}
+\index{iterator@{iterator}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{iterator}{iterator}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}{Move\+Stack\+Model\+::iterator}} =  std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_move}{Move}}$>$ $>$\+::const\+\_\+iterator}
+
+
+
+The stack iterator. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_move_stack_model_aaed956e471dc01eb1c996001e2d3751b}\label{class_move_stack_model_aaed956e471dc01eb1c996001e2d3751b}} 
+\index{MoveStackModel@{MoveStackModel}!MoveStackModel@{MoveStackModel}}
+\index{MoveStackModel@{MoveStackModel}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{MoveStackModel()}{MoveStackModel()}}
+{\footnotesize\ttfamily Move\+Stack\+Model\+::\+Move\+Stack\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the new model. 
+
 
 
 \subsection{Member Function Documentation}
@@ -54,10 +108,14 @@ iterator \mbox{\hyperlink{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492
 \index{MoveStackModel@{MoveStackModel}!begin@{begin}}
 \index{begin@{begin}!MoveStackModel@{MoveStackModel}}
 \subsubsection{\texorpdfstring{begin()}{begin()}}
-{\footnotesize\ttfamily iterator Move\+Stack\+Model\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}{iterator}} Move\+Stack\+Model\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the iterator to the first move in the stack. 
 
 \begin{DoxyReturn}{Returns}
-iterator 
+iterator The iterator. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa}\label{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa}} 
 \index{MoveStackModel@{MoveStackModel}!blockSwapedHandler@{blockSwapedHandler}}
@@ -66,49 +124,92 @@ iterator
 {\footnotesize\ttfamily void Move\+Stack\+Model\+::block\+Swaped\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{b,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move,  }\item[{bool}]{undo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
+
+Handles the swapped blocks signal. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em a} & \\
+{\em a} & The first \mbox{\hyperlink{class_block}{Block}} that changed the placement. \\
 \hline
-{\em b} & \\
+{\em b} & The second \mbox{\hyperlink{class_block}{Block}} that changed the placement. \\
 \hline
-{\em move} & \\
+{\em move} & Describes the move that happend on the board (how positions changed). \\
 \hline
-{\em undo} & \\
+{\em undo} & Indicates if it is an undo action. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a8ff4e26b9eaded33ae9a2588d470feaa_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492b9}\label{class_move_stack_model_aa4d30bfd992058342c0faff6ab5492b9}} 
 \index{MoveStackModel@{MoveStackModel}!end@{end}}
 \index{end@{end}!MoveStackModel@{MoveStackModel}}
 \subsubsection{\texorpdfstring{end()}{end()}}
-{\footnotesize\ttfamily iterator Move\+Stack\+Model\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_move_stack_model_a64b3cd5b744e18ce4cebd87957b2f3fa}{iterator}} Move\+Stack\+Model\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the iterator to the last move in the stack. 
 
 \begin{DoxyReturn}{Returns}
-iterator 
+iterator The iterator. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_move_stack_model_a8340fbe17638209c13250962fd4e2ff3}\label{class_move_stack_model_a8340fbe17638209c13250962fd4e2ff3}} 
+\mbox{\Hypertarget{class_move_stack_model_a5a5d359de832234daceef5e216120b65}\label{class_move_stack_model_a5a5d359de832234daceef5e216120b65}} 
 \index{MoveStackModel@{MoveStackModel}!gameStartedHandler@{gameStartedHandler}}
 \index{gameStartedHandler@{gameStartedHandler}!MoveStackModel@{MoveStackModel}}
 \subsubsection{\texorpdfstring{gameStartedHandler}{gameStartedHandler}}
-{\footnotesize\ttfamily void Move\+Stack\+Model\+::game\+Started\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::game\+Started\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles the new game signal. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em blocks} & \\
+{\em blocks} & The array of pointers to all Blocks that creates the board. \\
 \hline
-{\em level} & \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_move_stack_model_aff05dc88104b96911f9cf8a1033d4356}\label{class_move_stack_model_aff05dc88104b96911f9cf8a1033d4356}} 
-\index{MoveStackModel@{MoveStackModel}!movesChanged@{movesChanged}}
-\index{movesChanged@{movesChanged}!MoveStackModel@{MoveStackModel}}
-\subsubsection{\texorpdfstring{movesChanged}{movesChanged}}
-{\footnotesize\ttfamily void Move\+Stack\+Model\+::moves\+Changed (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
-
-
-\begin{DoxyParams}{Parameters}
-{\em moves} & \\
+{\em size} & The edge size of a board (i.\+e. 4 in case of board created for 16 blocks) \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a5a5d359de832234daceef5e216120b65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82}\label{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82}} 
+\index{MoveStackModel@{MoveStackModel}!puzzleSolvedHandler@{puzzleSolvedHandler}}
+\index{puzzleSolvedHandler@{puzzleSolvedHandler}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{puzzleSolvedHandler}{puzzleSolvedHandler}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::puzzle\+Solved\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles the puzzle solved signal. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a7fba5a7c9c8cca32112274c87b45fa82_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8}\label{class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8}} 
 \index{MoveStackModel@{MoveStackModel}!stateLoadedHandler@{stateLoadedHandler}}
 \index{stateLoadedHandler@{stateLoadedHandler}!MoveStackModel@{MoveStackModel}}
@@ -116,10 +217,22 @@ iterator
 {\footnotesize\ttfamily void Move\+Stack\+Model\+::state\+Loaded\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
+
+Handler for signals when new state has been loaded (game has been loaded from file). 
+
+
 \begin{DoxyParams}{Parameters}
-{\em state} & \\
+{\em state} & The state object, holding level, numbers and size of the board. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a2c8028466c62b5f8b269b71939c56ef8_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb}\label{class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb}} 
 \index{MoveStackModel@{MoveStackModel}!timePassedChanged@{timePassedChanged}}
 \index{timePassedChanged@{timePassedChanged}!MoveStackModel@{MoveStackModel}}
@@ -127,18 +240,34 @@ iterator
 {\footnotesize\ttfamily void Move\+Stack\+Model\+::time\+Passed\+Changed (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{time\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted when passed time changes. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em time\+Passed} & \\
+{\em time\+Passed} & The number of seconds since the first move. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_aa7d3186093032e523b2a7bbefa74f8fb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_move_stack_model_a59f08def53913e4f33df7fe30a16dc75}\label{class_move_stack_model_a59f08def53913e4f33df7fe30a16dc75}} 
 \index{MoveStackModel@{MoveStackModel}!totalMoves@{totalMoves}}
 \index{totalMoves@{totalMoves}!MoveStackModel@{MoveStackModel}}
 \subsubsection{\texorpdfstring{totalMoves()}{totalMoves()}}
 {\footnotesize\ttfamily size\+\_\+t Move\+Stack\+Model\+::total\+Moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Returns the number of total moves done by the user, including {\ttfamily undo} ones. 
+
 \begin{DoxyReturn}{Returns}
-size\+\_\+t 
+size\+\_\+t The number of total moves. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55}\label{class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55}} 
 \index{MoveStackModel@{MoveStackModel}!totalMovesChanged@{totalMovesChanged}}
@@ -147,12 +276,42 @@ size\+\_\+t
 {\footnotesize\ttfamily void Move\+Stack\+Model\+::total\+Moves\+Changed (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{counter,  }\item[{const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted when number of moves has changed. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em counter} & \\
+{\em counter} & The number of moves. \\
 \hline
-{\em moves} & \\
+{\em moves} & The list of pointers to changed moves. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a8b596d9619735fc7d066a3d0e1b8cc55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}\label{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf}} 
+\index{MoveStackModel@{MoveStackModel}!undo@{undo}}
+\index{undo@{undo}!MoveStackModel@{MoveStackModel}}
+\subsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void Move\+Stack\+Model\+::undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Undo the last move if there is any. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a10ab990b00c1eb0d543d75b8b07eb4bf_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_move_stack_model_a16436cf5acda5455355c24f28586f1e8}\label{class_move_stack_model_a16436cf5acda5455355c24f28586f1e8}} 
 \index{MoveStackModel@{MoveStackModel}!undoMove@{undoMove}}
 \index{undoMove@{undoMove}!MoveStackModel@{MoveStackModel}}
@@ -160,10 +319,22 @@ size\+\_\+t
 {\footnotesize\ttfamily void Move\+Stack\+Model\+::undo\+Move (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted when move has been undone. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em move} & \\
+{\em move} & The move that has been undone. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_move_stack_model_a16436cf5acda5455355c24f28586f1e8_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

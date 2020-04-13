@@ -1,0 +1,4 @@
+<map id="MoveStackModel::gameStartedHandler" name="MoveStackModel::gameStartedHandler">
+<area shape="rect" id="node1" title="Handles the new game signal." alt="" coords="220,5,447,47"/>
+<area shape="rect" id="node2" href="$class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>

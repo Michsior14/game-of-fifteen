@@ -1,0 +1,4 @@
+<map id="MoveStackModel" name="MoveStackModel">
+<area shape="rect" id="node1" title="The model responsible for storing all moves that have been made by the user and passed time." alt="" coords="5,80,140,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="35,5,110,32"/>
+</map>

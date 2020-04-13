@@ -1,0 +1,5 @@
+<map id="BlocksModel::gameRestored" name="BlocksModel::gameRestored">
+<area shape="rect" id="node1" title="Emitted when game board has been restored." alt="" coords="475,13,683,39"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node3" href="$class_blocks_model.html#a9fc884d31e972c84e2e3dcbce73b8377" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="233,35,427,76"/>
+</map>

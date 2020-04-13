@@ -1,0 +1,10 @@
+<map id="BlocksModel::gameStarted" name="BlocksModel::gameStarted">
+<area shape="rect" id="node1" title="Emitted when new game has been started." alt="" coords="601,101,799,127"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="371,5,551,47"/>
+<area shape="rect" id="node3" href="$class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2" title="Starts the game." alt="" coords="389,71,532,98"/>
+<area shape="rect" id="node7" href="$class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="377,123,544,164"/>
+<area shape="rect" id="node8" href="$class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="368,188,553,229"/>
+<area shape="rect" id="node4" href="$class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c" title="Initialize the default values for the model." alt="" coords="161,46,320,73"/>
+<area shape="rect" id="node6" href="$class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6" title="Restarts the game." alt="" coords="163,97,319,123"/>
+<area shape="rect" id="node5" href="$class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,46,113,73"/>
+</map>

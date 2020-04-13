@@ -1,5 +1,14 @@
 \hypertarget{struct_load_state}{}\section{Load\+State Struct Reference}
 \label{struct_load_state}\index{LoadState@{LoadState}}
+
+
+The structure used to pass loaded state of a game to models.  
+
+
+
+
+{\ttfamily \#include $<$state\+\_\+manager\+\_\+model.\+h$>$}
+
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,6 +24,11 @@ std\+::vector$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \mbox{\hyperlink{struc
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+The structure used to pass loaded state of a game to models. 
+
+
+
 \subsection{Member Data Documentation}
 \mbox{\Hypertarget{struct_load_state_a1496d8006e1f1ec80803818ed11038eb}\label{struct_load_state_a1496d8006e1f1ec80803818ed11038eb}} 
 \index{LoadState@{LoadState}!blocks@{blocks}}
@@ -22,31 +36,31 @@ std\+::vector$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \mbox{\hyperlink{struc
 \subsubsection{\texorpdfstring{blocks}{blocks}}
 {\footnotesize\ttfamily std\+::vector$<$qint32$>$ Load\+State\+::blocks}
 
-T\+O\+DO\+: describe \mbox{\Hypertarget{struct_load_state_ab48ca57dd161df569b22a88f457df244}\label{struct_load_state_ab48ca57dd161df569b22a88f457df244}} 
+The numbers used to create all blocks. \mbox{\Hypertarget{struct_load_state_ab48ca57dd161df569b22a88f457df244}\label{struct_load_state_ab48ca57dd161df569b22a88f457df244}} 
 \index{LoadState@{LoadState}!level@{level}}
 \index{level@{level}!LoadState@{LoadState}}
 \subsubsection{\texorpdfstring{level}{level}}
 {\footnotesize\ttfamily qint32 Load\+State\+::level}
 
-T\+O\+DO\+: describe \mbox{\Hypertarget{struct_load_state_a00e978ec8c48f99e7007814da01f328b}\label{struct_load_state_a00e978ec8c48f99e7007814da01f328b}} 
+The game level. \mbox{\Hypertarget{struct_load_state_a00e978ec8c48f99e7007814da01f328b}\label{struct_load_state_a00e978ec8c48f99e7007814da01f328b}} 
 \index{LoadState@{LoadState}!moves@{moves}}
 \index{moves@{moves}!LoadState@{LoadState}}
 \subsubsection{\texorpdfstring{moves}{moves}}
 {\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{struct_move}{Move}}$>$ Load\+State\+::moves}
 
-T\+O\+DO\+: describe \mbox{\Hypertarget{struct_load_state_a72929d48135962cbff700c440a57553f}\label{struct_load_state_a72929d48135962cbff700c440a57553f}} 
+The moves done in the save game. \mbox{\Hypertarget{struct_load_state_a72929d48135962cbff700c440a57553f}\label{struct_load_state_a72929d48135962cbff700c440a57553f}} 
 \index{LoadState@{LoadState}!movesCounter@{movesCounter}}
 \index{movesCounter@{movesCounter}!LoadState@{LoadState}}
 \subsubsection{\texorpdfstring{movesCounter}{movesCounter}}
 {\footnotesize\ttfamily qint32 Load\+State\+::moves\+Counter}
 
-T\+O\+DO\+: describe \mbox{\Hypertarget{struct_load_state_a1c37e682001c48d107c981f9e225e83c}\label{struct_load_state_a1c37e682001c48d107c981f9e225e83c}} 
+The number of moves in the saved game. \mbox{\Hypertarget{struct_load_state_a1c37e682001c48d107c981f9e225e83c}\label{struct_load_state_a1c37e682001c48d107c981f9e225e83c}} 
 \index{LoadState@{LoadState}!timePassed@{timePassed}}
 \index{timePassed@{timePassed}!LoadState@{LoadState}}
 \subsubsection{\texorpdfstring{timePassed}{timePassed}}
 {\footnotesize\ttfamily qint32 Load\+State\+::time\+Passed}
 
-T\+O\+DO\+: describe 
+The time passed in the saved game. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

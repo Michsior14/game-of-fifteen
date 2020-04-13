@@ -1,10 +1,31 @@
 \hypertarget{struct_move}{}\section{Move Struct Reference}
 \label{struct_move}\index{Move@{Move}}
+
+
+Represents the move of \mbox{\hyperlink{class_block}{Block}} between two positions on the grid layout.  
+
+
+
+
+{\ttfamily \#include $<$move.\+h$>$}
+
+
+
+Collaboration diagram for Move\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{struct_move__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{struct_move_a30751f94ab306167b39b648076407532}{Move}} (\mbox{\hyperlink{struct_position}{Position}} from\+Pos, \mbox{\hyperlink{struct_position}{Position}} to\+Pos)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{struct_move_aa27facde66c32c5f168c7779108c16a2}{Move}} (const \mbox{\hyperlink{struct_position}{Position}} from\+Pos, const \mbox{\hyperlink{struct_position}{Position}} to\+Pos)
+\begin{DoxyCompactList}\small\item\em Creates the move out of provided positions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_move_a6632e48fd18a643a58bf21c6eafc06d7}{$\sim$\+Move}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -14,20 +35,39 @@
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Represents the move of \mbox{\hyperlink{class_block}{Block}} between two positions on the grid layout. 
+
+
+
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{struct_move_a30751f94ab306167b39b648076407532}\label{struct_move_a30751f94ab306167b39b648076407532}} 
+\mbox{\Hypertarget{struct_move_aa27facde66c32c5f168c7779108c16a2}\label{struct_move_aa27facde66c32c5f168c7779108c16a2}} 
 \index{Move@{Move}!Move@{Move}}
 \index{Move@{Move}!Move@{Move}}
 \subsubsection{\texorpdfstring{Move()}{Move()}}
-{\footnotesize\ttfamily Move\+::\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{from\+Pos,  }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{to\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Move\+::\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_position}{Position}}}]{from\+Pos,  }\item[{const \mbox{\hyperlink{struct_position}{Position}}}]{to\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the move out of provided positions. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em from\+Pos} & \\
+{\em from\+Pos} & The starting position of the move. \\
 \hline
-{\em to\+Pos} & \\
+{\em to\+Pos} & The ending position of the move. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{struct_move_a6632e48fd18a643a58bf21c6eafc06d7}\label{struct_move_a6632e48fd18a643a58bf21c6eafc06d7}} 
+\index{Move@{Move}!````~Move@{$\sim$Move}}
+\index{````~Move@{$\sim$Move}!Move@{Move}}
+\subsubsection{\texorpdfstring{$\sim$Move()}{~Move()}}
+{\footnotesize\ttfamily virtual Move\+::$\sim$\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Data Documentation}
@@ -37,13 +77,13 @@
 \subsubsection{\texorpdfstring{from}{from}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}} Move\+::from}
 
-T\+O\+DO\+: describe \mbox{\Hypertarget{struct_move_a6b0d3fd05bd190244015848d4a1b0aae}\label{struct_move_a6b0d3fd05bd190244015848d4a1b0aae}} 
+The starting position of the move. \mbox{\Hypertarget{struct_move_a6b0d3fd05bd190244015848d4a1b0aae}\label{struct_move_a6b0d3fd05bd190244015848d4a1b0aae}} 
 \index{Move@{Move}!to@{to}}
 \index{to@{to}!Move@{Move}}
 \subsubsection{\texorpdfstring{to}{to}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_position}{Position}} Move\+::to}
 
-T\+O\+DO\+: describe 
+The ending position of the move. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

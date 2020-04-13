@@ -1,0 +1,5 @@
+<map id="BlocksModel::blockSwaped" name="BlocksModel::blockSwaped">
+<area shape="rect" id="node1" title="Emitted when pair of the blocks has switched their positions on the board." alt="" coords="233,46,432,73"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node3" href="$class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="12,71,179,112"/>
+</map>

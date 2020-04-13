@@ -1,34 +1,78 @@
 \hypertarget{class_free_block}{}\section{Free\+Block Class Reference}
 \label{class_free_block}\index{FreeBlock@{FreeBlock}}
-Inheritance diagram for Free\+Block\+:\begin{figure}[H]
+
+
+Represents empty \mbox{\hyperlink{class_block}{Block}} (without the title displayed to the user).  
+
+
+
+
+{\ttfamily \#include $<$free\+\_\+block.\+h$>$}
+
+
+
+Inheritance diagram for Free\+Block\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_free_block}
+\includegraphics[width=229pt]{class_free_block__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Free\+Block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_free_block__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_free_block_aa23ff8e21dde64908f9c6c01bf8e6923}{Free\+Block}} (size\+\_\+t \mbox{\hyperlink{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}{value}}, Q\+Graphics\+Item $\ast$parent=nullptr)
-\item 
+\mbox{\hyperlink{class_free_block_a6c7d3b6a2c8b1edac0f59ea2b33b9e73}{Free\+Block}} (const size\+\_\+t \mbox{\hyperlink{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}{value}}, Q\+Graphics\+Item $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Creates the free \mbox{\hyperlink{class_block}{Block}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_free_block_a7bd1edc9b556e577949cb2ec97b4f817}{$\sim$\+Free\+Block}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_free_block_a76d3f40934d42c566095ee2f1386eac5}{is\+Free}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Defines the \mbox{\hyperlink{class_block}{Block}} as \char`\"{}free\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents empty \mbox{\hyperlink{class_block}{Block}} (without the title displayed to the user). 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_free_block_aa23ff8e21dde64908f9c6c01bf8e6923}\label{class_free_block_aa23ff8e21dde64908f9c6c01bf8e6923}} 
+\mbox{\Hypertarget{class_free_block_a6c7d3b6a2c8b1edac0f59ea2b33b9e73}\label{class_free_block_a6c7d3b6a2c8b1edac0f59ea2b33b9e73}} 
 \index{FreeBlock@{FreeBlock}!FreeBlock@{FreeBlock}}
 \index{FreeBlock@{FreeBlock}!FreeBlock@{FreeBlock}}
 \subsubsection{\texorpdfstring{FreeBlock()}{FreeBlock()}}
-{\footnotesize\ttfamily Free\+Block\+::\+Free\+Block (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{value,  }\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Free\+Block\+::\+Free\+Block (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{value,  }\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates the free \mbox{\hyperlink{class_block}{Block}}. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & \\
+{\em value} & The underlaying value assigned to the \mbox{\hyperlink{class_block}{Block}}. \\
 \hline
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent object. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_free_block_a7bd1edc9b556e577949cb2ec97b4f817}\label{class_free_block_a7bd1edc9b556e577949cb2ec97b4f817}} 
+\index{FreeBlock@{FreeBlock}!````~FreeBlock@{$\sim$FreeBlock}}
+\index{````~FreeBlock@{$\sim$FreeBlock}!FreeBlock@{FreeBlock}}
+\subsubsection{\texorpdfstring{$\sim$FreeBlock()}{~FreeBlock()}}
+{\footnotesize\ttfamily virtual Free\+Block\+::$\sim$\+Free\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -38,8 +82,12 @@ bool \mbox{\hyperlink{class_free_block_a76d3f40934d42c566095ee2f1386eac5}{is\+Fr
 \subsubsection{\texorpdfstring{isFree()}{isFree()}}
 {\footnotesize\ttfamily bool Free\+Block\+::is\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Defines the \mbox{\hyperlink{class_block}{Block}} as \char`\"{}free\char`\"{}. 
+
 \begin{DoxyReturn}{Returns}
-bool 
+bool Always True. 
 \end{DoxyReturn}
 
 

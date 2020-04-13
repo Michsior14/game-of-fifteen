@@ -1,0 +1,5 @@
+<map id="BlocksController::init" name="BlocksController::init">
+<area shape="rect" id="node1" title="Initialize the default values for the model." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node2" href="$class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2" title="Starts the game." alt="" coords="212,5,355,32"/>
+<area shape="rect" id="node3" href="$class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="403,5,571,32"/>
+</map>

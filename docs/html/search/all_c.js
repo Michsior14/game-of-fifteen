@@ -8,5 +8,5 @@ var searchData=
   ['to',['to',['../struct_move.html#a6b0d3fd05bd190244015848d4a1b0aae',1,'Move']]],
   ['totalmoves',['totalMoves',['../class_move_stack_model.html#a59f08def53913e4f33df7fe30a16dc75',1,'MoveStackModel']]],
   ['totalmoveschanged',['totalMovesChanged',['../class_move_stack_model.html#a8b596d9619735fc7d066a3d0e1b8cc55',1,'MoveStackModel']]],
-  ['totalmoveshandler',['totalMovesHandler',['../class_state_manager_model.html#a3cd67127d4b7edcb431db1d700f0048e',1,'StateManagerModel']]]
+  ['totalmoveshandler',['totalMovesHandler',['../class_state_manager_model.html#a692ae20069405c9ace78f1d403046d8c',1,'StateManagerModel']]]
 ];

@@ -1,0 +1,5 @@
+<map id="Block::layoutItem" name="Block::layoutItem">
+<area shape="rect" id="node1" title="Gets a layout item assigned to the Block." alt="" coords="523,13,660,39"/>
+<area shape="rect" id="node2" href="$class_blocks_view.html#ad7f8487f26dd09d0058e8774f5f443b4" title="Handles the swapped blocks signal." alt="" coords="233,13,475,39"/>
+<area shape="rect" id="node3" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>

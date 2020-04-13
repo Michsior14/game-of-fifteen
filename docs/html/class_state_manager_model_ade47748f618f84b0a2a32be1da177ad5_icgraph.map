@@ -1,0 +1,6 @@
+<map id="StateManagerModel::stateLoaded" name="StateManagerModel::stateLoaded">
+<area shape="rect" id="node1" title="Emitted when new state has been loaded (game has been loaded from file)." alt="" coords="233,71,395,112"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node3" href="$class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="12,71,179,112"/>
+<area shape="rect" id="node4" href="$class_state_manager_model.html#abf3febd681c98f8522bd52944e720618" title="Loads the state of a game from the passed path." alt="" coords="15,136,176,177"/>
+</map>

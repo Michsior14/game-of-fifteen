@@ -1,0 +1,4 @@
+<map id="BlocksController::init" name="BlocksController::init">
+<area shape="rect" id="node1" title="Initialize the default values for the model." alt="" coords="161,5,320,32"/>
+<area shape="rect" id="node2" href="$class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,5,113,32"/>
+</map>

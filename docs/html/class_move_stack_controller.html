@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +55,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_move_stack_controller.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +86,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -69,19 +94,42 @@ $(function() {
 <div class="title">MoveStackController Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Connects <a class="el" href="class_move_stack_model.html" title="The model responsible for storing all moves that have been made by the user and passed time.">MoveStackModel</a> with <a class="el" href="class_move_stack_view.html" title="The view responsible for display information about done moves.">MoveStackView</a>.  
+ <a href="class_move_stack_controller.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="move__stack__controller_8h_source.html">move_stack_controller.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MoveStackController:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_move_stack_controller.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_move_stack_controller__inherit__graph.png" border="0" usemap="#_move_stack_controller_inherit__map" alt="Inheritance graph"/></div>
+<map name="_move_stack_controller_inherit__map" id="_move_stack_controller_inherit__map">
+<area shape="rect"  title="Connects MoveStackModel with MoveStackView." alt="" coords="5,80,164,107"/>
+<area shape="rect"  title=" " alt="" coords="47,5,122,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for MoveStackController:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_controller__coll__graph.png" border="0" usemap="#_move_stack_controller_coll__map" alt="Collaboration graph"/></div>
+<map name="_move_stack_controller_coll__map" id="_move_stack_controller_coll__map">
+<area shape="rect"  title="Connects MoveStackModel with MoveStackView." alt="" coords="5,80,164,107"/>
+<area shape="rect"  title=" " alt="" coords="47,5,122,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a99115875c9902519a69eaec92df7dd7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f">MoveStackController</a> (<a class="el" href="class_move_stack_model.html">MoveStackModel</a> &amp;model, <a class="el" href="class_move_stack_view.html">MoveStackView</a> &amp;view, <a class="el" href="class_blocks_model.html">BlocksModel</a> &amp;blocks, <a class="el" href="class_state_manager_model.html">StateManagerModel</a> &amp;stateManagerModel, QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:a99115875c9902519a69eaec92df7dd7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the controller.  <a href="#a99115875c9902519a69eaec92df7dd7f">More...</a><br /></td></tr>
 <tr class="separator:a99115875c9902519a69eaec92df7dd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1f7f27f4c98dadd32f436ff8245d66"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_move_stack_controller.html#a1e1f7f27f4c98dadd32f436ff8245d66">~MoveStackController</a> ()=default</td></tr>
+<tr class="memdesc:a1e1f7f27f4c98dadd32f436ff8245d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor.  <a href="#a1e1f7f27f4c98dadd32f436ff8245d66">More...</a><br /></td></tr>
+<tr class="separator:a1e1f7f27f4c98dadd32f436ff8245d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Connects <a class="el" href="class_move_stack_model.html" title="The model responsible for storing all moves that have been made by the user and passed time.">MoveStackModel</a> with <a class="el" href="class_move_stack_view.html" title="The view responsible for display information about done moves.">MoveStackView</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a99115875c9902519a69eaec92df7dd7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99115875c9902519a69eaec92df7dd7f">&#9670;&nbsp;</a></span>MoveStackController()</h2>
 
@@ -133,16 +181,61 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates the controller. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">model</td><td></td></tr>
-    <tr><td class="paramname">view</td><td></td></tr>
-    <tr><td class="paramname">blocks</td><td></td></tr>
-    <tr><td class="paramname">stateManagerModel</td><td></td></tr>
-    <tr><td class="paramname">parent</td><td></td></tr>
+    <tr><td class="paramname">model</td><td>The <a class="el" href="class_move_stack_model.html" title="The model responsible for storing all moves that have been made by the user and passed time.">MoveStackModel</a> instance. </td></tr>
+    <tr><td class="paramname">view</td><td>The <a class="el" href="class_move_stack_view.html" title="The view responsible for display information about done moves.">MoveStackView</a> instance. </td></tr>
+    <tr><td class="paramname">blocks</td><td>The <a class="el" href="class_blocks_model.html" title="The model responsible for Blocks logic. Handles all movements on the board.">BlocksModel</a> instance. </td></tr>
+    <tr><td class="paramname">stateManagerModel</td><td>The <a class="el" href="class_state_manager_model.html" title="The model responsible for the loading/saving current game from/to file.">StateManagerModel</a> instance. </td></tr>
+    <tr><td class="paramname">parent</td><td>The Qt's parent object. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_move_stack_controller_a99115875c9902519a69eaec92df7dd7f_cgraph.png" border="0" usemap="#class_move_stack_controller_a99115875c9902519a69eaec92df7dd7f_cgraph" alt=""/></div>
+<map name="class_move_stack_controller_a99115875c9902519a69eaec92df7dd7f_cgraph" id="class_move_stack_controller_a99115875c9902519a69eaec92df7dd7f_cgraph">
+<area shape="rect"  title="Creates the controller." alt="" coords="5,158,172,199"/>
+<area shape="rect"  href="class_move_stack_view.html#ad3439eab1b100699aa82ece0b21de8a8" title="Handles the total moves changes." alt="" coords="222,5,449,32"/>
+<area shape="rect"  href="class_move_stack_view.html#a6a70962da0c881426a408bb78cf9f974" title="Handles the time passed." alt="" coords="220,56,451,83"/>
+<area shape="rect"  href="class_blocks_model.html#a6707a7dac44d269c2d52e7904a7473ef" title="Undo the move on the board." alt="" coords="245,107,426,133"/>
+<area shape="rect"  href="class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa" title="Handles the swapped blocks signal." alt="" coords="221,158,449,199"/>
+<area shape="rect"  href="class_move_stack_model.html#a5a5d359de832234daceef5e216120b65" title="Handles the new game signal." alt="" coords="222,223,449,265"/>
+<area shape="rect"  href="class_move_stack_model.html#a7fba5a7c9c8cca32112274c87b45fa82" title="Handles the puzzle solved signal." alt="" coords="221,289,449,330"/>
+<area shape="rect"  href="class_move_stack_model.html#a2c8028466c62b5f8b269b71939c56ef8" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="224,354,447,395"/>
+<area shape="rect"  href="class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf" title="Undo the last move if there is any." alt="" coords="499,165,673,192"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1e1f7f27f4c98dadd32f436ff8245d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1f7f27f4c98dadd32f436ff8245d66">&#9670;&nbsp;</a></span>~MoveStackController()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual MoveStackController::~MoveStackController </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default destructor. </p>
 
 </div>
 </div>
@@ -151,11 +244,15 @@ Public Member Functions</h2></td></tr>
 <li>src/move_stack/move_stack_controller.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_move_stack_controller.html">MoveStackController</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

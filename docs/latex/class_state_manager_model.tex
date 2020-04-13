@@ -1,38 +1,64 @@
 \hypertarget{class_state_manager_model}{}\section{State\+Manager\+Model Class Reference}
 \label{class_state_manager_model}\index{StateManagerModel@{StateManagerModel}}
-Inheritance diagram for State\+Manager\+Model\+:\begin{figure}[H]
+
+
+The model responsible for the loading/saving current game from/to file.  
+
+
+
+
+{\ttfamily \#include $<$state\+\_\+manager\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for State\+Manager\+Model\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_state_manager_model}
+\includegraphics[width=195pt]{class_state_manager_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for State\+Manager\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{class_state_manager_model__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_state_manager_model_a414fe4dfa55aa139c26b3ccd002328ff}{game\+Started\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&size)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles the new game signal. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_state_manager_model_a51df218169f899e063572ca5df5a388b}{blocks\+Updated\+Handler}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks)
-\item 
-void \mbox{\hyperlink{class_state_manager_model_a3cd67127d4b7edcb431db1d700f0048e}{total\+Moves\+Handler}} (const size\+\_\+t \&moves\+Counter, const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&moves)
-\item 
+\begin{DoxyCompactList}\small\item\em Handles changes of the blocks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_manager_model_a692ae20069405c9ace78f1d403046d8c}{total\+Moves\+Handler}} (const size\+\_\+t \&counter, const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&moves)
+\begin{DoxyCompactList}\small\item\em Handles the total moves changes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_state_manager_model_ab3f4c9b1d44a75c63c034e79f88ee9f0}{time\+Passed\+Handler}} (const size\+\_\+t \&time\+Passed)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handles the time passed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_state_manager_model_ade47748f618f84b0a2a32be1da177ad5}{state\+Loaded}} (const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&state)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Emitted when new state has been loaded (game has been loaded from file). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_state_manager_model_a79fdf627c06b835bbe4c457366f66524}{State\+Manager\+Model}} ()
-\item 
-\mbox{\Hypertarget{class_state_manager_model_a57883b92890873f23537e78c1bf6f2de}\label{class_state_manager_model_a57883b92890873f23537e78c1bf6f2de}} 
-void {\bfseries save\+Game} (const Q\+String \&path)
-\item 
-\mbox{\Hypertarget{class_state_manager_model_abf3febd681c98f8522bd52944e720618}\label{class_state_manager_model_abf3febd681c98f8522bd52944e720618}} 
-void {\bfseries load\+Game} (const Q\+String \&path)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates the model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_manager_model_a57883b92890873f23537e78c1bf6f2de}{save\+Game}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em Saves the current state of a game to the passed path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_manager_model_abf3febd681c98f8522bd52944e720618}{load\+Game}} (const Q\+String \&path)
+\begin{DoxyCompactList}\small\item\em Loads the state of a game from the passed path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The model responsible for the loading/saving current game from/to file. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -43,10 +69,9 @@ void {\bfseries load\+Game} (const Q\+String \&path)
 {\footnotesize\ttfamily State\+Manager\+Model\+::\+State\+Manager\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
-\begin{DoxyParams}{Parameters}
-{\em \+\_\+blocks} & \\
-\hline
-\end{DoxyParams}
+
+Creates the model. 
+
 
 
 \subsection{Member Function Documentation}
@@ -57,10 +82,22 @@ void {\bfseries load\+Game} (const Q\+String \&path)
 {\footnotesize\ttfamily void State\+Manager\+Model\+::blocks\+Updated\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
 
 
+
+Handles changes of the blocks. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em blocks} & \\
+{\em blocks} & The array of pointers to all Blocks that creates the board. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state_manager_model_a51df218169f899e063572ca5df5a388b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_state_manager_model_a414fe4dfa55aa139c26b3ccd002328ff}\label{class_state_manager_model_a414fe4dfa55aa139c26b3ccd002328ff}} 
 \index{StateManagerModel@{StateManagerModel}!gameStartedHandler@{gameStartedHandler}}
 \index{gameStartedHandler@{gameStartedHandler}!StateManagerModel@{StateManagerModel}}
@@ -68,10 +105,52 @@ void {\bfseries load\+Game} (const Q\+String \&path)
 {\footnotesize\ttfamily void State\+Manager\+Model\+::game\+Started\+Handler (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
 
 
+
+Handles the new game signal. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em blocks} & \\
+{\em blocks} & The array of pointers to all Blocks that creates the board. \\
 \hline
-{\em size} & \\
+{\em size} & The edge size of a board (i.\+e. 4 in case of board created for 16 blocks) \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state_manager_model_a414fe4dfa55aa139c26b3ccd002328ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_manager_model_abf3febd681c98f8522bd52944e720618}\label{class_state_manager_model_abf3febd681c98f8522bd52944e720618}} 
+\index{StateManagerModel@{StateManagerModel}!loadGame@{loadGame}}
+\index{loadGame@{loadGame}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{loadGame()}{loadGame()}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::load\+Game (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Loads the state of a game from the passed path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the file, game will be load from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_state_manager_model_a57883b92890873f23537e78c1bf6f2de}\label{class_state_manager_model_a57883b92890873f23537e78c1bf6f2de}} 
+\index{StateManagerModel@{StateManagerModel}!saveGame@{saveGame}}
+\index{saveGame@{saveGame}!StateManagerModel@{StateManagerModel}}
+\subsubsection{\texorpdfstring{saveGame()}{saveGame()}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::save\+Game (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Saves the current state of a game to the passed path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to the file, game will be save to. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_state_manager_model_ade47748f618f84b0a2a32be1da177ad5}\label{class_state_manager_model_ade47748f618f84b0a2a32be1da177ad5}} 
@@ -81,10 +160,22 @@ void {\bfseries load\+Game} (const Q\+String \&path)
 {\footnotesize\ttfamily void State\+Manager\+Model\+::state\+Loaded (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted when new state has been loaded (game has been loaded from file). 
+
+
 \begin{DoxyParams}{Parameters}
-{\em state} & \\
+{\em state} & The state object, holding level, numbers and size of the board. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state_manager_model_ade47748f618f84b0a2a32be1da177ad5_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_state_manager_model_ab3f4c9b1d44a75c63c034e79f88ee9f0}\label{class_state_manager_model_ab3f4c9b1d44a75c63c034e79f88ee9f0}} 
 \index{StateManagerModel@{StateManagerModel}!timePassedHandler@{timePassedHandler}}
 \index{timePassedHandler@{timePassedHandler}!StateManagerModel@{StateManagerModel}}
@@ -92,23 +183,47 @@ void {\bfseries load\+Game} (const Q\+String \&path)
 {\footnotesize\ttfamily void State\+Manager\+Model\+::time\+Passed\+Handler (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{time\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
 
 
+
+Handles the time passed. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em time\+Passed} & \\
+{\em time\+Passed} & The number of seconds since the first move. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_state_manager_model_a3cd67127d4b7edcb431db1d700f0048e}\label{class_state_manager_model_a3cd67127d4b7edcb431db1d700f0048e}} 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state_manager_model_ab3f4c9b1d44a75c63c034e79f88ee9f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_manager_model_a692ae20069405c9ace78f1d403046d8c}\label{class_state_manager_model_a692ae20069405c9ace78f1d403046d8c}} 
 \index{StateManagerModel@{StateManagerModel}!totalMovesHandler@{totalMovesHandler}}
 \index{totalMovesHandler@{totalMovesHandler}!StateManagerModel@{StateManagerModel}}
 \subsubsection{\texorpdfstring{totalMovesHandler}{totalMovesHandler}}
-{\footnotesize\ttfamily void State\+Manager\+Model\+::total\+Moves\+Handler (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{moves\+Counter,  }\item[{const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+{\footnotesize\ttfamily void State\+Manager\+Model\+::total\+Moves\+Handler (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{counter,  }\item[{const std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$$>$ \&}]{moves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [slot]}}
+
+
+
+Handles the total moves changes. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em moves\+Counter} & \\
+{\em counter} & The number of moves. \\
 \hline
-{\em moves} & \\
+{\em moves} & The list of pointers to changed moves. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state_manager_model_a692ae20069405c9ace78f1d403046d8c_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

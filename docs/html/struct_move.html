@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +55,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_move.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +86,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -70,11 +95,29 @@ $(function() {
 <div class="title">Move Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents the move of <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> between two positions on the grid layout.  
+ <a href="struct_move.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="move_8h_source.html">move.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Move:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_move__coll__graph.png" border="0" usemap="#_move_coll__map" alt="Collaboration graph"/></div>
+<map name="_move_coll__map" id="_move_coll__map">
+<area shape="rect"  title="Represents the move of Block between two positions on the grid layout." alt="" coords="13,109,72,136"/>
+<area shape="rect"  href="struct_position.html" title="The structure that indicates the position of Block in the grid layout." alt="" coords="5,5,80,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30751f94ab306167b39b648076407532"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_move.html#a30751f94ab306167b39b648076407532">Move</a> (<a class="el" href="struct_position.html">Position</a> fromPos, <a class="el" href="struct_position.html">Position</a> toPos)</td></tr>
-<tr class="separator:a30751f94ab306167b39b648076407532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa27facde66c32c5f168c7779108c16a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_move.html#aa27facde66c32c5f168c7779108c16a2">Move</a> (const <a class="el" href="struct_position.html">Position</a> fromPos, const <a class="el" href="struct_position.html">Position</a> toPos)</td></tr>
+<tr class="memdesc:aa27facde66c32c5f168c7779108c16a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the move out of provided positions.  <a href="#aa27facde66c32c5f168c7779108c16a2">More...</a><br /></td></tr>
+<tr class="separator:aa27facde66c32c5f168c7779108c16a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6632e48fd18a643a58bf21c6eafc06d7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_move.html#a6632e48fd18a643a58bf21c6eafc06d7">~Move</a> ()=default</td></tr>
+<tr class="memdesc:a6632e48fd18a643a58bf21c6eafc06d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor.  <a href="#a6632e48fd18a643a58bf21c6eafc06d7">More...</a><br /></td></tr>
+<tr class="separator:a6632e48fd18a643a58bf21c6eafc06d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -83,9 +126,11 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6b0d3fd05bd190244015848d4a1b0aae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_move.html#a6b0d3fd05bd190244015848d4a1b0aae">to</a></td></tr>
 <tr class="separator:a6b0d3fd05bd190244015848d4a1b0aae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a30751f94ab306167b39b648076407532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30751f94ab306167b39b648076407532">&#9670;&nbsp;</a></span>Move()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents the move of <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> between two positions on the grid layout. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa27facde66c32c5f168c7779108c16a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa27facde66c32c5f168c7779108c16a2">&#9670;&nbsp;</a></span>Move()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -96,13 +141,13 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">Move::Move </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_position.html">Position</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_position.html">Position</a>&#160;</td>
           <td class="paramname"><em>fromPos</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_position.html">Position</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_position.html">Position</a>&#160;</td>
           <td class="paramname"><em>toPos</em>&#160;</td>
         </tr>
         <tr>
@@ -117,13 +162,42 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates the move out of provided positions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fromPos</td><td></td></tr>
-    <tr><td class="paramname">toPos</td><td></td></tr>
+    <tr><td class="paramname">fromPos</td><td>The starting position of the move. </td></tr>
+    <tr><td class="paramname">toPos</td><td>The ending position of the move. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6632e48fd18a643a58bf21c6eafc06d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6632e48fd18a643a58bf21c6eafc06d7">&#9670;&nbsp;</a></span>~Move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Move::~Move </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default destructor. </p>
 
 </div>
 </div>
@@ -139,7 +213,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>TODO: describe </p>
+<p>The starting position of the move. </p>
 
 </div>
 </div>
@@ -154,7 +228,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>TODO: describe </p>
+<p>The ending position of the move. </p>
 
 </div>
 </div>
@@ -162,11 +236,15 @@ Public Attributes</h2></td></tr>
 <li>src/move_stack/<a class="el" href="move_8h_source.html">move.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_move.html">Move</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

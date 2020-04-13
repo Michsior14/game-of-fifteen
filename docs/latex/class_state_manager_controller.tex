@@ -1,16 +1,46 @@
 \hypertarget{class_state_manager_controller}{}\section{State\+Manager\+Controller Class Reference}
 \label{class_state_manager_controller}\index{StateManagerController@{StateManagerController}}
-Inheritance diagram for State\+Manager\+Controller\+:\begin{figure}[H]
+
+
+Connects State\+Managger\+Model with Blocks nad Move\+Stack models.  
+
+
+
+
+{\ttfamily \#include $<$state\+\_\+manager\+\_\+controller.\+h$>$}
+
+
+
+Inheritance diagram for State\+Manager\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_state_manager_controller}
+\includegraphics[width=213pt]{class_state_manager_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for State\+Manager\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{class_state_manager_controller__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_state_manager_controller_a5c85e4844ad71a69c615bf3278956cda}{State\+Manager\+Controller}} (\mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} \&model, \mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} \&blocks\+Model, \mbox{\hyperlink{class_move_stack_model}{Move\+Stack\+Model}} \&moves\+Stack\+Model, Q\+Object $\ast$parent=nullptr)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates the controller. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_state_manager_controller_a9fc558b48688774b9690edd208ee5797}{$\sim$\+State\+Manager\+Controller}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Connects State\+Managger\+Model with Blocks nad Move\+Stack models. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -21,16 +51,38 @@ Inheritance diagram for State\+Manager\+Controller\+:\begin{figure}[H]
 {\footnotesize\ttfamily State\+Manager\+Controller\+::\+State\+Manager\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} \&}]{model,  }\item[{\mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} \&}]{blocks\+Model,  }\item[{\mbox{\hyperlink{class_move_stack_model}{Move\+Stack\+Model}} \&}]{moves\+Stack\+Model,  }\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
+
+Creates the controller. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em model} & \\
+{\em model} & The \mbox{\hyperlink{class_state_manager_model}{State\+Manager\+Model}} instance. \\
 \hline
-{\em blocks\+Model} & \\
+{\em blocks\+Model} & The \mbox{\hyperlink{class_blocks_model}{Blocks\+Model}} instance. \\
 \hline
-{\em moves\+Stack\+Model} & \\
+{\em moves\+Stack\+Model} & The \mbox{\hyperlink{class_move_stack_model}{Move\+Stack\+Model}} instance. \\
 \hline
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent object. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_state_manager_controller_a5c85e4844ad71a69c615bf3278956cda_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_state_manager_controller_a9fc558b48688774b9690edd208ee5797}\label{class_state_manager_controller_a9fc558b48688774b9690edd208ee5797}} 
+\index{StateManagerController@{StateManagerController}!````~StateManagerController@{$\sim$StateManagerController}}
+\index{````~StateManagerController@{$\sim$StateManagerController}!StateManagerController@{StateManagerController}}
+\subsubsection{\texorpdfstring{$\sim$StateManagerController()}{~StateManagerController()}}
+{\footnotesize\ttfamily virtual State\+Manager\+Controller\+::$\sim$\+State\+Manager\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

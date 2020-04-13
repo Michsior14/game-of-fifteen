@@ -1,49 +1,78 @@
 \hypertarget{class_blocks_model}{}\section{Blocks\+Model Class Reference}
 \label{class_blocks_model}\index{BlocksModel@{BlocksModel}}
-Inheritance diagram for Blocks\+Model\+:\begin{figure}[H]
+
+
+The model responsible for Blocks logic. Handles all movements on the board.  
+
+
+
+
+{\ttfamily \#include $<$blocks\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for Blocks\+Model\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_blocks_model}
+\includegraphics[width=159pt]{class_blocks_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Blocks\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_blocks_model__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266}{set\+Level}} (const Game\+Level \&level)
-\item 
-void \mbox{\hyperlink{class_blocks_model_abf01998c6ba41012b2ef6a457415b06c}{move\+Block}} (const \mbox{\hyperlink{struct_position}{Position}} \&move)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the level of a board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blocks_model_a8ce391f7ec760f11d166aead833aa002}{move\+Block}} (const \mbox{\hyperlink{struct_position}{Position}} \&from)
+\begin{DoxyCompactList}\small\item\em Moves the block to the free position if it is possible. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef}{undo\+Move}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move)
-\item 
-\mbox{\Hypertarget{class_blocks_model_a9bc356cf8f30e3cdaa94b8d7cf5d92f2}\label{class_blocks_model_a9bc356cf8f30e3cdaa94b8d7cf5d92f2}} 
-void {\bfseries start} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Undo the move on the board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6}{restart}} ()
+\begin{DoxyCompactList}\small\item\em Restarts the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2}{start}} (const Game\+Level \&level)
+\begin{DoxyCompactList}\small\item\em Starts the game. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377}{state\+Loaded\+Handler}} (const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&state)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handler for signals when new state has been loaded (game has been loaded from file). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_blocks_model_ad4beaf1054214a1688033489a0817a8b}{game\+Started}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&size)
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted when new game has been started. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_blocks_model_a1b26e86f148e270ac598aa24accc718b}{game\+Restored}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks, const size\+\_\+t \&size)
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted when game board has been restored. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb}{blocks\+Updated}} (const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&blocks)
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted whenever the position of one of the blocks has changed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_blocks_model_aadc67f8541695e398bd80f66690308c4}{level\+Changed}} (const Game\+Level level)
-\item 
+\begin{DoxyCompactList}\small\item\em Emitted whenever the current game level has changed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e}{block\+Swaped}} (\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&a, \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&b, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&move, bool undo)
-\item 
-\mbox{\Hypertarget{class_blocks_model_a0511c008064fa694adfc249c096609bb}\label{class_blocks_model_a0511c008064fa694adfc249c096609bb}} 
-void {\bfseries puzzle\+Solved} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Emitted when pair of the blocks has switched their positions on the board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blocks_model_a0511c008064fa694adfc249c096609bb}{puzzle\+Solved}} ()
+\begin{DoxyCompactList}\small\item\em Informes if the board has been solved. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_blocks_model_a0c3da3595fe9984f7ac2c02cef09c03d}{Blocks\+Model}} (Q\+Object $\ast$parent=nullptr)
-\item 
-\mbox{\Hypertarget{class_blocks_model_a115cbe7c4e49a128ebcbae3b5c6c24ee}\label{class_blocks_model_a115cbe7c4e49a128ebcbae3b5c6c24ee}} 
-void {\bfseries print} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates the model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_blocks_model_af39495843287a69e0957451f3751ebbe}{$\sim$\+Blocks\+Model}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_blocks_model_a115cbe7c4e49a128ebcbae3b5c6c24ee}{print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the current state of the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The model responsible for Blocks logic. Handles all movements on the board. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -54,10 +83,24 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily Blocks\+Model\+::\+Blocks\+Model (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
+
+Creates the model. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent object. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_blocks_model_af39495843287a69e0957451f3751ebbe}\label{class_blocks_model_af39495843287a69e0957451f3751ebbe}} 
+\index{BlocksModel@{BlocksModel}!````~BlocksModel@{$\sim$BlocksModel}}
+\index{````~BlocksModel@{$\sim$BlocksModel}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{$\sim$BlocksModel()}{~BlocksModel()}}
+{\footnotesize\ttfamily virtual Blocks\+Model\+::$\sim$\+Blocks\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -68,10 +111,22 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::blocks\+Updated (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted whenever the position of one of the blocks has changed. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em blocks} & \\
+{\em blocks} & The array of pointers to all Blocks that creates the board. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e}\label{class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e}} 
 \index{BlocksModel@{BlocksModel}!blockSwaped@{blockSwaped}}
 \index{blockSwaped@{blockSwaped}!BlocksModel@{BlocksModel}}
@@ -79,16 +134,28 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::block\+Swaped (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$ \&}]{b,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move,  }\item[{bool}]{undo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted when pair of the blocks has switched their positions on the board. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em a} & \\
+{\em a} & The first \mbox{\hyperlink{class_block}{Block}} that changed the placement. \\
 \hline
-{\em b} & \\
+{\em b} & The second \mbox{\hyperlink{class_block}{Block}} that changed the placement. \\
 \hline
-{\em move} & \\
+{\em move} & Describes the move that happend on the board (how positions changed). \\
 \hline
-{\em undo} & \\
+{\em undo} & Indicates if it is an undo action. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_model_a1b26e86f148e270ac598aa24accc718b}\label{class_blocks_model_a1b26e86f148e270ac598aa24accc718b}} 
 \index{BlocksModel@{BlocksModel}!gameRestored@{gameRestored}}
 \index{gameRestored@{gameRestored}!BlocksModel@{BlocksModel}}
@@ -96,12 +163,24 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::game\+Restored (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted when game board has been restored. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em blocks} & \\
+{\em blocks} & The array of pointers to all Blocks that creates the board. \\
 \hline
-{\em size} & \\
+{\em size} & The edge size of a board (i.\+e. 4 in case of board created for 16 blocks) \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a1b26e86f148e270ac598aa24accc718b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_model_ad4beaf1054214a1688033489a0817a8b}\label{class_blocks_model_ad4beaf1054214a1688033489a0817a8b}} 
 \index{BlocksModel@{BlocksModel}!gameStarted@{gameStarted}}
 \index{gameStarted@{gameStarted}!BlocksModel@{BlocksModel}}
@@ -109,12 +188,24 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::game\+Started (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_block}{Block}}$<$ \mbox{\hyperlink{class_block_layout_item}{Block\+Layout\+Item}} $>$$>$$>$ \&}]{blocks,  }\item[{const size\+\_\+t \&}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted when new game has been started. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em blocks} & \\
+{\em blocks} & The array of pointers to all Blocks that creates the board. \\
 \hline
-{\em size} & \\
+{\em size} & The edge size of a board (i.\+e. 4 in case of board created for 16 blocks) \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_ad4beaf1054214a1688033489a0817a8b_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_model_aadc67f8541695e398bd80f66690308c4}\label{class_blocks_model_aadc67f8541695e398bd80f66690308c4}} 
 \index{BlocksModel@{BlocksModel}!levelChanged@{levelChanged}}
 \index{levelChanged@{levelChanged}!BlocksModel@{BlocksModel}}
@@ -122,21 +213,91 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::level\+Changed (\begin{DoxyParamCaption}\item[{const Game\+Level}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
+
+Emitted whenever the current game level has changed. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em level} & \\
+{\em level} & The game level that has been choosen. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_blocks_model_abf01998c6ba41012b2ef6a457415b06c}\label{class_blocks_model_abf01998c6ba41012b2ef6a457415b06c}} 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_aadc67f8541695e398bd80f66690308c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_blocks_model_a8ce391f7ec760f11d166aead833aa002}\label{class_blocks_model_a8ce391f7ec760f11d166aead833aa002}} 
 \index{BlocksModel@{BlocksModel}!moveBlock@{moveBlock}}
 \index{moveBlock@{moveBlock}!BlocksModel@{BlocksModel}}
 \subsubsection{\texorpdfstring{moveBlock}{moveBlock}}
-{\footnotesize\ttfamily void Blocks\+Model\+::move\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_position}{Position}} \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+{\footnotesize\ttfamily void Blocks\+Model\+::move\+Block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_position}{Position}} \&}]{from }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Moves the block to the free position if it is possible. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em move} & \\
+{\em from} & The coordinates of a block to start from. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a8ce391f7ec760f11d166aead833aa002_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_blocks_model_a115cbe7c4e49a128ebcbae3b5c6c24ee}\label{class_blocks_model_a115cbe7c4e49a128ebcbae3b5c6c24ee}} 
+\index{BlocksModel@{BlocksModel}!print@{print}}
+\index{print@{print}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Blocks\+Model\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the current state of the board. 
+
+\mbox{\Hypertarget{class_blocks_model_a0511c008064fa694adfc249c096609bb}\label{class_blocks_model_a0511c008064fa694adfc249c096609bb}} 
+\index{BlocksModel@{BlocksModel}!puzzleSolved@{puzzleSolved}}
+\index{puzzleSolved@{puzzleSolved}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{puzzleSolved}{puzzleSolved}}
+{\footnotesize\ttfamily void Blocks\+Model\+::puzzle\+Solved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Informes if the board has been solved. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a0511c008064fa694adfc249c096609bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6}\label{class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6}} 
+\index{BlocksModel@{BlocksModel}!restart@{restart}}
+\index{restart@{restart}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{restart}{restart}}
+{\footnotesize\ttfamily void Blocks\+Model\+::restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Restarts the game. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266}\label{class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266}} 
 \index{BlocksModel@{BlocksModel}!setLevel@{setLevel}}
 \index{setLevel@{setLevel}!BlocksModel@{BlocksModel}}
@@ -144,10 +305,53 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::set\+Level (\begin{DoxyParamCaption}\item[{const Game\+Level \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
+
+Sets the level of a board. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em level} & \\
+{\em level} & The level to set. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2}\label{class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2}} 
+\index{BlocksModel@{BlocksModel}!start@{start}}
+\index{start@{start}!BlocksModel@{BlocksModel}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily void Blocks\+Model\+::start (\begin{DoxyParamCaption}\item[{const Game\+Level \&}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Starts the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The level to start game with. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377}\label{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377}} 
 \index{BlocksModel@{BlocksModel}!stateLoadedHandler@{stateLoadedHandler}}
 \index{stateLoadedHandler@{stateLoadedHandler}!BlocksModel@{BlocksModel}}
@@ -155,10 +359,30 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::state\+Loaded\+Handler (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_load_state}{Load\+State}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
+
+Handler for signals when new state has been loaded (game has been loaded from file). 
+
+
 \begin{DoxyParams}{Parameters}
-{\em state} & \\
+{\em state} & The state object, holding level, numbers and size of the board. \\
 \hline
 \end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef}\label{class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef}} 
 \index{BlocksModel@{BlocksModel}!undoMove@{undoMove}}
 \index{undoMove@{undoMove}!BlocksModel@{BlocksModel}}
@@ -166,10 +390,22 @@ void {\bfseries print} ()
 {\footnotesize\ttfamily void Blocks\+Model\+::undo\+Move (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_move}{Move}} $>$ \&}]{move }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
+
+Undo the move on the board. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em move} & \\
+{\em move} & The move to undo. \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

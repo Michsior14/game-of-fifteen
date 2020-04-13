@@ -1,0 +1,4 @@
+<map id="BlocksModel::moveBlock" name="BlocksModel::moveBlock">
+<area shape="rect" id="node1" title="Moves the block to the free position if it is possible." alt="" coords="233,13,420,39"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>

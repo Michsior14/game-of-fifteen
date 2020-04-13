@@ -1,0 +1,11 @@
+<map id="MoveStackController::MoveStackController" name="MoveStackController::MoveStackController">
+<area shape="rect" id="node1" title="Creates the controller." alt="" coords="5,158,172,199"/>
+<area shape="rect" id="node2" href="$class_move_stack_view.html#ad3439eab1b100699aa82ece0b21de8a8" title="Handles the total moves changes." alt="" coords="222,5,449,32"/>
+<area shape="rect" id="node3" href="$class_move_stack_view.html#a6a70962da0c881426a408bb78cf9f974" title="Handles the time passed." alt="" coords="220,56,451,83"/>
+<area shape="rect" id="node4" href="$class_blocks_model.html#a6707a7dac44d269c2d52e7904a7473ef" title="Undo the move on the board." alt="" coords="245,107,426,133"/>
+<area shape="rect" id="node5" href="$class_move_stack_model.html#a8ff4e26b9eaded33ae9a2588d470feaa" title="Handles the swapped blocks signal." alt="" coords="221,158,449,199"/>
+<area shape="rect" id="node7" href="$class_move_stack_model.html#a5a5d359de832234daceef5e216120b65" title="Handles the new game signal." alt="" coords="222,223,449,265"/>
+<area shape="rect" id="node8" href="$class_move_stack_model.html#a7fba5a7c9c8cca32112274c87b45fa82" title="Handles the puzzle solved signal." alt="" coords="221,289,449,330"/>
+<area shape="rect" id="node9" href="$class_move_stack_model.html#a2c8028466c62b5f8b269b71939c56ef8" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="224,354,447,395"/>
+<area shape="rect" id="node6" href="$class_move_stack_model.html#a10ab990b00c1eb0d543d75b8b07eb4bf" title="Undo the last move if there is any." alt="" coords="499,165,673,192"/>
+</map>

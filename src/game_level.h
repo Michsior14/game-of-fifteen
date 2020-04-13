@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * @brief
+ * @brief Defines the game level
  *
  */
 enum class GameLevel : size_t {

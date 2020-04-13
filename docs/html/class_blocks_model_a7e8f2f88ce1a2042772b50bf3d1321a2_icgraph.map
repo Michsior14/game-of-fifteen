@@ -1,0 +1,6 @@
+<map id="BlocksModel::start" name="BlocksModel::start">
+<area shape="rect" id="node1" title="Starts the game." alt="" coords="368,31,511,57"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c" title="Initialize the default values for the model." alt="" coords="161,5,320,32"/>
+<area shape="rect" id="node4" href="$class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6" title="Restarts the game." alt="" coords="163,56,319,83"/>
+<area shape="rect" id="node3" href="$class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,5,113,32"/>
+</map>

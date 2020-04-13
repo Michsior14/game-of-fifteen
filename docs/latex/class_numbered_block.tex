@@ -1,18 +1,48 @@
 \hypertarget{class_numbered_block}{}\section{Numbered\+Block Class Reference}
 \label{class_numbered_block}\index{NumberedBlock@{NumberedBlock}}
-Inheritance diagram for Numbered\+Block\+:\begin{figure}[H]
+
+
+Represents a \mbox{\hyperlink{class_block}{Block}} with number displayed on it.  
+
+
+
+
+{\ttfamily \#include $<$numbered\+\_\+block.\+h$>$}
+
+
+
+Inheritance diagram for Numbered\+Block\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_numbered_block}
+\includegraphics[width=229pt]{class_numbered_block__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Numbered\+Block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_numbered_block__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_numbered_block_a4ca70b5e1ada6cebea98b8ecff25dcc7}{Numbered\+Block}} (const size\+\_\+t \mbox{\hyperlink{class_block_ab0b547f273f8d5e4e783ccedaf13ef26}{value}}, Q\+Graphics\+Item $\ast$parent=nullptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates the \mbox{\hyperlink{class_block}{Block}} based on provided value. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_numbered_block_aa7724b741079dbba2a507988bf669aaa}{$\sim$\+Numbered\+Block}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_numbered_block_a04899b0e9d90f4ce4faa8aae9e4140e9}{is\+Free}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Defines the \mbox{\hyperlink{class_block}{Block}} as not \char`\"{}free\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a \mbox{\hyperlink{class_block}{Block}} with number displayed on it. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -23,12 +53,26 @@ bool \mbox{\hyperlink{class_numbered_block_a04899b0e9d90f4ce4faa8aae9e4140e9}{is
 {\footnotesize\ttfamily Numbered\+Block\+::\+Numbered\+Block (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{value,  }\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
+
+Creates the \mbox{\hyperlink{class_block}{Block}} based on provided value. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em value} & \\
+{\em value} & The underlaying value assigned to the \mbox{\hyperlink{class_block}{Block}}. \\
 \hline
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent object. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_numbered_block_aa7724b741079dbba2a507988bf669aaa}\label{class_numbered_block_aa7724b741079dbba2a507988bf669aaa}} 
+\index{NumberedBlock@{NumberedBlock}!````~NumberedBlock@{$\sim$NumberedBlock}}
+\index{````~NumberedBlock@{$\sim$NumberedBlock}!NumberedBlock@{NumberedBlock}}
+\subsubsection{\texorpdfstring{$\sim$NumberedBlock()}{~NumberedBlock()}}
+{\footnotesize\ttfamily virtual Numbered\+Block\+::$\sim$\+Numbered\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -38,8 +82,12 @@ bool \mbox{\hyperlink{class_numbered_block_a04899b0e9d90f4ce4faa8aae9e4140e9}{is
 \subsubsection{\texorpdfstring{isFree()}{isFree()}}
 {\footnotesize\ttfamily bool Numbered\+Block\+::is\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
+Defines the \mbox{\hyperlink{class_block}{Block}} as not \char`\"{}free\char`\"{}. 
+
 \begin{DoxyReturn}{Returns}
-bool 
+bool Always False. 
 \end{DoxyReturn}
 
 

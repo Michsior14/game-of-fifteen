@@ -1,0 +1,5 @@
+<map id="BlocksView::blockClicked" name="BlocksView::blockClicked">
+<area shape="rect" id="node1" title="Emitted whenever displayed Block has been clicked." alt="" coords="273,42,460,69"/>
+<area shape="rect" id="node2" href="$class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="25,5,205,47"/>
+<area shape="rect" id="node3" href="$class_blocks_view.html#a9131c975ebe8b9c6933890bb9d9b0848" title="Handles mouse pressed events that origin from the blocks view." alt="" coords="5,71,225,98"/>
+</map>

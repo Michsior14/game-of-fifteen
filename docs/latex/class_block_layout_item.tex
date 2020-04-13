@@ -1,26 +1,56 @@
 \hypertarget{class_block_layout_item}{}\section{Block\+Layout\+Item Class Reference}
 \label{class_block_layout_item}\index{BlockLayoutItem@{BlockLayoutItem}}
-Inheritance diagram for Block\+Layout\+Item\+:\begin{figure}[H]
+
+
+The layout item used for presentation of the \mbox{\hyperlink{class_block}{Block}}. Holds information about size, position etc.  
+
+
+
+
+{\ttfamily \#include $<$block\+\_\+layout\+\_\+item.\+h$>$}
+
+
+
+Inheritance diagram for Block\+Layout\+Item\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_block_layout_item}
+\includegraphics[width=350pt]{class_block_layout_item__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Block\+Layout\+Item\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_block_layout_item__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_block_layout_item_ad5ffcaab7d39d6a3c7e29f990acebc21}{Block\+Layout\+Item}} (const std\+::string \&\mbox{\hyperlink{class_block_layout_item_a374055c252f6532b80b31d065ebf1a11}{text}}, Q\+Graphics\+Item $\ast$parent=nullptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates layout item based on the provided title and parent object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_block_layout_item_aa39e2ec9aa8fd0168bbc5eca07eb5814}{$\sim$\+Block\+Layout\+Item}} ()=default
+\begin{DoxyCompactList}\small\item\em The default destructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_block_layout_item_a46955c91f71c6fb77d7f01b102e0daec}{set\+Geometry}} (const Q\+RectF \&geom)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the geometry of the layout item. Overrides the Q\+Graphics\+Layout\+Item implementation. \end{DoxyCompactList}\item 
 Q\+SizeF \mbox{\hyperlink{class_block_layout_item_aed00c617a4ca20cc196fe2809382488b}{size\+Hint}} (Qt\+::\+Size\+Hint which, const Q\+SizeF \&constraint=Q\+SizeF()) const
-\item 
+\begin{DoxyCompactList}\small\item\em Allows Qt to set proper item size based on size hint and constraint. \end{DoxyCompactList}\item 
 Q\+RectF \mbox{\hyperlink{class_block_layout_item_a6de4f93c0a2cdcccd5fe9f94f1769906}{bounding\+Rect}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Gets the bounding box of the layout element. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_block_layout_item_a418628ab57eed9f9e9857f1a33149c54}{paint}} (Q\+Painter $\ast$painter, const Q\+Style\+Option\+Graphics\+Item $\ast$option, Q\+Widget $\ast$widget=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Paints the element content in local coordinates. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_block_layout_item_a374055c252f6532b80b31d065ebf1a11}{text}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the title of layout item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The layout item used for presentation of the \mbox{\hyperlink{class_block}{Block}}. Holds information about size, position etc. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -31,12 +61,26 @@ std\+::string \mbox{\hyperlink{class_block_layout_item_a374055c252f6532b80b31d06
 {\footnotesize\ttfamily Block\+Layout\+Item\+::\+Block\+Layout\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{Q\+Graphics\+Item $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
+
+Creates layout item based on the provided title and parent object. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em text} & \\
+{\em text} & The title of a \mbox{\hyperlink{class_block}{Block}}. \\
 \hline
-{\em parent} & \\
+{\em parent} & The Qt\textquotesingle{}s parent of a \mbox{\hyperlink{class_block}{Block}}. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_block_layout_item_aa39e2ec9aa8fd0168bbc5eca07eb5814}\label{class_block_layout_item_aa39e2ec9aa8fd0168bbc5eca07eb5814}} 
+\index{BlockLayoutItem@{BlockLayoutItem}!````~BlockLayoutItem@{$\sim$BlockLayoutItem}}
+\index{````~BlockLayoutItem@{$\sim$BlockLayoutItem}!BlockLayoutItem@{BlockLayoutItem}}
+\subsubsection{\texorpdfstring{$\sim$BlockLayoutItem()}{~BlockLayoutItem()}}
+{\footnotesize\ttfamily virtual Block\+Layout\+Item\+::$\sim$\+Block\+Layout\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+The default destructor. 
+
 
 
 \subsection{Member Function Documentation}
@@ -46,8 +90,12 @@ std\+::string \mbox{\hyperlink{class_block_layout_item_a374055c252f6532b80b31d06
 \subsubsection{\texorpdfstring{boundingRect()}{boundingRect()}}
 {\footnotesize\ttfamily Q\+RectF Block\+Layout\+Item\+::bounding\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Gets the bounding box of the layout element. 
+
 \begin{DoxyReturn}{Returns}
-Q\+RectF 
+Q\+RectF The element\textquotesingle{}s bounding box. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_block_layout_item_a418628ab57eed9f9e9857f1a33149c54}\label{class_block_layout_item_a418628ab57eed9f9e9857f1a33149c54}} 
 \index{BlockLayoutItem@{BlockLayoutItem}!paint@{paint}}
@@ -56,12 +104,16 @@ Q\+RectF
 {\footnotesize\ttfamily void Block\+Layout\+Item\+::paint (\begin{DoxyParamCaption}\item[{Q\+Painter $\ast$}]{painter,  }\item[{const Q\+Style\+Option\+Graphics\+Item $\ast$}]{option,  }\item[{Q\+Widget $\ast$}]{widget = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
+
+Paints the element content in local coordinates. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em painter} & \\
+{\em painter} & The painter implementation. \\
 \hline
-{\em option} & \\
+{\em option} & The styles options for painting. \\
 \hline
-{\em widget} & \\
+{\em widget} & Points the widget that is being painted on. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_block_layout_item_a46955c91f71c6fb77d7f01b102e0daec}\label{class_block_layout_item_a46955c91f71c6fb77d7f01b102e0daec}} 
@@ -71,8 +123,12 @@ Q\+RectF
 {\footnotesize\ttfamily void Block\+Layout\+Item\+::set\+Geometry (\begin{DoxyParamCaption}\item[{const Q\+RectF \&}]{geom }\end{DoxyParamCaption})}
 
 
+
+Sets the geometry of the layout item. Overrides the Q\+Graphics\+Layout\+Item implementation. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em geom} & \\
+{\em geom} & The geometry to set. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_block_layout_item_aed00c617a4ca20cc196fe2809382488b}\label{class_block_layout_item_aed00c617a4ca20cc196fe2809382488b}} 
@@ -82,14 +138,18 @@ Q\+RectF
 {\footnotesize\ttfamily Q\+SizeF Block\+Layout\+Item\+::size\+Hint (\begin{DoxyParamCaption}\item[{Qt\+::\+Size\+Hint}]{which,  }\item[{const Q\+SizeF \&}]{constraint = {\ttfamily QSizeF()} }\end{DoxyParamCaption}) const}
 
 
+
+Allows Qt to set proper item size based on size hint and constraint. 
+
+
 \begin{DoxyParams}{Parameters}
-{\em which} & \\
+{\em which} & The condition to get size for. \\
 \hline
-{\em constraint} & \\
+{\em constraint} & Passes width and height to constrain the output. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Q\+SizeF 
+Q\+SizeF The desired size of an element. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{class_block_layout_item_a374055c252f6532b80b31d065ebf1a11}\label{class_block_layout_item_a374055c252f6532b80b31d065ebf1a11}} 
 \index{BlockLayoutItem@{BlockLayoutItem}!text@{text}}
@@ -97,8 +157,12 @@ Q\+SizeF
 \subsubsection{\texorpdfstring{text()}{text()}}
 {\footnotesize\ttfamily std\+::string Block\+Layout\+Item\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Gets the title of layout item. 
+
 \begin{DoxyReturn}{Returns}
-std\+::string 
+std\+::string The title of layout item. 
 \end{DoxyReturn}
 
 

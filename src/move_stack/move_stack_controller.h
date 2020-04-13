@@ -8,7 +8,7 @@
 #include <QObject>
 
 /**
- * @brief
+ * @brief Connects MoveStackModel with MoveStackView.
  *
  */
 class MoveStackController : public QObject
@@ -16,25 +16,20 @@ class MoveStackController : public QObject
     Q_OBJECT
 public:
     /**
-     * @brief
+     * @brief Creates the controller.
      *
-     * @param model
-     * @param view
-     * @param blocks
-     * @param stateManagerModel
-     * @param parent
+     * @param model The MoveStackModel instance.
+     * @param view The MoveStackView instance.
+     * @param blocks The BlocksModel instance.
+     * @param stateManagerModel The StateManagerModel instance.
+     * @param parent The Qt's parent object.
      */
     explicit MoveStackController(MoveStackModel& model, MoveStackView& view, BlocksModel& blocks, StateManagerModel& stateManagerModel, QObject *parent = nullptr);
     /**
-     * @brief
+     * @brief The default destructor.
      *
      */
     virtual ~MoveStackController() = default;
-
-private:
-    MoveStackView& _view; /**< TODO: describe */
-    MoveStackModel& _model; /**< TODO: describe */
-    BlocksModel& _blocksModel; /**< TODO: describe */
 };
 
 #endif // MOVESTACKCONTROLLER_H

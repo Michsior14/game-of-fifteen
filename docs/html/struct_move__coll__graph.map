@@ -1,0 +1,4 @@
+<map id="Move" name="Move">
+<area shape="rect" id="node1" title="Represents the move of Block between two positions on the grid layout." alt="" coords="13,109,72,136"/>
+<area shape="rect" id="node2" href="$struct_position.html" title="The structure that indicates the position of Block in the grid layout." alt="" coords="5,5,80,32"/>
+</map>

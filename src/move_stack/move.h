@@ -4,44 +4,44 @@
 #include <stddef.h>
 
 /**
- * @brief
+ * @brief The structure that indicates the position of Block in the grid layout.
  *
  */
 struct Position {
-    size_t row; /**< TODO: describe */
-    size_t column; /**< TODO: describe */
+    size_t row; /**< The row in the grid */
+    size_t column; /**< The column in the grid */
 
     /**
-     * @brief
+     * @brief Creates the position.
      *
-     * @param posRow
-     * @param posCol
+     * @param posRow The row in the grid.
+     * @param posCol THe column in the grid.
      */
-    Position(size_t posRow, size_t posCol): row(posRow), column(posCol) {};
+    Position(const size_t posRow, const size_t posCol): row(posRow), column(posCol) {};
     /**
-     * @brief
+     * @brief The default destructor.
      *
      */
     virtual ~Position() = default;
 };
 
 /**
- * @brief
+ * @brief Represents the move of Block between two positions on the grid layout.
  *
  */
 struct Move {
-    Position from; /**< TODO: describe */
-    Position to; /**< TODO: describe */
+    Position from; /**< The starting position of the move. */
+    Position to; /**< The ending position of the move. */
 
     /**
-     * @brief
+     * @brief Creates the move out of provided positions.
      *
-     * @param fromPos
-     * @param toPos
+     * @param fromPos The starting position of the move.
+     * @param toPos The ending position of the move.
      */
-    Move(Position fromPos, Position toPos): from(fromPos), to(toPos){};
+    Move(const Position fromPos, const Position toPos): from(fromPos), to(toPos){};
     /**
-     * @brief
+     * @brief The default destructor.
      *
      */
     virtual ~Move() = default;

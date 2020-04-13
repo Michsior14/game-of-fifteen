@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +55,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_blocks_view.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +86,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
@@ -72,39 +97,66 @@ $(function() {
 <div class="title">BlocksView Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>View responsible for showing all Blocks that takes part in the game.  
+ <a href="class_blocks_view.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="blocks__view_8h_source.html">blocks_view.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BlocksView:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_blocks_view.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_blocks_view__inherit__graph.png" border="0" usemap="#_blocks_view_inherit__map" alt="Inheritance graph"/></div>
+<map name="_blocks_view_inherit__map" id="_blocks_view_inherit__map">
+<area shape="rect"  title="View responsible for showing all Blocks that takes part in the game." alt="" coords="17,80,115,107"/>
+<area shape="rect"  title=" " alt="" coords="5,5,127,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for BlocksView:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_view__coll__graph.png" border="0" usemap="#_blocks_view_coll__map" alt="Collaboration graph"/></div>
+<map name="_blocks_view_coll__map" id="_blocks_view_coll__map">
+<area shape="rect"  title="View responsible for showing all Blocks that takes part in the game." alt="" coords="17,80,115,107"/>
+<area shape="rect"  title=" " alt="" coords="5,5,127,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:a23c0b8242274f9627a91dba5fa8af036"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_view.html#a23c0b8242274f9627a91dba5fa8af036">gameStartedHandler</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt;&gt;&gt; &amp;blocks, const size_t &amp;level)</td></tr>
+<tr class="memdesc:a23c0b8242274f9627a91dba5fa8af036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the new game signal.  <a href="#a23c0b8242274f9627a91dba5fa8af036">More...</a><br /></td></tr>
 <tr class="separator:a23c0b8242274f9627a91dba5fa8af036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7f8487f26dd09d0058e8774f5f443b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_view.html#ad7f8487f26dd09d0058e8774f5f443b4">blockSwapedHandler</a> (<a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;a, <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;b, const std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &amp;move)</td></tr>
+<tr class="memdesc:ad7f8487f26dd09d0058e8774f5f443b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the swapped blocks signal.  <a href="#ad7f8487f26dd09d0058e8774f5f443b4">More...</a><br /></td></tr>
 <tr class="separator:ad7f8487f26dd09d0058e8774f5f443b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac769b83129ef5e37c4ab6c680cc13a1"><td class="memItemLeft" align="right" valign="top"><a id="aac769b83129ef5e37c4ab6c680cc13a1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>puzzleSolvedHandler</b> ()</td></tr>
+<tr class="memitem:aac769b83129ef5e37c4ab6c680cc13a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_view.html#aac769b83129ef5e37c4ab6c680cc13a1">puzzleSolvedHandler</a> ()</td></tr>
+<tr class="memdesc:aac769b83129ef5e37c4ab6c680cc13a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the puzzle solved signal.  <a href="#aac769b83129ef5e37c4ab6c680cc13a1">More...</a><br /></td></tr>
 <tr class="separator:aac769b83129ef5e37c4ab6c680cc13a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:ace9e48402539d2e3945ce794d7ae7dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_view.html#ace9e48402539d2e3945ce794d7ae7dd9">blockClicked</a> (const <a class="el" href="struct_position.html">Position</a> &amp;position)</td></tr>
+<tr class="memdesc:ace9e48402539d2e3945ce794d7ae7dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted whenever displayed <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> has been clicked.  <a href="#ace9e48402539d2e3945ce794d7ae7dd9">More...</a><br /></td></tr>
 <tr class="separator:ace9e48402539d2e3945ce794d7ae7dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a921e08c8ceb03226654cdedca68590ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_view.html#a921e08c8ceb03226654cdedca68590ad">BlocksView</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a921e08c8ceb03226654cdedca68590ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the view.  <a href="#a921e08c8ceb03226654cdedca68590ad">More...</a><br /></td></tr>
 <tr class="separator:a921e08c8ceb03226654cdedca68590ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c2c572d4a1cb2809ce55fa0746c4ff"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_view.html#a40c2c572d4a1cb2809ce55fa0746c4ff">~BlocksView</a> ()=default</td></tr>
+<tr class="memdesc:a40c2c572d4a1cb2809ce55fa0746c4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor.  <a href="#a40c2c572d4a1cb2809ce55fa0746c4ff">More...</a><br /></td></tr>
+<tr class="separator:a40c2c572d4a1cb2809ce55fa0746c4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9131c975ebe8b9c6933890bb9d9b0848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_view.html#a9131c975ebe8b9c6933890bb9d9b0848">mousePressEvent</a> (QMouseEvent *event)</td></tr>
+<tr class="memdesc:a9131c975ebe8b9c6933890bb9d9b0848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles mouse pressed events that origin from the blocks view.  <a href="#a9131c975ebe8b9c6933890bb9d9b0848">More...</a><br /></td></tr>
 <tr class="separator:a9131c975ebe8b9c6933890bb9d9b0848"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>View responsible for showing all Blocks that takes part in the game. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a921e08c8ceb03226654cdedca68590ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a921e08c8ceb03226654cdedca68590ad">&#9670;&nbsp;</a></span>BlocksView()</h2>
 
@@ -128,12 +180,41 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates the view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td></td></tr>
+    <tr><td class="paramname">parent</td><td>The Qt's parent object. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a40c2c572d4a1cb2809ce55fa0746c4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c2c572d4a1cb2809ce55fa0746c4ff">&#9670;&nbsp;</a></span>~BlocksView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual BlocksView::~BlocksView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default destructor. </p>
 
 </div>
 </div>
@@ -161,12 +242,24 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted whenever displayed <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> has been clicked. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">position</td><td></td></tr>
+    <tr><td class="paramname">position</td><td>The possition of the <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> that has been clicked. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9_icgraph.png" border="0" usemap="#class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9_icgraph" alt=""/></div>
+<map name="class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9_icgraph" id="class_blocks_view_ace9e48402539d2e3945ce794d7ae7dd9_icgraph">
+<area shape="rect"  title="Emitted whenever displayed Block has been clicked." alt="" coords="273,42,460,69"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="25,5,205,47"/>
+<area shape="rect"  href="class_blocks_view.html#a9131c975ebe8b9c6933890bb9d9b0848" title="Handles mouse pressed events that origin from the blocks view." alt="" coords="5,71,225,98"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -209,14 +302,34 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handles the swapped blocks signal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td></td></tr>
-    <tr><td class="paramname">b</td><td></td></tr>
-    <tr><td class="paramname">move</td><td></td></tr>
+    <tr><td class="paramname">a</td><td>The first <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> that changed the placement. </td></tr>
+    <tr><td class="paramname">b</td><td>The second <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> that changed the placement. </td></tr>
+    <tr><td class="paramname">move</td><td>Describes the move that happend on the board (how positions changed). </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_cgraph.png" border="0" usemap="#class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_cgraph" alt=""/></div>
+<map name="class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_cgraph" id="class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_cgraph">
+<area shape="rect"  title="Handles the swapped blocks signal." alt="" coords="5,5,247,32"/>
+<area shape="rect"  href="class_block.html#adebc177a35bfd2ecaebd8fc23a6ceafb" title="Gets a layout item assigned to the Block." alt="" coords="295,5,432,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_icgraph.png" border="0" usemap="#class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_icgraph" alt=""/></div>
+<map name="class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_icgraph" id="class_blocks_view_ad7f8487f26dd09d0058e8774f5f443b4_icgraph">
+<area shape="rect"  title="Handles the swapped blocks signal." alt="" coords="233,13,475,39"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -253,13 +366,24 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handles the new game signal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blocks</td><td></td></tr>
-    <tr><td class="paramname">level</td><td></td></tr>
+    <tr><td class="paramname">blocks</td><td>The array of pointers to all Blocks that creates the board. </td></tr>
+    <tr><td class="paramname">size</td><td>The edge size of a board (i.e. 4 in case of board created for 16 blocks) </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_view_a23c0b8242274f9627a91dba5fa8af036_icgraph.png" border="0" usemap="#class_blocks_view_a23c0b8242274f9627a91dba5fa8af036_icgraph" alt=""/></div>
+<map name="class_blocks_view_a23c0b8242274f9627a91dba5fa8af036_icgraph" id="class_blocks_view_a23c0b8242274f9627a91dba5fa8af036_icgraph">
+<area shape="rect"  title="Handles the new game signal." alt="" coords="233,13,472,39"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -286,12 +410,50 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handles mouse pressed events that origin from the blocks view. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td></td></tr>
+    <tr><td class="paramname">event</td><td>The mouse event. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aac769b83129ef5e37c4ab6c680cc13a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac769b83129ef5e37c4ab6c680cc13a1">&#9670;&nbsp;</a></span>puzzleSolvedHandler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlocksView::puzzleSolvedHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles the puzzle solved signal. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1_icgraph.png" border="0" usemap="#class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1_icgraph" alt=""/></div>
+<map name="class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1_icgraph" id="class_blocks_view_aac769b83129ef5e37c4ab6c680cc13a1_icgraph">
+<area shape="rect"  title="Handles the puzzle solved signal." alt="" coords="233,5,424,47"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -300,11 +462,15 @@ Protected Member Functions</h2></td></tr>
 <li>src/blocks/blocks_view.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_blocks_view.html">BlocksView</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

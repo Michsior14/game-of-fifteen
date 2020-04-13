@@ -1,0 +1,7 @@
+<map id="StateManagerController::StateManagerController" name="StateManagerController::StateManagerController">
+<area shape="rect" id="node1" title="Creates the controller." alt="" coords="5,104,191,145"/>
+<area shape="rect" id="node2" href="$class_state_manager_model.html#a414fe4dfa55aa139c26b3ccd002328ff" title="Handles the new game signal." alt="" coords="243,5,405,47"/>
+<area shape="rect" id="node3" href="$class_state_manager_model.html#a51df218169f899e063572ca5df5a388b" title="Handles changes of the blocks." alt="" coords="239,71,409,112"/>
+<area shape="rect" id="node4" href="$class_state_manager_model.html#a692ae20069405c9ace78f1d403046d8c" title="Handles the total moves changes." alt="" coords="243,136,405,177"/>
+<area shape="rect" id="node5" href="$class_state_manager_model.html#ab3f4c9b1d44a75c63c034e79f88ee9f0" title="Handles the time passed." alt="" coords="243,201,405,243"/>
+</map>

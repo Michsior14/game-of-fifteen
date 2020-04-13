@@ -1,0 +1,10 @@
+<map id="BlocksController::BlocksController" name="BlocksController::BlocksController">
+<area shape="rect" id="node1" title="Creates the controller." alt="" coords="5,115,185,157"/>
+<area shape="rect" id="node2" href="$class_blocks_view.html#a23c0b8242274f9627a91dba5fa8af036" title="Handles the new game signal." alt="" coords="235,5,473,32"/>
+<area shape="rect" id="node3" href="$class_blocks_view.html#aac769b83129ef5e37c4ab6c680cc13a1" title="Handles the puzzle solved signal." alt="" coords="259,57,449,98"/>
+<area shape="rect" id="node4" href="$class_blocks_view.html#ad7f8487f26dd09d0058e8774f5f443b4" title="Handles the swapped blocks signal." alt="" coords="233,123,475,149"/>
+<area shape="rect" id="node6" href="$class_blocks_model.html#a8ce391f7ec760f11d166aead833aa002" title="Moves the block to the free position if it is possible." alt="" coords="261,173,447,200"/>
+<area shape="rect" id="node7" href="$class_blocks_model.html#a9fc884d31e972c84e2e3dcbce73b8377" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="257,225,451,266"/>
+<area shape="rect" id="node5" href="$class_block.html#adebc177a35bfd2ecaebd8fc23a6ceafb" title="Gets a layout item assigned to the Block." alt="" coords="538,123,675,149"/>
+<area shape="rect" id="node8" href="$class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="523,232,691,259"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,6 +32,7 @@
    <div id="projectname">Game of Fifteen - Extended
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
+   <div id="projectbrief">Documentation of extended version of &quot;Game of Fifteen&quot;.</div>
   </td>
  </tr>
  </tbody>
@@ -46,6 +55,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_blocks_model.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +86,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
@@ -71,52 +96,87 @@ $(function() {
 <div class="title">BlocksModel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The model responsible for Blocks logic. Handles all movements on the board.  
+ <a href="class_blocks_model.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="blocks__model_8h_source.html">blocks_model.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BlocksModel:</div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_blocks_model.png" alt=""/>
- </div></div>
+<div class="center"><img src="class_blocks_model__inherit__graph.png" border="0" usemap="#_blocks_model_inherit__map" alt="Inheritance graph"/></div>
+<map name="_blocks_model_inherit__map" id="_blocks_model_inherit__map">
+<area shape="rect"  title="The model responsible for Blocks logic. Handles all movements on the board." alt="" coords="5,80,111,107"/>
+<area shape="rect"  title=" " alt="" coords="21,5,95,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for BlocksModel:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model__coll__graph.png" border="0" usemap="#_blocks_model_coll__map" alt="Collaboration graph"/></div>
+<map name="_blocks_model_coll__map" id="_blocks_model_coll__map">
+<area shape="rect"  title="The model responsible for Blocks logic. Handles all movements on the board." alt="" coords="5,80,111,107"/>
+<area shape="rect"  title=" " alt="" coords="21,5,95,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:aa5ca46eacee24fe51864845ecf6a1266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266">setLevel</a> (const GameLevel &amp;level)</td></tr>
+<tr class="memdesc:aa5ca46eacee24fe51864845ecf6a1266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the level of a board.  <a href="#aa5ca46eacee24fe51864845ecf6a1266">More...</a><br /></td></tr>
 <tr class="separator:aa5ca46eacee24fe51864845ecf6a1266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf01998c6ba41012b2ef6a457415b06c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#abf01998c6ba41012b2ef6a457415b06c">moveBlock</a> (const <a class="el" href="struct_position.html">Position</a> &amp;move)</td></tr>
-<tr class="separator:abf01998c6ba41012b2ef6a457415b06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce391f7ec760f11d166aead833aa002"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a8ce391f7ec760f11d166aead833aa002">moveBlock</a> (const <a class="el" href="struct_position.html">Position</a> &amp;from)</td></tr>
+<tr class="memdesc:a8ce391f7ec760f11d166aead833aa002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the block to the free position if it is possible.  <a href="#a8ce391f7ec760f11d166aead833aa002">More...</a><br /></td></tr>
+<tr class="separator:a8ce391f7ec760f11d166aead833aa002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6707a7dac44d269c2d52e7904a7473ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a6707a7dac44d269c2d52e7904a7473ef">undoMove</a> (const std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &amp;move)</td></tr>
+<tr class="memdesc:a6707a7dac44d269c2d52e7904a7473ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undo the move on the board.  <a href="#a6707a7dac44d269c2d52e7904a7473ef">More...</a><br /></td></tr>
 <tr class="separator:a6707a7dac44d269c2d52e7904a7473ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bc356cf8f30e3cdaa94b8d7cf5d92f2"><td class="memItemLeft" align="right" valign="top"><a id="a9bc356cf8f30e3cdaa94b8d7cf5d92f2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>start</b> ()</td></tr>
-<tr class="separator:a9bc356cf8f30e3cdaa94b8d7cf5d92f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73cc9633752440b2060b5bb1f964d9e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6">restart</a> ()</td></tr>
+<tr class="memdesc:a73cc9633752440b2060b5bb1f964d9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Restarts the game.  <a href="#a73cc9633752440b2060b5bb1f964d9e6">More...</a><br /></td></tr>
+<tr class="separator:a73cc9633752440b2060b5bb1f964d9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8f2f88ce1a2042772b50bf3d1321a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2">start</a> (const GameLevel &amp;level)</td></tr>
+<tr class="memdesc:a7e8f2f88ce1a2042772b50bf3d1321a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the game.  <a href="#a7e8f2f88ce1a2042772b50bf3d1321a2">More...</a><br /></td></tr>
+<tr class="separator:a7e8f2f88ce1a2042772b50bf3d1321a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fc884d31e972c84e2e3dcbce73b8377"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a9fc884d31e972c84e2e3dcbce73b8377">stateLoadedHandler</a> (const <a class="el" href="struct_load_state.html">LoadState</a> &amp;state)</td></tr>
+<tr class="memdesc:a9fc884d31e972c84e2e3dcbce73b8377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler for signals when new state has been loaded (game has been loaded from file).  <a href="#a9fc884d31e972c84e2e3dcbce73b8377">More...</a><br /></td></tr>
 <tr class="separator:a9fc884d31e972c84e2e3dcbce73b8377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:ad4beaf1054214a1688033489a0817a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#ad4beaf1054214a1688033489a0817a8b">gameStarted</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt;&gt;&gt; &amp;blocks, const size_t &amp;size)</td></tr>
+<tr class="memdesc:ad4beaf1054214a1688033489a0817a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when new game has been started.  <a href="#ad4beaf1054214a1688033489a0817a8b">More...</a><br /></td></tr>
 <tr class="separator:ad4beaf1054214a1688033489a0817a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b26e86f148e270ac598aa24accc718b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a1b26e86f148e270ac598aa24accc718b">gameRestored</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt;&gt;&gt; &amp;blocks, const size_t &amp;size)</td></tr>
+<tr class="memdesc:a1b26e86f148e270ac598aa24accc718b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when game board has been restored.  <a href="#a1b26e86f148e270ac598aa24accc718b">More...</a><br /></td></tr>
 <tr class="separator:a1b26e86f148e270ac598aa24accc718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2870995b5c7936d0e0f7afe41e7fbeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#ab2870995b5c7936d0e0f7afe41e7fbeb">blocksUpdated</a> (const std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt;&gt;&gt; &amp;blocks)</td></tr>
+<tr class="memdesc:ab2870995b5c7936d0e0f7afe41e7fbeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted whenever the position of one of the blocks has changed.  <a href="#ab2870995b5c7936d0e0f7afe41e7fbeb">More...</a><br /></td></tr>
 <tr class="separator:ab2870995b5c7936d0e0f7afe41e7fbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc67f8541695e398bd80f66690308c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#aadc67f8541695e398bd80f66690308c4">levelChanged</a> (const GameLevel level)</td></tr>
+<tr class="memdesc:aadc67f8541695e398bd80f66690308c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted whenever the current game level has changed.  <a href="#aadc67f8541695e398bd80f66690308c4">More...</a><br /></td></tr>
 <tr class="separator:aadc67f8541695e398bd80f66690308c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fb837fa85f6de3b9e3bc56a590f734e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a7fb837fa85f6de3b9e3bc56a590f734e">blockSwaped</a> (<a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;a, <a class="el" href="class_block.html">Block</a>&lt; <a class="el" href="class_block_layout_item.html">BlockLayoutItem</a> &gt; &amp;b, const std::shared_ptr&lt; <a class="el" href="struct_move.html">Move</a> &gt; &amp;move, bool undo)</td></tr>
+<tr class="memdesc:a7fb837fa85f6de3b9e3bc56a590f734e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when pair of the blocks has switched their positions on the board.  <a href="#a7fb837fa85f6de3b9e3bc56a590f734e">More...</a><br /></td></tr>
 <tr class="separator:a7fb837fa85f6de3b9e3bc56a590f734e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0511c008064fa694adfc249c096609bb"><td class="memItemLeft" align="right" valign="top"><a id="a0511c008064fa694adfc249c096609bb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>puzzleSolved</b> ()</td></tr>
+<tr class="memitem:a0511c008064fa694adfc249c096609bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a0511c008064fa694adfc249c096609bb">puzzleSolved</a> ()</td></tr>
+<tr class="memdesc:a0511c008064fa694adfc249c096609bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informes if the board has been solved.  <a href="#a0511c008064fa694adfc249c096609bb">More...</a><br /></td></tr>
 <tr class="separator:a0511c008064fa694adfc249c096609bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c3da3595fe9984f7ac2c02cef09c03d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a0c3da3595fe9984f7ac2c02cef09c03d">BlocksModel</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:a0c3da3595fe9984f7ac2c02cef09c03d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the model.  <a href="#a0c3da3595fe9984f7ac2c02cef09c03d">More...</a><br /></td></tr>
 <tr class="separator:a0c3da3595fe9984f7ac2c02cef09c03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a115cbe7c4e49a128ebcbae3b5c6c24ee"><td class="memItemLeft" align="right" valign="top"><a id="a115cbe7c4e49a128ebcbae3b5c6c24ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr>
+<tr class="memitem:af39495843287a69e0957451f3751ebbe"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#af39495843287a69e0957451f3751ebbe">~BlocksModel</a> ()=default</td></tr>
+<tr class="memdesc:af39495843287a69e0957451f3751ebbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default destructor.  <a href="#af39495843287a69e0957451f3751ebbe">More...</a><br /></td></tr>
+<tr class="separator:af39495843287a69e0957451f3751ebbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115cbe7c4e49a128ebcbae3b5c6c24ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blocks_model.html#a115cbe7c4e49a128ebcbae3b5c6c24ee">print</a> ()</td></tr>
+<tr class="memdesc:a115cbe7c4e49a128ebcbae3b5c6c24ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the current state of the board.  <a href="#a115cbe7c4e49a128ebcbae3b5c6c24ee">More...</a><br /></td></tr>
 <tr class="separator:a115cbe7c4e49a128ebcbae3b5c6c24ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The model responsible for Blocks logic. Handles all movements on the board. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0c3da3595fe9984f7ac2c02cef09c03d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c3da3595fe9984f7ac2c02cef09c03d">&#9670;&nbsp;</a></span>BlocksModel()</h2>
 
@@ -132,12 +192,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates the model. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td></td></tr>
+    <tr><td class="paramname">parent</td><td>The Qt's parent object. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af39495843287a69e0957451f3751ebbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39495843287a69e0957451f3751ebbe">&#9670;&nbsp;</a></span>~BlocksModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual BlocksModel::~BlocksModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The default destructor. </p>
 
 </div>
 </div>
@@ -165,12 +254,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted whenever the position of one of the blocks has changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blocks</td><td></td></tr>
+    <tr><td class="paramname">blocks</td><td>The array of pointers to all Blocks that creates the board. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb_icgraph.png" border="0" usemap="#class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb_icgraph" alt=""/></div>
+<map name="class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb_icgraph" id="class_blocks_model_ab2870995b5c7936d0e0f7afe41e7fbeb_icgraph">
+<area shape="rect"  title="Emitted whenever the position of one of the blocks has changed." alt="" coords="239,13,449,39"/>
+<area shape="rect"  href="class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="5,5,191,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -219,15 +319,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted when pair of the blocks has switched their positions on the board. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td></td></tr>
-    <tr><td class="paramname">b</td><td></td></tr>
-    <tr><td class="paramname">move</td><td></td></tr>
-    <tr><td class="paramname">undo</td><td></td></tr>
+    <tr><td class="paramname">a</td><td>The first <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> that changed the placement. </td></tr>
+    <tr><td class="paramname">b</td><td>The second <a class="el" href="class_block.html" title="Abstract class used to connect layout with model. Holds the information if created block is the empty...">Block</a> that changed the placement. </td></tr>
+    <tr><td class="paramname">move</td><td>Describes the move that happend on the board (how positions changed). </td></tr>
+    <tr><td class="paramname">undo</td><td>Indicates if it is an undo action. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e_icgraph.png" border="0" usemap="#class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e_icgraph" alt=""/></div>
+<map name="class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e_icgraph" id="class_blocks_model_a7fb837fa85f6de3b9e3bc56a590f734e_icgraph">
+<area shape="rect"  title="Emitted when pair of the blocks has switched their positions on the board." alt="" coords="233,46,432,73"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="12,71,179,112"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -264,13 +376,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted when game board has been restored. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blocks</td><td></td></tr>
-    <tr><td class="paramname">size</td><td></td></tr>
+    <tr><td class="paramname">blocks</td><td>The array of pointers to all Blocks that creates the board. </td></tr>
+    <tr><td class="paramname">size</td><td>The edge size of a board (i.e. 4 in case of board created for 16 blocks) </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a1b26e86f148e270ac598aa24accc718b_icgraph.png" border="0" usemap="#class_blocks_model_a1b26e86f148e270ac598aa24accc718b_icgraph" alt=""/></div>
+<map name="class_blocks_model_a1b26e86f148e270ac598aa24accc718b_icgraph" id="class_blocks_model_a1b26e86f148e270ac598aa24accc718b_icgraph">
+<area shape="rect"  title="Emitted when game board has been restored." alt="" coords="475,13,683,39"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+<area shape="rect"  href="class_blocks_model.html#a9fc884d31e972c84e2e3dcbce73b8377" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="233,35,427,76"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -307,13 +431,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted when new game has been started. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">blocks</td><td></td></tr>
-    <tr><td class="paramname">size</td><td></td></tr>
+    <tr><td class="paramname">blocks</td><td>The array of pointers to all Blocks that creates the board. </td></tr>
+    <tr><td class="paramname">size</td><td>The edge size of a board (i.e. 4 in case of board created for 16 blocks) </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_ad4beaf1054214a1688033489a0817a8b_icgraph.png" border="0" usemap="#class_blocks_model_ad4beaf1054214a1688033489a0817a8b_icgraph" alt=""/></div>
+<map name="class_blocks_model_ad4beaf1054214a1688033489a0817a8b_icgraph" id="class_blocks_model_ad4beaf1054214a1688033489a0817a8b_icgraph">
+<area shape="rect"  title="Emitted when new game has been started." alt="" coords="601,101,799,127"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="371,5,551,47"/>
+<area shape="rect"  href="class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2" title="Starts the game." alt="" coords="389,71,532,98"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="377,123,544,164"/>
+<area shape="rect"  href="class_state_manager_controller.html#a5c85e4844ad71a69c615bf3278956cda" title="Creates the controller." alt="" coords="368,188,553,229"/>
+<area shape="rect"  href="class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c" title="Initialize the default values for the model." alt="" coords="161,46,320,73"/>
+<area shape="rect"  href="class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6" title="Restarts the game." alt="" coords="163,97,319,123"/>
+<area shape="rect"  href="class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,46,113,73"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -340,17 +481,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Emitted whenever the current game level has changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td></td></tr>
+    <tr><td class="paramname">level</td><td>The game level that has been choosen. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_aadc67f8541695e398bd80f66690308c4_icgraph.png" border="0" usemap="#class_blocks_model_aadc67f8541695e398bd80f66690308c4_icgraph" alt=""/></div>
+<map name="class_blocks_model_aadc67f8541695e398bd80f66690308c4_icgraph" id="class_blocks_model_aadc67f8541695e398bd80f66690308c4_icgraph">
+<area shape="rect"  title="Emitted whenever the current game level has changed." alt="" coords="847,85,1049,112"/>
+<area shape="rect"  href="class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="631,85,799,112"/>
+<area shape="rect"  href="class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2" title="Starts the game." alt="" coords="415,56,557,83"/>
+<area shape="rect"  href="class_blocks_model.html#a9fc884d31e972c84e2e3dcbce73b8377" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="389,107,583,149"/>
+<area shape="rect"  href="class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c" title="Initialize the default values for the model." alt="" coords="172,5,331,32"/>
+<area shape="rect"  href="class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6" title="Restarts the game." alt="" coords="173,56,329,83"/>
+<area shape="rect"  href="class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,5,113,32"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="161,107,341,149"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="abf01998c6ba41012b2ef6a457415b06c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf01998c6ba41012b2ef6a457415b06c">&#9670;&nbsp;</a></span>moveBlock</h2>
+<a id="a8ce391f7ec760f11d166aead833aa002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce391f7ec760f11d166aead833aa002">&#9670;&nbsp;</a></span>moveBlock</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +520,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
           <td class="memname">void BlocksModel::moveBlock </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_position.html">Position</a> &amp;&#160;</td>
-          <td class="paramname"><em>move</em></td><td>)</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -372,12 +530,116 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Moves the block to the free position if it is possible. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">move</td><td></td></tr>
+    <tr><td class="paramname">from</td><td>The coordinates of a block to start from. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a8ce391f7ec760f11d166aead833aa002_icgraph.png" border="0" usemap="#class_blocks_model_a8ce391f7ec760f11d166aead833aa002_icgraph" alt=""/></div>
+<map name="class_blocks_model_a8ce391f7ec760f11d166aead833aa002_icgraph" id="class_blocks_model_a8ce391f7ec760f11d166aead833aa002_icgraph">
+<area shape="rect"  title="Moves the block to the free position if it is possible." alt="" coords="233,13,420,39"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a115cbe7c4e49a128ebcbae3b5c6c24ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115cbe7c4e49a128ebcbae3b5c6c24ee">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlocksModel::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the current state of the board. </p>
+
+</div>
+</div>
+<a id="a0511c008064fa694adfc249c096609bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0511c008064fa694adfc249c096609bb">&#9670;&nbsp;</a></span>puzzleSolved</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlocksModel::puzzleSolved </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Informes if the board has been solved. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a0511c008064fa694adfc249c096609bb_icgraph.png" border="0" usemap="#class_blocks_model_a0511c008064fa694adfc249c096609bb_icgraph" alt=""/></div>
+<map name="class_blocks_model_a0511c008064fa694adfc249c096609bb_icgraph" id="class_blocks_model_a0511c008064fa694adfc249c096609bb_icgraph">
+<area shape="rect"  title="Informes if the board has been solved." alt="" coords="233,46,432,73"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="12,71,179,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73cc9633752440b2060b5bb1f964d9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73cc9633752440b2060b5bb1f964d9e6">&#9670;&nbsp;</a></span>restart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlocksModel::restart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Restarts the game. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6_cgraph.png" border="0" usemap="#class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6_cgraph" alt=""/></div>
+<map name="class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6_cgraph" id="class_blocks_model_a73cc9633752440b2060b5bb1f964d9e6_cgraph">
+<area shape="rect"  title="Restarts the game." alt="" coords="5,5,161,32"/>
+<area shape="rect"  href="class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2" title="Starts the game." alt="" coords="209,5,352,32"/>
+<area shape="rect"  href="class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="400,5,568,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -404,12 +666,82 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the level of a board. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td></td></tr>
+    <tr><td class="paramname">level</td><td>The level to set. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266_icgraph.png" border="0" usemap="#class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266_icgraph" alt=""/></div>
+<map name="class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266_icgraph" id="class_blocks_model_aa5ca46eacee24fe51864845ecf6a1266_icgraph">
+<area shape="rect"  title="Sets the level of a board." alt="" coords="631,85,799,112"/>
+<area shape="rect"  href="class_blocks_model.html#a7e8f2f88ce1a2042772b50bf3d1321a2" title="Starts the game." alt="" coords="415,56,557,83"/>
+<area shape="rect"  href="class_blocks_model.html#a9fc884d31e972c84e2e3dcbce73b8377" title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="389,107,583,149"/>
+<area shape="rect"  href="class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c" title="Initialize the default values for the model." alt="" coords="172,5,331,32"/>
+<area shape="rect"  href="class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6" title="Restarts the game." alt="" coords="173,56,329,83"/>
+<area shape="rect"  href="class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,5,113,32"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="161,107,341,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7e8f2f88ce1a2042772b50bf3d1321a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e8f2f88ce1a2042772b50bf3d1321a2">&#9670;&nbsp;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BlocksModel::start </td>
+          <td>(</td>
+          <td class="paramtype">const GameLevel &amp;&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Starts the game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>The level to start game with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_cgraph.png" border="0" usemap="#class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_cgraph" alt=""/></div>
+<map name="class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_cgraph" id="class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_cgraph">
+<area shape="rect"  title="Starts the game." alt="" coords="5,5,148,32"/>
+<area shape="rect"  href="class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="196,5,364,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_icgraph.png" border="0" usemap="#class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_icgraph" alt=""/></div>
+<map name="class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_icgraph" id="class_blocks_model_a7e8f2f88ce1a2042772b50bf3d1321a2_icgraph">
+<area shape="rect"  title="Starts the game." alt="" coords="368,31,511,57"/>
+<area shape="rect"  href="class_blocks_controller.html#a469ef02a49634593039a88e96dcff22c" title="Initialize the default values for the model." alt="" coords="161,5,320,32"/>
+<area shape="rect"  href="class_blocks_model.html#a73cc9633752440b2060b5bb1f964d9e6" title="Restarts the game." alt="" coords="163,56,319,83"/>
+<area shape="rect"  href="class_game.html#ad59df6562a58a614fda24622d3715b65" title="The creates the main window." alt="" coords="5,5,113,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -436,12 +768,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Handler for signals when new state has been loaded (game has been loaded from file). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">state</td><td></td></tr>
+    <tr><td class="paramname">state</td><td>The state object, holding level, numbers and size of the board. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_cgraph.png" border="0" usemap="#class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_cgraph" alt=""/></div>
+<map name="class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_cgraph" id="class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_cgraph">
+<area shape="rect"  title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="5,5,199,47"/>
+<area shape="rect"  href="class_blocks_model.html#aa5ca46eacee24fe51864845ecf6a1266" title="Sets the level of a board." alt="" coords="247,13,415,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_icgraph.png" border="0" usemap="#class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_icgraph" alt=""/></div>
+<map name="class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_icgraph" id="class_blocks_model_a9fc884d31e972c84e2e3dcbce73b8377_icgraph">
+<area shape="rect"  title="Handler for signals when new state has been loaded (game has been loaded from file)." alt="" coords="233,5,427,47"/>
+<area shape="rect"  href="class_blocks_controller.html#a477c727edcc0d3fd121beae431d7539b" title="Creates the controller." alt="" coords="5,5,185,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -468,12 +820,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Undo the move on the board. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">move</td><td></td></tr>
+    <tr><td class="paramname">move</td><td>The move to undo. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef_icgraph.png" border="0" usemap="#class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef_icgraph" alt=""/></div>
+<map name="class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef_icgraph" id="class_blocks_model_a6707a7dac44d269c2d52e7904a7473ef_icgraph">
+<area shape="rect"  title="Undo the move on the board." alt="" coords="220,13,401,39"/>
+<area shape="rect"  href="class_move_stack_controller.html#a99115875c9902519a69eaec92df7dd7f" title="Creates the controller." alt="" coords="5,5,172,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -482,11 +845,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr
 <li>src/blocks/blocks_model.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_blocks_model.html">BlocksModel</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

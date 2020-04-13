@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['undomove',['undoMove',['../class_blocks_model.html#a6707a7dac44d269c2d52e7904a7473ef',1,'BlocksModel::undoMove()'],['../class_move_stack_model.html#a16436cf5acda5455355c24f28586f1e8',1,'MoveStackModel::undoMove()']]]
+  ['text',['text',['../class_block_layout_item.html#a374055c252f6532b80b31d065ebf1a11',1,'BlockLayoutItem']]],
+  ['timepassedchanged',['timePassedChanged',['../class_move_stack_model.html#aa7d3186093032e523b2a7bbefa74f8fb',1,'MoveStackModel']]],
+  ['timepassedhandler',['timePassedHandler',['../class_state_manager_model.html#ab3f4c9b1d44a75c63c034e79f88ee9f0',1,'StateManagerModel']]],
+  ['title',['title',['../class_block.html#a48197972162fbfe6b2f4d721d80034cf',1,'Block']]],
+  ['totalmoves',['totalMoves',['../class_move_stack_model.html#a59f08def53913e4f33df7fe30a16dc75',1,'MoveStackModel']]],
+  ['totalmoveschanged',['totalMovesChanged',['../class_move_stack_model.html#a8b596d9619735fc7d066a3d0e1b8cc55',1,'MoveStackModel']]],
+  ['totalmoveshandler',['totalMovesHandler',['../class_state_manager_model.html#a692ae20069405c9ace78f1d403046d8c',1,'StateManagerModel']]]
 ];
