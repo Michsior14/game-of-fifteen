@@ -10,16 +10,16 @@
 BlocksModel::BlocksModel(QObject *parent) : QObject(parent) {
 }
 
-void BlocksModel::setLevel(const GameLevel& level){
-    _level = static_cast<size_t>(level);
+void BlocksModel::setLevel(const size_t level){
+    _level = level;
     emit levelChanged(level);
 }
 
 void BlocksModel::restart() {
-    start(static_cast<GameLevel>(_level));
+    start(_level);
 }
 
-void BlocksModel::start(const GameLevel& level) {
+void BlocksModel::start(const size_t level) {
     setLevel(level);
 
     size_t blocksSize = _level * _level;
@@ -87,7 +87,7 @@ void BlocksModel::print() {
 }
 
 void BlocksModel::stateLoadedHandler(const LoadState& state) {
-    setLevel(static_cast<GameLevel>(state.level));
+    setLevel(state.level);
 
     _blocks.clear();
     _blocks.reserve(state.blocks.size());

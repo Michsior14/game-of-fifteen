@@ -62,7 +62,7 @@ signals:
      *
      * @param level The game level that has been choosen.
      */
-    void levelChanged(const GameLevel level);
+    void levelChanged(const size_t level);
     /**
      * @brief Emitted when pair of the blocks has switched their positions on the board.
      *
@@ -84,7 +84,7 @@ public slots:
      *
      * @param level The level to set.
      */
-    void setLevel(const GameLevel& level);
+    void setLevel(const size_t level);
     /**
      * @brief Moves the block to the free position if it is possible.
      *
@@ -107,7 +107,7 @@ public slots:
      *
      * @param level The level to start game with.
      */
-    void start(const GameLevel& level);
+    void start(const size_t level);
     /**
      * @brief Handler for signals when new state has been loaded (game has been loaded from file).
      *

@@ -10,5 +10,5 @@ BlocksController::BlocksController(BlocksModel& model, BlocksView& view, StateMa
 }
 
 void BlocksController::init() {
-    _model.start(GameLevel::Easy);
+    _model.start(static_cast<size_t>(GameLevel::Easy));
 }

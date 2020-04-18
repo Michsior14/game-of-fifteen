@@ -75,6 +75,7 @@ private:
     QAction* _loadGameAct; /**< The load game action instance. */
     QAction* _easyLevelAct; /**< The easy level action instance. */
     QAction* _mediumLevelAct; /**< The medium level action instance. */
+    QAction* _customLevelAct; /**< The custom level action instance. */
     QAction* _hardLevelAct; /**< The hard level action instance. */
     QAction* _undoMove; /**< The undo move action instance. */
     QActionGroup* _levelGroup; /**< The level group instance. */

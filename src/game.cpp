@@ -75,18 +75,31 @@ void Game::createActions(){
 
     _easyLevelAct = new QAction(tr("Easy"), this);
     _easyLevelAct->setCheckable(true);
-    connect(_easyLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(GameLevel::Easy); });
+    connect(_easyLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(static_cast<size_t>(GameLevel::Easy)); });
 
     _mediumLevelAct = new QAction(tr("Medium"), this);
     _mediumLevelAct->setCheckable(true);
-    connect(_mediumLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(GameLevel::Medium); });
+    connect(_mediumLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(static_cast<size_t>(GameLevel::Medium)); });
 
     _hardLevelAct = new QAction(tr("Hard"), this);
     _hardLevelAct->setCheckable(true);
-    connect(_hardLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(GameLevel::Hard); });
+    connect(_hardLevelAct, &QAction::triggered, this, [this]{ _blocksModel.start(static_cast<size_t>(GameLevel::Hard)); });
 
-    connect(&_blocksModel, &BlocksModel::levelChanged, this, [this](const GameLevel level) {
-        switch (level) {
+    _customLevelAct = new QAction(tr("Custom"), this);
+    _customLevelAct->setCheckable(true);
+    connect(_customLevelAct, &QAction::triggered, this, [this]{
+
+         bool ok;
+         int level = QInputDialog::getInt(this, tr("Custom"),
+                                                 tr("Level:"), 4,
+                                                4, 2147483647, 1, &ok);
+         if(ok) {
+            _blocksModel.start(static_cast<size_t>(level));
+         }
+    });
+
+    connect(&_blocksModel, &BlocksModel::levelChanged, this, [this](const size_t level) {
+        switch (static_cast<GameLevel>(level)) {
         case GameLevel::Easy:
             _easyLevelAct->setChecked(true);
             break;
@@ -96,6 +109,8 @@ void Game::createActions(){
         case GameLevel::Hard:
             _hardLevelAct->setChecked(true);
             break;
+        default:
+            _customLevelAct->setChecked(true);
         }
     });
 
@@ -133,12 +148,14 @@ void Game::createMenus(){
     _levelMenu->addAction(_easyLevelAct);
     _levelMenu->addAction(_mediumLevelAct);
     _levelMenu->addAction(_hardLevelAct);
+    _levelMenu->addAction(_customLevelAct);
 
 
     _levelGroup = new QActionGroup(this);
     _levelGroup->addAction(_easyLevelAct);
     _levelGroup->addAction(_mediumLevelAct);
     _levelGroup->addAction(_hardLevelAct);
+    _levelGroup->addAction(_customLevelAct);
     _levelGroup->setExclusive(true);
 
     _gameMenu->addAction(_undoMove);
